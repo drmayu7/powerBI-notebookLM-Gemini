@@ -1,0 +1,14 @@
+# Sumber peribadi (jangan publish)
+surat jemputan peserta.docx
+
+# IDE / env
+.idea/
+.venv/
+
+# Power BI & pejabat
+*.pbix
+~$*
+
+# OS
+.DS_Store
+Thumbs.db

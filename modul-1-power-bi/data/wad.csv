@@ -1,0 +1,8 @@
+Kod_Wad,Nama_Wad,Kapasiti_Katil,Jenis_Wad
+W01,Wad Perubatan Lelaki,30,Umum
+W02,Wad Perubatan Wanita,30,Umum
+W03,Wad Pembedahan,28,Umum
+W04,Wad O&G,24,Khusus
+W05,Wad Pediatrik,20,Khusus
+W06,Wad Ortopedik,26,Umum
+W07,Unit Rawatan Rapi (ICU),10,Kritikal
