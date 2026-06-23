@@ -8,22 +8,20 @@ rosak** — ini normal.
 > **Nota:** UI NotebookLM/Gemini kerap berubah; tangkap apa yang paling hampir
 > dengan langkah jika butang dinamakan berbeza.
 
-## Modul 1 — Power BI (`modul-1-power-bi/lab/img/`)
+## Modul 1 — Power BI (`modul-1-power-bi/img/`)
 
-| Siap | Fail | Lab / langkah | Apa yang ditangkap |
-|------|------|---------------|--------------------|
-| [ ] | `01-get-data.png` | Lab 1, langkah 2 | Menu Home → Get Data → Text/CSV |
-| [ ] | `01-jadual-dimuat.png` | Lab 1, hasil | Panel Data menunjukkan 4 jadual |
-| [ ] | `02-data-type.png` | Lab 2, langkah 3 | Menukar jenis data lajur di Power Query |
-| [ ] | `02-custom-column-los.png` | Lab 2, langkah 6 | Dialog Custom Column dengan formula Tempoh_Tinggal |
-| [ ] | `03-edit-relationship.png` | Lab 3, langkah 4 | Dialog Edit relationship (cardinality & cross filter) |
-| [ ] | `03-model.png` | Lab 3, langkah 4 | Model view star schema (3 hubungan) |
-| [ ] | `04-new-measure.png` | Lab 4, pengenalan | Cipta measure baharu pada formula bar |
-| [ ] | `05-card-kpi.png` | Lab 5, bahagian A | Tiga kad KPI di atas kanvas |
-| [ ] | `05-visual.png` | Lab 5, hasil | Semua visual (3 kad, 2 bar, 1 garis) |
-| [ ] | `06-slicer.png` | Lab 6, langkah 3 | Tiga slicer ditambah di tepi |
-| [ ] | `06-dashboard.png` | Lab 6, langkah 4 | Dashboard lengkap selepas tapis |
-| [ ] | `07-export-pdf.png` | Lab 7, langkah 2 | File → Export → Export to PDF |
+| Siap | Fail | Langkah dalam panduan | Apa yang ditangkap |
+|------|------|------------------------|--------------------|
+| [ ] | `01-get-data-csv.png` | Part 1, 1.1 | Home → Get Data → Text/CSV (pilih covid_deaths_linelist.csv) |
+| [ ] | `02-custom-column-agegroup.png` | Part 1, 1.3 | Custom Column dialog — formula Age_Group |
+| [ ] | `02-custom-column-vaccine.png` | Part 1, 1.3 | Custom Column dialog — formula Vaccination_Status |
+| [ ] | `02-dim-state.png` | Part 1, 1.4 | Dim_State selepas filter + lajur Region & Population |
+| [ ] | `03-mark-date-table.png` | Part 2, 2.2 | Mark as date table pada Dim_Date[Date] |
+| [ ] | `03-model-star.png` | Part 2, 2.3 | Model view — star schema dengan 4 hubungan |
+| [ ] | `04-new-measure.png` | Part 3 | New measure — Deaths per 100k |
+| [ ] | `05-cards-visuals.png` | Part 4 | 4 kad KPI + carta garis/bar/lajur/donut |
+| [ ] | `06-slicers-dashboard.png` | Part 5, 5.1 | 4 slicer + cross-filter dashboard lengkap |
+| [ ] | `07-map-per100k.png` | Part 5, 5.2 (pilihan) | Filled map — Deaths per 100k (opsyenal) |
 
 ## Modul 2 — NotebookLM & Gemini (`modul-2-notebooklm-gemini/lab/img/`)
 
