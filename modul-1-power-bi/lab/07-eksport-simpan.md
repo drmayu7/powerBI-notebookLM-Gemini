@@ -18,6 +18,8 @@
    - **File** → **Export** → **Export to PDF**.
    - Power BI menjana PDF setiap halaman laporan untuk dikongsi atau dicetak.
 
+   ![Export to PDF](img/07-export-pdf.png)
+
 ---
 
 ## Nota: Berkongsi dalam talian (pilihan / Fasa 2)

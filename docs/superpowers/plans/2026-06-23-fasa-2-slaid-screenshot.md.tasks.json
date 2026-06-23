@@ -1,0 +1,38 @@
+{
+  "planPath": "docs/superpowers/plans/2026-06-23-fasa-2-slaid-screenshot.md",
+  "tasks": [
+    {
+      "id": 9,
+      "subject": "Task 1: Marp scaffolding + Power BI intro deck",
+      "status": "completed",
+      "description": "**Goal:** Create the slides/ directory, the render guide, and the rendered Power BI intro deck.\n\n**Files:** Create slides/modul-1-power-bi.md, slides/README.md, slides/build/modul-1-power-bi.pdf\n\n**Verify:** npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf && test -f slides/build/modul-1-power-bi.pdf && echo OK\n\n```json:metadata\n{\"files\": [\"slides/modul-1-power-bi.md\", \"slides/README.md\", \"slides/build/modul-1-power-bi.pdf\"], \"verifyCommand\": \"npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf && test -f slides/build/modul-1-power-bi.pdf && echo OK\", \"acceptanceCriteria\": [\"Deck .md has Marp front-matter + ~8-9 slides\", \"PDF renders without error (or .md committed with note if download blocked)\", \"slides/README.md documents render commands\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 10,
+      "subject": "Task 2: NotebookLM & Gemini intro deck",
+      "status": "completed",
+      "blockedBy": [9],
+      "description": "**Goal:** Create and render the Slot 2 intro deck using the same Marp setup.\n\n**Files:** Create slides/modul-2-notebooklm-gemini.md, slides/build/modul-2-notebooklm-gemini.pdf\n\n**Verify:** npx -y @marp-team/marp-cli slides/modul-2-notebooklm-gemini.md --pdf -o slides/build/modul-2-notebooklm-gemini.pdf && test -f slides/build/modul-2-notebooklm-gemini.pdf && echo OK\n\n```json:metadata\n{\"files\": [\"slides/modul-2-notebooklm-gemini.md\", \"slides/build/modul-2-notebooklm-gemini.pdf\"], \"verifyCommand\": \"npx -y @marp-team/marp-cli slides/modul-2-notebooklm-gemini.md --pdf -o slides/build/modul-2-notebooklm-gemini.pdf && test -f slides/build/modul-2-notebooklm-gemini.pdf && echo OK\", \"acceptanceCriteria\": [\"Deck .md has matching front-matter + ~8 slides incl. data-safety slide\", \"PDF renders without error (or .md committed with note)\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 11,
+      "subject": "Task 3: Screenshot scaffolding — Modul 1 labs",
+      "status": "completed",
+      "description": "**Goal:** Create modul-1 image folder and standardize/insert screenshot placeholders across all 7 Power BI labs.\n\n**Files:** Create modul-1-power-bi/lab/img/.gitkeep; modify all 7 modul-1-power-bi/lab/0N-*.md\n\n**Verify:** ! grep -rn '\\.\\./img/' modul-1-power-bi/lab/ && grep -rEc '\\!\\[.*\\]\\(img/' modul-1-power-bi/lab/*.md\n\n```json:metadata\n{\"files\": [\"modul-1-power-bi/lab/img/.gitkeep\", \"modul-1-power-bi/lab/01-import-data.md\", \"modul-1-power-bi/lab/02-power-query-bersih.md\", \"modul-1-power-bi/lab/03-model-hubungan.md\", \"modul-1-power-bi/lab/04-ukuran-dax.md\", \"modul-1-power-bi/lab/05-visual-asas.md\", \"modul-1-power-bi/lab/06-dashboard-interaktif.md\", \"modul-1-power-bi/lab/07-eksport-simpan.md\"], \"verifyCommand\": \"! grep -rn '\\\\.\\\\./img/' modul-1-power-bi/lab/ && grep -rEc '\\\\!\\\\[.*\\\\]\\\\(img/' modul-1-power-bi/lab/*.md\", \"acceptanceCriteria\": [\"lab/img/ exists\", \"no ../img/ references remain\", \"each of 7 labs has 1-2 placeholders\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 12,
+      "subject": "Task 4: Screenshot scaffolding — Modul 2 labs",
+      "status": "completed",
+      "description": "**Goal:** Create modul-2 image folder and insert screenshot placeholders across all 5 AI labs.\n\n**Files:** Create modul-2-notebooklm-gemini/lab/img/.gitkeep; modify all 5 modul-2-notebooklm-gemini/lab/0N-*.md\n\n**Verify:** grep -rEc '\\!\\[.*\\]\\(img/' modul-2-notebooklm-gemini/lab/*.md && ! grep -rn '\\.\\./img/' modul-2-notebooklm-gemini/lab/\n\n```json:metadata\n{\"files\": [\"modul-2-notebooklm-gemini/lab/img/.gitkeep\", \"modul-2-notebooklm-gemini/lab/01-sediakan-notebook.md\", \"modul-2-notebooklm-gemini/lab/02-tanya-korpus.md\", \"modul-2-notebooklm-gemini/lab/03-kertas-projek-ke-slaid.md\", \"modul-2-notebooklm-gemini/lab/04-audio-mesyuarat-ke-minit.md\", \"modul-2-notebooklm-gemini/lab/05-explore-lanjut.md\"], \"verifyCommand\": \"grep -rEc '\\\\!\\\\[.*\\\\]\\\\(img/' modul-2-notebooklm-gemini/lab/*.md && ! grep -rn '\\\\.\\\\./img/' modul-2-notebooklm-gemini/lab/\", \"acceptanceCriteria\": [\"lab/img/ exists\", \"each of 5 labs has 1-2 placeholders\", \"no ../img/ references\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 13,
+      "subject": "Task 5: Screenshot capture manifest",
+      "status": "completed",
+      "blockedBy": [11, 12],
+      "description": "**Goal:** Write docs/SCREENSHOTS.md — a checklist covering every screenshot referenced in any lab.\n\n**Files:** Create docs/SCREENSHOTS.md\n\n**Verify:** for f in $(grep -rhoE 'img/[0-9]+-[a-z-]+\\.png' modul-1-power-bi/lab modul-2-notebooklm-gemini/lab | sort -u); do grep -q \"$(basename $f)\" docs/SCREENSHOTS.md || echo \"MISSING: $f\"; done\n\n```json:metadata\n{\"files\": [\"docs/SCREENSHOTS.md\"], \"verifyCommand\": \"for f in $(grep -rhoE 'img/[0-9]+-[a-z-]+\\\\.png' modul-1-power-bi/lab modul-2-notebooklm-gemini/lab | sort -u); do grep -q \\\"$(basename $f)\\\" docs/SCREENSHOTS.md || echo \\\"MISSING: $f\\\"; done\", \"acceptanceCriteria\": [\"every referenced screenshot filename is a row\", \"rows have checkbox/filename/lab-step/what\", \"grouped by module with caveats note\"], \"modelTier\": \"mechanical\"}\n```"
+    }
+  ],
+  "lastUpdated": "2026-06-23T04:30:00Z"
+}

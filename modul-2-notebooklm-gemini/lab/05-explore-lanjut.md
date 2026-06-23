@@ -20,6 +20,8 @@ Cuba jana output berikut daripada notebook anda:
 > Cuba jana **Audio Overview** daripada satu garis panduan — dengar bagaimana ia
 > menerangkan kandungan secara perbualan.
 
+![Audio Overview di panel Studio](img/05-audio-overview.png)
+
 ---
 
 ## Gemini untuk dokumentasi rasmi

@@ -16,6 +16,8 @@ beberapa dokumen rujukan awam.
 
 3. Klik **Add sources** (Tambah sumber).
 
+   ![Add sources di NotebookLM](img/01-add-sources.png)
+
 4. Sediakan 2–3 dokumen awam terlebih dahulu:
    - Buka [`rujukan-awam.md`](../rujukan-awam.md).
    - Muat turun 2–3 dokumen (cth. PDF garis panduan) dari pautan yang
@@ -36,5 +38,7 @@ beberapa dokumen rujukan awam.
 
 Satu notebook dengan **2–3 sumber** yang telah diproses dan tersenarai di panel
 sumber (kiri). NotebookLM bersedia untuk menjawab soalan.
+
+![Sumber diproses & tersenarai](img/01-sumber-diproses.png)
 
 ➡️ Seterusnya: [Lab 2 — Tanya korpus](02-tanya-korpus.md)

@@ -22,6 +22,8 @@ tinggal (*length of stay*) yang akan kita guna untuk ALOS.
    - `Umur` → **Whole Number**
    - `Kod_Wad`, `Kod_Disiplin`, `Diagnosis_DRG`, `ID_Kemasukan`, `Jantina` → **Text**
 
+   ![Tetapkan jenis data lajur](img/02-data-type.png)
+
 4. Buang ruang berlebihan pada lajur teks: pilih `Kod_Wad`, `Kod_Disiplin`
    (tahan **Ctrl** untuk pilih banyak) → tab **Transform** → **Format** → **Trim**.
 
@@ -38,6 +40,8 @@ tinggal (*length of stay*) yang akan kita guna untuk ALOS.
    - Klik **OK**.
    - Klik ikon jenis pada lajur `Tempoh_Tinggal` dan tukar kepada
      **Whole Number**.
+
+   ![Custom Column untuk Tempoh_Tinggal](img/02-custom-column-los.png)
 
 7. Ulang semakan jenis data untuk jadual lain (ringkas):
    - `wad`: `Kapasiti_Katil` → **Whole Number**.

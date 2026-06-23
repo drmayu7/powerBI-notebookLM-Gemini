@@ -24,7 +24,9 @@ penapis (slicer) berfungsi merentas semua visual.
    - **Cardinality:** `Many to one (*:1)` — banyak di `kemasukan`, satu di dimensi.
    - **Cross filter direction:** `Single`.
 
-   ![Model view star schema](../img/03-model.png)
+   ![Dialog Edit relationship — cardinality & cross filter](img/03-edit-relationship.png)
+
+   ![Model view star schema](img/03-model.png)
 
 ---
 
