@@ -10,6 +10,8 @@
 **Cara cipta measure:** Klik jadual `kemasukan` di panel **Fields** →
 tab **Home** → **New measure** → taip/tampal formula → tekan **Enter**.
 
+![Cipta measure baharu (formula bar)](img/04-new-measure.png)
+
 ---
 
 ## Measure utama

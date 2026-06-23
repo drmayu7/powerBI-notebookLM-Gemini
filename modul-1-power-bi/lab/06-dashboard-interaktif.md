@@ -22,11 +22,13 @@
    - Klik visual **Slicer** baharu → seret `tarikh[Bulan]`.
    - Letakkan ketiga-tiga slicer di tepi (cth. lajur kiri).
 
+   ![Tiga slicer ditambah](img/06-slicer.png)
+
 4. **Uji interaktiviti:** klik satu disiplin atau wad pada slicer. Perhatikan
    semua kad dan carta dikemas kini (ditapis) secara automatik. Klik sekali lagi
    untuk nyahpilih.
 
-   ![Dashboard interaktif](../img/06-dashboard.png)
+   ![Dashboard interaktif](img/06-dashboard.png)
 
 > **Tip:** Untuk slicer `Bulan`, pada menu *dropdown* slicer anda boleh tukar
 > kepada gaya **Between** untuk julat bulan.

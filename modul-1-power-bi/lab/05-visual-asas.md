@@ -17,6 +17,8 @@
 
 > Letakkan tiga kad berbaris di bahagian atas kanvas.
 
+![Kad KPI](img/05-card-kpi.png)
+
 ### B. Carta bar — Kemasukan ikut Disiplin
 1. Klik visual **Clustered bar chart** (atau **Clustered column chart**).
 2. **Y-axis / Axis:** `disiplin[Nama_Disiplin]`
@@ -33,7 +35,7 @@
    tukar paparan kepada `Nama_Bulan` kemudian).
 3. **Y-axis / Values:** `[Jumlah Kemasukan]`
 
-![Visual asas](../img/05-visual.png)
+![Visual asas](img/05-visual.png)
 
 ---
 

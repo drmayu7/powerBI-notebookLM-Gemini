@@ -11,7 +11,7 @@
 
 2. Pada tab **Home**, klik **Get Data** → **Text/CSV**.
 
-   ![Get Data Text/CSV](../img/01-get-data.png)
+   ![Get Data Text/CSV](img/01-get-data.png)
 
 3. Pergi ke folder `modul-1-power-bi/data/` dan pilih **`kemasukan.csv`**.
    Klik **Open**.
@@ -33,5 +33,7 @@
 
 Pada panel **Data** (atau **Fields**) di sebelah kanan, anda sepatutnya nampak
 **4 jadual**: `kemasukan`, `wad`, `disiplin`, dan `tarikh`.
+
+![Empat jadual di panel Data](img/01-jadual-dimuat.png)
 
 ➡️ Seterusnya: [Lab 2 — Bersihkan data (Power Query)](02-power-query-bersih.md)
