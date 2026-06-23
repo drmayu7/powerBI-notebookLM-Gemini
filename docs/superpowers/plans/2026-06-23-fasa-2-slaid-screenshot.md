@@ -4,13 +4,13 @@
 
 **Goal:** Produce two Marp intro slide decks (rendered to committed PDFs) and standardize screenshot placeholders + a capture manifest across all 12 lab files.
 
-**Architecture:** Marp Markdown decks under `slides/` rendered to PDF via `npx @marp-cli/marp`; `.md` is canonical, PDFs committed for zero-setup presenting. Screenshot work creates `lab/img/` folders, normalizes/inserts `![...](img/NN-nama.png)` references at key visual steps, and lists every shot in `docs/SCREENSHOTS.md`.
+**Architecture:** Marp Markdown decks under `slides/` rendered to PDF via `npx @marp-team/marp-cli`; `.md` is canonical, PDFs committed for zero-setup presenting. Screenshot work creates `lab/img/` folders, normalizes/inserts `![...](img/NN-nama.png)` references at key visual steps, and lists every shot in `docs/SCREENSHOTS.md`.
 
-**Tech Stack:** Marp (`@marp-cli/marp` via npx, Node 20 available), Markdown.
+**Tech Stack:** Marp (`@marp-team/marp-cli` via npx, Node 20 available), Markdown.
 
 **User decisions (already made):**
 - Phase 2 focus = slides + screenshots only (`.pbix`/audio excluded).
-- Slides via Marp, rendered with `npx @marp-cli/marp` (Approach A); `.md` canonical, PDF committed.
+- Slides via Marp, rendered with `npx @marp-team/marp-cli` (Approach A); `.md` canonical, PDF committed.
 - Two intro decks only (one per slot), sourced from each module's existing `README.md` intro notes.
 - Clean built-in Marp theme (`gaia`); no official KKM logo committed.
 - Screenshots = manifest + placeholders + folders; real image capture done by the user.
@@ -29,10 +29,10 @@
 
 **Acceptance Criteria:**
 - [ ] `slides/modul-1-power-bi.md` has Marp front-matter (`marp: true`, `theme: gaia`, `paginate: true`, footer) and ~8–9 slides matching the spec breakdown.
-- [ ] `npx @marp-cli/marp slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf` produces a PDF with no error.
+- [ ] `npx @marp-team/marp-cli slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf` produces a PDF with no error.
 - [ ] `slides/README.md` documents the render commands (PDF/PPTX/HTML) and the theme choice.
 
-**Verify:** `npx -y @marp-cli/marp slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf && test -f slides/build/modul-1-power-bi.pdf && echo OK` → prints `OK`
+**Verify:** `npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf && test -f slides/build/modul-1-power-bi.pdf && echo OK` → prints `OK`
 
 **Steps:**
 
@@ -140,7 +140,7 @@ Satu halaman dashboard dengan:
 
 - [ ] **Step 2: Render the deck to PDF**
 
-Run: `npx -y @marp-cli/marp slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf`
+Run: `npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf`
 Expected: command exits 0; `slides/build/modul-1-power-bi.pdf` created. (First run downloads Marp + a headless Chromium; allow time. If the network blocks the download, skip PDF generation, note it, and commit the `.md` source only — the PDF can be rendered later with the same command.)
 
 - [ ] **Step 3: Write `slides/README.md`**
@@ -164,13 +164,13 @@ secara automatik kali pertama.
 
 ```bash
 # PDF (untuk bentang/cetak)
-npx -y @marp-cli/marp slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf
+npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf
 
 # PowerPoint (untuk edit dalam PowerPoint)
-npx -y @marp-cli/marp slides/modul-1-power-bi.md --pptx -o slides/build/modul-1-power-bi.pptx
+npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --pptx -o slides/build/modul-1-power-bi.pptx
 
 # HTML (untuk bentang dari pelayar)
-npx -y @marp-cli/marp slides/modul-1-power-bi.md --html -o slides/build/modul-1-power-bi.html
+npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --html -o slides/build/modul-1-power-bi.html
 ```
 
 Tema: `gaia` (terbina-dalam Marp). Untuk tukar tema, edit `theme:` dalam
@@ -198,7 +198,7 @@ git commit -m "feat: slaid pengenalan Modul 1 (Power BI) + panduan render Marp"
 - [ ] `slides/modul-2-notebooklm-gemini.md` has matching Marp front-matter and ~8 slides per the spec breakdown, including the data-sensitivity warning slide.
 - [ ] PDF renders without error.
 
-**Verify:** `npx -y @marp-cli/marp slides/modul-2-notebooklm-gemini.md --pdf -o slides/build/modul-2-notebooklm-gemini.pdf && test -f slides/build/modul-2-notebooklm-gemini.pdf && echo OK` → prints `OK`
+**Verify:** `npx -y @marp-team/marp-cli slides/modul-2-notebooklm-gemini.md --pdf -o slides/build/modul-2-notebooklm-gemini.pdf && test -f slides/build/modul-2-notebooklm-gemini.pdf && echo OK` → prints `OK`
 
 **Steps:**
 
@@ -291,7 +291,7 @@ Dokumen latihan: lihat `rujukan-awam.md` (pautan awam KKM/JPA).
 
 - [ ] **Step 2: Render the deck to PDF**
 
-Run: `npx -y @marp-cli/marp slides/modul-2-notebooklm-gemini.md --pdf -o slides/build/modul-2-notebooklm-gemini.pdf`
+Run: `npx -y @marp-team/marp-cli slides/modul-2-notebooklm-gemini.md --pdf -o slides/build/modul-2-notebooklm-gemini.pdf`
 Expected: command exits 0; PDF created. (Same network caveat as Task 1 Step 2.)
 
 - [ ] **Step 3: Commit**
@@ -593,5 +593,5 @@ git commit -m "docs: manifest tangkapan screenshot (checklist semua lab)"
 
 ## Notes
 
-- All `npx -y @marp-cli/marp` and `grep`/`mkdir` commands are written for the Bash tool (POSIX). On this Windows host, run them via the Bash tool, not PowerShell.
+- All `npx -y @marp-team/marp-cli` and `grep`/`mkdir` commands are written for the Bash tool (POSIX). On this Windows host, run them via the Bash tool, not PowerShell.
 - If Marp's first-run download is blocked, commit the `.md` slide source without the PDF and note it; the render command stays valid for later.

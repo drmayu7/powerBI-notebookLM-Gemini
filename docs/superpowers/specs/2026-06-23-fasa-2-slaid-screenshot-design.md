@@ -20,7 +20,7 @@ Fasa 1 (tulang belakang kandungan markdown + dataset sintetik + pautan awam) tel
 | # | Keputusan |
 |---|---|
 | Tooling slaid | **Marp** (Markdown → PPTX/PDF/HTML) |
-| Render slaid | **Marp CLI via `npx @marp-cli/marp`** (Approach A). `.md` ialah sumber kanonik; PDF dirender & di-commit |
+| Render slaid | **Marp CLI via `npx @marp-team/marp-cli`** (Approach A). `.md` ialah sumber kanonik; PDF dirender & di-commit |
 | Skop slaid | **Dua deck pengenalan sahaja** (satu setiap slot, ~20 min / ~12–15 slaid) |
 | Sumber kandungan slaid | Nota pengenalan sedia ada dalam `README.md` setiap modul (slaid & lab kekal selaras) |
 | Tema | **Tema terbina-dalam Marp yang bersih** (cth. `default`/`gaia`) + footer kursus; tiada logo rasmi di-commit |
@@ -43,7 +43,7 @@ modul-2-notebooklm-gemini/lab/img/
 docs/SCREENSHOTS.md             ← manifest/checklist tangkapan (semua shot, ikut lab/langkah)
 ```
 
-**Nota commit PDF:** PDF dirender guna `npx @marp-cli/marp` dan di-commit supaya ada fail presentable pada hari kursus tanpa sebarang setup. Jika rangkaian menghalang muat turun pakej Marp, fallback = commit sumber `.md` + resipi build sahaja.
+**Nota commit PDF:** PDF dirender guna `npx @marp-team/marp-cli` dan di-commit supaya ada fail presentable pada hari kursus tanpa sebarang setup. Jika rangkaian menghalang muat turun pakej Marp, fallback = commit sumber `.md` + resipi build sahaja.
 
 ## 4. Slaid — Kandungan
 
@@ -95,7 +95,7 @@ Kedua-dua deck bersumberkan nota pengenalan sedia ada dalam `README.md` setiap m
 
 ## 7. Pengesahan (verification)
 
-- `npx @marp-cli/marp slides/modul-1-power-bi.md --pdf` menghasilkan PDF tanpa error; sama untuk deck 2.
+- `npx @marp-team/marp-cli slides/modul-1-power-bi.md --pdf` menghasilkan PDF tanpa error; sama untuk deck 2.
 - Setiap deck dibuka & semua slaid render (teks BM + istilah English betul).
 - Semua lab: rujukan placeholder mengikut konvensyen `![...](img/NN-nama.png)`; folder `img/` wujud.
 - `docs/SCREENSHOTS.md` menyenaraikan setiap fail screenshot yang dirujuk dalam mana-mana lab (tiada rujukan tertinggal).
