@@ -6,7 +6,7 @@ di-commit supaya boleh terus dibentangkan tanpa sebarang pemasangan.
 
 | Fail | Slot |
 |------|------|
-| `modul-1-power-bi.md` | Slot 1 — Power BI (~20 min) |
+| `modul-1-power-bi.md` | Slot 1 — Power BI (~30 min, English) |
 | `modul-2-notebooklm-gemini.md` | Slot 2 — NotebookLM & Gemini (~20 min) |
 
 ## Render semula

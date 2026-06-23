@@ -8,9 +8,9 @@ footer: 'Kursus Lanjutan KKM 2026 · Dr. Muhammad Naufal bin Nordin'
 <!-- _class: lead -->
 <!-- _paginate: false -->
 
-# Transformasi Statistik Perubatan menggunakan Power BI
+# Transforming Medical Statistics with Power BI
 
-**Slot 1 — 25 Jun 2026 (Khamis)**
+**Slot 1 — 25 Jun 2026 (Thursday)**
 Kursus Lanjutan (Advanced) — Pegawai Tadbir (Rekod Perubatan) & Penolong
 KKM 2026
 
@@ -18,80 +18,112 @@ Dr. Muhammad Naufal bin Nordin
 
 ---
 
-## Apa itu Power BI?
+## What is Power BI?
 
-- Alat *business intelligence* daripada Microsoft.
-- Menukar data mentah (Excel, CSV, pangkalan data) → **dashboard** & **laporan** interaktif.
-- Untuk Rekod Perubatan: beralih daripada kira statistik **manual di Excel** → **dashboard automatik** yang sentiasa dikemas kini.
-
----
-
-## Kenapa relevan untuk statistik perubatan?
-
-- Kira **BOR**, **ALOS**, kemasukan/discaj secara **automatik**.
-- Tapis ikut **wad**, **disiplin**, atau **bulan** dengan satu klik.
-- Kongsi gambaran statistik yang **konsisten** kepada pengurusan.
+- A **business intelligence** tool from Microsoft.
+- Turns raw data (Excel, CSV, databases) into interactive **dashboards** & **reports**.
+- For Medical Records: move from **manual Excel statistics** → **automatic dashboards** that are always up to date.
 
 ---
 
-## Aliran kerja Power BI
+## The 5 types of analytics
+
+- **Descriptive** — what happened? (counts, trends → *today's dashboard*)
+- **Diagnostic** — why did it happen? (slicing, drill-down → *also today*)
+- **Predictive** — what will happen? (forecasting → *Module 2 / AI*)
+- **Prescriptive** — what should we do? (recommendations)
+- **Continuous** — real-time, always-on automated analytics
+
+---
+
+## Why it matters for KKM
+
+- **Automate** counts and rates — no more manual tallying.
+- **Filter** by state, age group, or vaccination status in one click.
+- **Share** consistent figures with management — everyone sees the same numbers.
+
+---
+
+## The Power BI workflow
 
 ```
 Get Data → Transform → Model → Visualize → Share
 ```
 
-1. **Get Data** — import CSV/Excel.
-2. **Transform** — bersihkan (Power Query).
-3. **Model** — hubungan antara jadual.
-4. **Visualize** — carta & dashboard.
-5. **Share** — eksport/kongsi.
+1. **Get Data** — import CSV/Excel/database.
+2. **Transform** — clean & shape the data (Power Query).
+3. **Model** — define relationships between tables.
+4. **Visualize** — build charts & dashboards.
+5. **Share** — publish/export to others.
 
 ---
 
-## Lawatan ringkas antara muka
+## A quick tour: 3 views
 
-Tiga *view* di tepi kiri Power BI Desktop:
+Three views on the left side of Power BI Desktop:
 
-- **Report view** — kanvas untuk bina visual & dashboard.
-- **Data view** — lihat jadual data (rows & columns).
-- **Model view** — urus hubungan (*relationship*) antara jadual.
-
----
-
-## Pratonton hasil akhir
-
-Satu halaman dashboard dengan:
-
-- Kad **KPI** (Jumlah Kemasukan, ALOS, BOR %)
-- Carta kemasukan **ikut disiplin**
-- Carta pesakit **ikut wad**
-- Carta **trend kemasukan bulanan**
-- **Slicer** (disiplin, wad, bulan)
+- **Report view** — canvas for building visuals & dashboards.
+- **Data view** — inspect tables (rows & columns).
+- **Model view** — manage relationships between tables.
 
 ---
 
-## Apa yang kita bina hari ini
+## What is a data model?
 
-| # | Lab | Masa |
-|---|-----|------|
-| 1 | Import data | 15 min |
-| 2 | Bersihkan data (Power Query) | 25 min |
-| 3 | Model & hubungan | 20 min |
-| 4 | Ukuran (measure) DAX | 30 min |
-| 5 | Visual asas | 30 min |
-| 6 | Dashboard interaktif | 25 min |
-| 7 | Eksport & simpan | 10 min |
+- **Fact table** — the events/measurements (e.g. each death).
+- **Dimension table** — the descriptive context (date, state, age group).
+- Intuition: **one big flat table** vs **related smaller tables** — a model uses the latter (a **star schema**).
+- Today: **Deaths** fact table + **Date** and **State** dimension tables.
 
 ---
 
-## Sebelum mula
+## What is a measure (DAX)?
 
-- Dataset **sepenuhnya sintetik** — tiada data pesakit sebenar.
-- Format: **hands-on** — ikut langkah, tanya bila tersekat.
-- Setiap lab boleh **diulang sendiri** selepas kursus.
+- **Column** — a stored value, fixed per row (e.g. *State*, *Age*).
+- **Measure** — a calculation evaluated **in context**, using DAX (e.g. *Total Deaths*, *Deaths per 100k*).
+- Measures recalculate automatically as you filter or slice the report.
+
+---
+
+## Today's data
+
+- Source: **data.gov.my** — open government data.
+- Dataset: **COVID-19 deaths line-list**.
+- **One row = one death.**
+- ~37,000 deaths, **2020–2024**, by state, age, sex, comorbidity, and vaccination status.
+
+---
+
+## Is this safe to use?
+
+- Open, **aggregate / de-identified** government data → safe to share, publish, and teach with.
+- **Never** upload real patient records or confidential documents to any cloud/AI tool.
+- This rule applies beyond today's class — it's a standing data-security principle.
+
+---
+
+## What we'll build today
+
+A one-page dashboard with:
+
+- **KPI cards** — total deaths, key summary numbers.
+- **Line chart** — deaths over time.
+- **Bar chart** — deaths by state.
+- **Breakdown by age group.**
+- **Donut chart** — vaccination status.
+- **Slicers** — to filter everything above interactively.
+
+---
+
+## Follow-along ground rules
+
+- Everyone builds on their **own laptop**.
+- Data files are in `modul-1-power-bi/data/`.
+- **Raise your hand** if you get stuck — don't wait.
+- We save **checkpoints** along the way so you can rejoin at any point.
 
 ---
 
 <!-- _class: lead -->
 
-# Mari mula → Lab 1
+# Let's build → hands-on-guide
