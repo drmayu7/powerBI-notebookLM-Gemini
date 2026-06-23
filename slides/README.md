@@ -27,6 +27,10 @@ npx -y @marp-team/marp-cli slides/module-1-power-bi.md --pdf -o slides/build/mod
 # PowerPoint (for editing in PowerPoint)
 npx -y @marp-team/marp-cli slides/module-1-power-bi.md --pptx -o slides/build/module-1-power-bi.pptx
 
+# Speaker notes: Marp does NOT copy <!-- notes --> into the .pptx, so run this
+# afterwards to inject them into the PowerPoint Notes pane (needs python-pptx):
+python slides/apply_pptx_notes.py slides/module-1-power-bi.md slides/build/module-1-power-bi.pptx
+
 # HTML (for presenting from a browser)
 npx -y @marp-team/marp-cli slides/module-1-power-bi.md --html -o slides/build/module-1-power-bi.html
 ```
