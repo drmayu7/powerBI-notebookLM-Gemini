@@ -10,18 +10,15 @@ rosak** — ini normal.
 
 ## Modul 1 — Power BI (`modul-1-power-bi/img/`)
 
+> Modul 1 kini **demo langsung (live)** + `hands-on-guide.md` sebagai jaring
+> keselamatan. Panduan tidak menyemat imej, jadi screenshot adalah **opsyenal**.
+> Tangkap hanya yang sukar dipulihkan secara teks — paling baik ditangkap
+> sambil membina fail checkpoint `.pbix`.
+
 | Siap | Fail | Langkah dalam panduan | Apa yang ditangkap |
 |------|------|------------------------|--------------------|
-| [ ] | `01-get-data-csv.png` | Part 1, 1.1 | Home → Get Data → Text/CSV (pilih covid_deaths_linelist.csv) |
-| [ ] | `02-custom-column-agegroup.png` | Part 1, 1.3 | Custom Column dialog — formula Age_Group |
-| [ ] | `02-custom-column-vaccine.png` | Part 1, 1.3 | Custom Column dialog — formula Vaccination_Status |
-| [ ] | `02-dim-state.png` | Part 1, 1.4 | Dim_State selepas filter + lajur Region & Population |
-| [ ] | `03-mark-date-table.png` | Part 2, 2.2 | Mark as date table pada Dim_Date[Date] |
-| [ ] | `03-model-star.png` | Part 2, 2.3 | Model view — star schema dengan 4 hubungan |
-| [ ] | `04-new-measure.png` | Part 3 | New measure — Deaths per 100k |
-| [ ] | `05-cards-visuals.png` | Part 4 | 4 kad KPI + carta garis/bar/lajur/donut |
-| [ ] | `06-slicers-dashboard.png` | Part 5, 5.1 | 4 slicer + cross-filter dashboard lengkap |
-| [ ] | `07-map-per100k.png` | Part 5, 5.2 (pilihan) | Filled map — Deaths per 100k (opsyenal) |
+| [ ] | `03-model-star.png` | Part 2, 2.3 | Model view — star schema dengan 4 hubungan (langkah paling sukar dikejar semula) |
+| [ ] | `05-cards-visuals.png` | Part 4 | Susun atur dashboard akhir (4 kad + carta garis/bar/lajur/donut) |
 
 ## Modul 2 — NotebookLM & Gemini (`modul-2-notebooklm-gemini/lab/img/`)
 
