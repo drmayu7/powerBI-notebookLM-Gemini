@@ -25,9 +25,9 @@ rosak** — ini normal.
 | Siap | Fail | Lab / langkah | Apa yang ditangkap |
 |------|------|---------------|--------------------|
 | [ ] | `01-add-sources.png` | Lab 1, langkah 3 | Butang Add sources di NotebookLM |
-| [ ] | `01-sumber-diproses.png` | Lab 1, hasil | Senarai sumber diproses di panel kiri |
+| [ ] | `01-sources-processed.png` | Lab 1, hasil | Senarai sumber diproses di panel kiri |
 | [ ] | `02-citation.png` | Lab 2, langkah 4 | Jawapan dengan nombor citation diklik |
 | [ ] | `03-studio-output.png` | Lab 3, Bahagian A | Output berstruktur (briefing/study guide) di Studio |
-| [ ] | `03-gemini-slaid.png` | Lab 3, Bahagian B | Rangka slaid dijana oleh Gemini |
-| [ ] | `04-minit-jadual.png` | Lab 4, langkah 4 | Draf minit mesyuarat berlajur |
+| [ ] | `03-gemini-slides.png` | Lab 3, Bahagian B | Rangka slaid dijana oleh Gemini |
+| [ ] | `04-minutes-table.png` | Lab 4, langkah 4 | Draf minit mesyuarat berlajur |
 | [ ] | `05-audio-overview.png` | Lab 5 | Audio Overview di panel Studio |

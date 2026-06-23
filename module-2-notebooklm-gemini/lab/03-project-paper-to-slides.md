@@ -40,7 +40,7 @@ pembentangan menggunakan NotebookLM Studio dan Gemini.
    [tampal ringkasan di sini]
    ```
 
-   ![Rangka slaid dijana oleh Gemini](img/03-gemini-slaid.png)
+   ![Rangka slaid dijana oleh Gemini](img/03-gemini-slides.png)
 
 3. Perhalusi dengan *prompt* susulan, contohnya:
    - "Ringkaskan slaid 3 supaya lebih padat."

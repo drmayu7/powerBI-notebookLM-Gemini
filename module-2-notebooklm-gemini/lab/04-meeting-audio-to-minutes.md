@@ -31,7 +31,7 @@ berstruktur.
    Bil | Perkara | Keputusan/Tindakan | Pegawai Bertanggungjawab | Tarikh
    ```
 
-   ![Draf minit mesyuarat berlajur](img/04-minit-jadual.png)
+   ![Draf minit mesyuarat berlajur](img/04-minutes-table.png)
 
 5. (Pilihan) Halusi di **Gemini** — tampal draf dan minta:
    ```

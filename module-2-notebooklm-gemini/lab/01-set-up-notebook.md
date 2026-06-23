@@ -39,6 +39,6 @@ beberapa dokumen rujukan awam.
 Satu notebook dengan **2–3 sumber** yang telah diproses dan tersenarai di panel
 sumber (kiri). NotebookLM bersedia untuk menjawab soalan.
 
-![Sumber diproses & tersenarai](img/01-sumber-diproses.png)
+![Sumber diproses & tersenarai](img/01-sources-processed.png)
 
 ➡️ Seterusnya: [Lab 2 — Tanya korpus](02-query-the-corpus.md)
