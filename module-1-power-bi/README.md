@@ -66,6 +66,9 @@ real-world Power BI reports.
   files are documented there. Use it to follow along live or to redo the
   build on your own afterwards.
 - The **theory slide deck** is at [`../slides/module-1-power-bi.md`](../slides/module-1-power-bi.md).
+- **[express-build-checklist.md](express-build-checklist.md)** — a condensed
+  ~20-min build (facilitator prep) for quickly producing a presentable
+  dashboard and its screenshots.
 
 ---
 
