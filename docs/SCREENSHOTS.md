@@ -17,8 +17,8 @@ image icon** — this is normal.
 
 | Done | File | Step in guide | What to capture |
 |------|------|------------------------|--------------------|
-| [ ] | `03-model-star.png` | Part 2, 2.3 | Model view — star schema with 4 relationships (the step hardest to recreate) |
-| [ ] | `05-cards-visuals.png` | Part 4 | Final dashboard layout (4 cards + line/bar/column/donut charts) |
+| [x] | `03-model-star.png` | Part 2, 2.3 | Model view — star schema with 4 relationships (the step hardest to recreate) |
+| [x] | `05-cards-visuals.png` | Part 4 | Final dashboard layout (4 cards + line/bar/column/donut charts) |
 
 ## Module 2 — NotebookLM & Gemini (`module-2-notebooklm-gemini/lab/img/`)
 
