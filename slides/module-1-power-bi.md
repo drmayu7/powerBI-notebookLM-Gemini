@@ -70,12 +70,12 @@ Three views on the left side of Power BI Desktop:
 
 ## What is a data model?
 
-![bg right:46%](../module-1-power-bi/img/03-model-star.png)
+![bg left:60% fit](../module-1-power-bi/img/03-model-star.png)
 
-- **Fact table** — the events (e.g. each death).
-- **Dimension table** — the context (date, state, age group).
-- Intuition: **related smaller tables**, not one big flat table — a **star schema**.
-- Today: **Deaths** fact + **Date** and **State** dimensions.
+- **Fact:** `Fact_Deaths`
+- **Dimensions:** `Dim_Date`, `Dim_State`
+- **Relationships** join them
+- → a **star schema**
 
 ---
 
