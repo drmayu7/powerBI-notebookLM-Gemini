@@ -20,6 +20,8 @@ pembentangan menggunakan NotebookLM Studio dan Gemini.
    - **Briefing doc** — ringkasan eksekutif berstruktur.
    - **Study guide** — pecahan topik utama dan soalan.
 
+   ![Output berstruktur dari Studio](img/03-studio-output.png)
+
 4. Salin (copy) output struktur tersebut — ini menjadi asas slaid anda.
 
 ---
@@ -37,6 +39,8 @@ pembentangan menggunakan NotebookLM Studio dan Gemini.
 
    [tampal ringkasan di sini]
    ```
+
+   ![Rangka slaid dijana oleh Gemini](img/03-gemini-slaid.png)
 
 3. Perhalusi dengan *prompt* susulan, contohnya:
    - "Ringkaskan slaid 3 supaya lebih padat."

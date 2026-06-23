@@ -20,6 +20,8 @@ jawapan melalui citation** — tanpa perlu *flip* banyak muka surat.
 4. **Klik nombor petikan** tersebut. NotebookLM akan menunjukkan **petikan tepat**
    dari dokumen sumber — sahkan jawapan itu benar-benar daripada dokumen.
 
+   ![Jawapan dengan citation yang diklik](img/02-citation.png)
+
 5. Tanya soalan susulan untuk pergi lebih dalam, cth.:
    - "Ringkaskan langkah-langkah utama dalam bentuk senarai."
    - "Apakah pengecualian kepada prosedur ini?"
