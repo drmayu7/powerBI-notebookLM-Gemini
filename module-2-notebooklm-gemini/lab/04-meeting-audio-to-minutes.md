@@ -1,23 +1,24 @@
-# Lab 4 (Aliran 3): Audio Mesyuarat → Minit Mesyuarat
+# Lab 4 (Workflow 3): Meeting Audio → Meeting Minutes
 
-**Matlamat:** Tukar rakaman audio mesyuarat kepada **draf minit mesyuarat**
-berstruktur.
+**Goal:** Turn a meeting audio recording into a structured **draft meeting
+minutes** document.
 
-> **⚠️ Amaran:** Dapatkan **kebenaran** sebelum merakam mesyuarat. Elak
-> memuat naik perbincangan yang mengandungi maklumat sulit ke akaun peribadi.
+> **⚠️ Warning:** Obtain **permission** before recording a meeting. Avoid
+> uploading discussions containing confidential information to a personal
+> account.
 
 ---
 
-## Langkah
+## Steps
 
-1. **Sediakan sumber audio/transkrip:**
-   - Rakam mesyuarat (cth. guna perakam suara telefon), **atau**
-   - Jika anda sudah ada transkrip teks, gunakan terus sebagai sumber.
+1. **Prepare your audio/transcript source:**
+   - Record the meeting (e.g. using a phone voice recorder), **or**
+   - If you already have a text transcript, use it directly as the source.
 
-2. Dalam NotebookLM, **Add source** dan upload fail audio (atau tampal transkrip).
-   NotebookLM akan memproses kandungannya.
+2. In NotebookLM, click **Add source** and upload the audio file (or paste the
+   transcript). NotebookLM will process the content.
 
-3. Dalam chat, minta ringkasan berstruktur. Contoh *prompt*:
+3. In the chat, ask for a structured summary. Example prompt:
    ```
    Ringkaskan mesyuarat ini. Senaraikan:
    1. Perkara yang dibincangkan
@@ -25,29 +26,29 @@ berstruktur.
    3. Tindakan susulan (siapa & bila)
    ```
 
-4. Minta format minit mesyuarat. Contoh *prompt*:
+4. Ask for the meeting minutes format. Example prompt:
    ```
    Susun semula sebagai minit mesyuarat dengan jadual berlajur:
    Bil | Perkara | Keputusan/Tindakan | Pegawai Bertanggungjawab | Tarikh
    ```
 
-   ![Draf minit mesyuarat berlajur](img/04-minutes-table.png)
+   ![Draft meeting minutes table](img/04-minutes-table.png)
 
-5. (Pilihan) Halusi di **Gemini** — tampal draf dan minta:
+5. (Optional) Refine in **Gemini** — paste the draft and ask:
    ```
    Kemaskan minit mesyuarat ini dalam nada rasmi dan format kemas untuk
    diedarkan. Pastikan setiap tindakan ada pegawai bertanggungjawab.
    ```
 
-6. Semak dan betulkan draf secara manual sebelum diedarkan — AI membantu draf,
-   bukan menggantikan semakan anda.
+6. Review and correct the draft manually before distribution — AI helps draft
+   it, but does not replace your review.
 
 ---
 
-## Hasil yang dijangka
+## Expected outcome
 
-Satu **draf minit mesyuarat** berstruktur (Bil, Perkara, Tindakan, Pegawai,
-Tarikh) yang dijana daripada rakaman/transkrip, sedia untuk disemak dan
-dimuktamadkan.
+A structured **draft meeting minutes** document (No., Item, Action, Officer,
+Date) generated from the recording/transcript, ready to be reviewed and
+finalized.
 
-➡️ Seterusnya: [Lab 5 — Explore lanjut](05-explore-further.md)
+➡️ Next: [Lab 5 — Explore further](05-explore-further.md)

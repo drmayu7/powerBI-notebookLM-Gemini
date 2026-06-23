@@ -1,44 +1,46 @@
-# Lab 5: Explore Lanjut
+# Lab 5: Explore Further
 
-**Matlamat:** Terokai ciri-ciri lain NotebookLM dan Gemini yang berguna untuk
-kerja harian pengurusan rekod.
-
----
-
-## Ciri tambahan NotebookLM (panel Studio)
-
-Cuba jana output berikut daripada notebook anda:
-
-- **Audio Overview** — menjana "podcast" ringkasan dua pembentang yang
-  membincangkan dokumen anda. Berguna untuk fahami dokumen panjang sambil memandu
-  atau berjalan.
-- **FAQ** — senarai soalan lazim & jawapan yang dijana dari dokumen.
-- **Study Guide** — panduan belajar berstruktur (soalan, istilah, ringkasan).
-- **Mind Map** — peta minda hubungan antara konsep dalam dokumen.
-- **Timeline / Briefing doc** — kronologi atau ringkasan eksekutif.
-
-> Cuba jana **Audio Overview** daripada satu garis panduan — dengar bagaimana ia
-> menerangkan kandungan secara perbualan.
-
-![Audio Overview di panel Studio](img/05-audio-overview.png)
+**Goal:** Explore other NotebookLM and Gemini features that are useful for the
+daily work of records management.
 
 ---
 
-## Gemini untuk dokumentasi rasmi
+## Additional NotebookLM features (Studio panel)
 
-Gemini berguna untuk mendraf dan mengolah dokumen. Contoh *prompt*:
+Try generating the following outputs from your notebook:
 
-- **Draf memo:**
+- **Audio Overview** — generates a summary "podcast" with two presenters
+  discussing your document. Useful for understanding a long document while
+  driving or walking.
+- **FAQ** — a list of frequently asked questions and answers generated from
+  the document.
+- **Study Guide** — a structured study guide (questions, terms, summary).
+- **Mind Map** — a mind map of the relationships between concepts in the
+  document.
+- **Timeline / Briefing doc** — a chronology or executive summary.
+
+> Try generating an **Audio Overview** from a guideline — listen to how it
+> explains the content conversationally.
+
+![Audio Overview in the Studio panel](img/05-audio-overview.png)
+
+---
+
+## Gemini for official documentation
+
+Gemini is useful for drafting and refining documents. Example prompts:
+
+- **Draft a memo:**
   ```
   Draf satu memo rasmi dalam Bahasa Melayu untuk memaklumkan ketua jabatan
   tentang [perkara]. Nada formal, ringkas, dengan tindakan yang jelas.
   ```
-- **Ringkas laporan:**
+- **Summarize a report:**
   ```
   Ringkaskan laporan ini kepada 5 poin utama untuk pembentangan pengurusan.
   [tampal teks]
   ```
-- **Perbaiki bahasa:**
+- **Improve the language:**
   ```
   Perbaiki tatabahasa dan gaya bahasa perenggan berikut supaya lebih kemas:
   [tampal teks]
@@ -46,22 +48,22 @@ Gemini berguna untuk mendraf dan mengolah dokumen. Contoh *prompt*:
 
 ---
 
-## Cabaran: gunakan dokumen anda sendiri
+## Challenge: use your own documents
 
-Selepas kursus, cuba aplikasikan ketiga-tiga aliran kerja kepada dokumen kerja
-anda yang sebenar (dengan mematuhi dasar keselamatan data). Eksperimen dengan
-*prompt* berbeza untuk lihat apa yang paling membantu.
+After the course, try applying all three workflows to your own real work
+documents (while complying with data security policy). Experiment with
+different prompts to see what helps most.
 
-> **Ingat amaran data:** gunakan hanya dokumen yang anda berhak proses, dan ikut
-> garis panduan keselamatan maklumat jabatan.
+> **Remember the data warning:** use only documents you are authorized to
+> process, and follow your department's information security guidelines.
 
 ---
 
-## Hasil yang dijangka
+## Expected outcome
 
-Anda telah mencuba sekurang-kurangnya satu ciri tambahan (cth. Audio Overview)
-dan tahu beberapa *prompt* Gemini untuk mendraf memo/laporan — serta tahu ciri
-mana untuk diterokai sendiri selepas kursus.
+You have tried at least one additional feature (e.g. Audio Overview) and know
+several Gemini prompts for drafting memos/reports — and know which features to
+explore further on your own after the course.
 
-🎉 **Tahniah!** Anda telah melengkapkan Modul 2. Kembali ke
-[README Modul 2](../README.md) atau [halaman utama repo](../../README.md).
+🎉 **Congratulations!** You have completed Module 2. Return to the
+[Module 2 README](../README.md) or the [repo home page](../../README.md).

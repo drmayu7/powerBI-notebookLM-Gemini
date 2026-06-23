@@ -1,42 +1,44 @@
-# Lab 2 (Aliran 1): Tanya Korpus Rujukan
+# Lab 2 (Workflow 1): Query the Reference Corpus
 
-**Matlamat:** Tanya soalan prosedur kepada dokumen yang anda upload, dan **sahkan
-jawapan melalui citation** — tanpa perlu *flip* banyak muka surat.
-
----
-
-## Langkah
-
-1. Dalam notebook anda (dari Lab 1), pergi ke kotak **chat** di tengah.
-
-2. Taip soalan spesifik berdasarkan dokumen anda. Contoh:
-   - "Apakah prosedur permohonan laporan perubatan?"
-   - "Apakah tempoh yang ditetapkan untuk menyimpan rekod perubatan?"
-   - "Siapa yang perlu meluluskan permohonan ini?"
-
-3. Baca jawapan yang dijana. Perhatikan terdapat **nombor petikan** (cth. `[1]`,
-   `[2]`) di dalam jawapan.
-
-4. **Klik nombor petikan** tersebut. NotebookLM akan menunjukkan **petikan tepat**
-   dari dokumen sumber — sahkan jawapan itu benar-benar daripada dokumen.
-
-   ![Jawapan dengan citation yang diklik](img/02-citation.png)
-
-5. Tanya soalan susulan untuk pergi lebih dalam, cth.:
-   - "Ringkaskan langkah-langkah utama dalam bentuk senarai."
-   - "Apakah pengecualian kepada prosedur ini?"
-
-> **Amalan baik:**
-> - Tanya soalan yang **spesifik** — jawapan lebih tepat.
-> - **Sentiasa sahkan citation** sebelum menggunakan jawapan untuk kerja rasmi.
-> - Jika jawapan berkata maklumat tiada dalam sumber, ia memang tiada — tambah
->   dokumen yang relevan jika perlu.
+**Goal:** Ask procedural questions against the documents you uploaded, and
+**verify the answers via citations** — without having to flip through many
+pages.
 
 ---
 
-## Hasil yang dijangka
+## Steps
 
-Anda memperoleh jawapan **bersumber** kepada soalan prosedur, dan tahu cara
-**mengklik citation** untuk mengesahkan ketepatannya terhadap dokumen asal.
+1. In your notebook (from Lab 1), go to the **chat** box in the middle.
 
-➡️ Seterusnya: [Lab 3 — Kertas projek → slaid](03-project-paper-to-slides.md)
+2. Type a specific question based on your documents. Examples:
+   - "What is the procedure for requesting a medical report?"
+   - "What is the stipulated retention period for medical records?"
+   - "Who needs to approve this application?"
+
+3. Read the generated answer. Notice the **citation numbers** (e.g. `[1]`,
+   `[2]`) within the answer.
+
+4. **Click on a citation number.** NotebookLM will show you the **exact
+   excerpt** from the source document — confirming the answer truly comes
+   from the document.
+
+   ![Answer with a clicked citation](img/02-citation.png)
+
+5. Ask follow-up questions to go deeper, e.g.:
+   - "Summarize the main steps as a list."
+   - "What are the exceptions to this procedure?"
+
+> **Good practice:**
+> - Ask **specific** questions — answers will be more accurate.
+> - **Always verify citations** before using the answer for official work.
+> - If the answer says the information is not in the source, it genuinely
+>   isn't — add the relevant document if needed.
+
+---
+
+## Expected outcome
+
+You obtain **sourced** answers to procedural questions, and know how to
+**click a citation** to verify its accuracy against the original document.
+
+➡️ Next: [Lab 3 — Project paper → slides](03-project-paper-to-slides.md)

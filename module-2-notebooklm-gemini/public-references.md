@@ -1,47 +1,48 @@
-# Rujukan Dokumen Awam
+# Public Reference Documents
 
-Senarai ini mengandungi **dokumen awam** yang boleh dimuat turun untuk latihan
-NotebookLM (Lab 1). Gunakan dokumen ini supaya tiada risiko data sulit.
+This list contains **public documents** that can be downloaded for NotebookLM
+training (Lab 1). Use these documents so there is no risk of confidential
+data.
 
-> **Penting:**
-> - Pautan boleh berubah atau luput dari masa ke masa. Item bertanda `[sahkan]`
->   perlu disahkan masih hidup **sebelum kursus** (lihat nota di bawah).
-> - Anda juga boleh **menggantikan** dengan dokumen anda sendiri semasa bengkel
->   (dengan mematuhi dasar keselamatan data — gunakan dokumen awam atau yang
->   telah dinyahkenal).
+> **Important:**
+> - Links may change or expire over time. Items marked `[verify]` must be
+>   confirmed as still live **before the course** (see note below).
+> - You may also **substitute** your own documents during the workshop
+>   (while complying with data security policy — use public or de-identified
+>   documents).
 
 ---
 
-## Portal rasmi (titik mula carian)
+## Official portals (starting points for search)
 
-| Sumber | Portal | Kandungan berkaitan |
+| Source | Portal | Related content |
 | --- | --- | --- |
-| KKM | `https://www.moh.gov.my` | Garis panduan, pekeliling, polisi kesihatan |
-| JPA | `https://www.jpa.gov.my` | Pekeliling perkhidmatan, surat edaran |
-| MyGovernment | `https://www.malaysia.gov.my` | Perkhidmatan & dokumen kerajaan |
-| Data Terbuka | `https://www.data.gov.my` | Set data kesihatan & statistik awam |
-| MAMPU/Pekeliling | `https://www.mampu.gov.my` | Pekeliling tadbir urus & ICT |
+| MOH | `https://www.moh.gov.my` | Guidelines, circulars, health policy |
+| JPA | `https://www.jpa.gov.my` | Service circulars, circular letters |
+| MyGovernment | `https://www.malaysia.gov.my` | Government services & documents |
+| Open Data | `https://www.data.gov.my` | Health datasets & public statistics |
+| MAMPU/Circulars | `https://www.mampu.gov.my` | Governance & ICT circulars |
 
 ---
 
-## Dokumen cadangan untuk latihan
+## Suggested documents for training
 
-Pilih 2–3 untuk dimuat turun dan diupload ke NotebookLM. Sahkan setiap pautan
-masih hidup sebelum digunakan.
+Choose 2–3 to download and upload to NotebookLM. Verify each link is still
+live before use.
 
-| Tajuk (cadangan) | Sumber | Pautan | Tarikh Akses | Status |
+| Title (suggested) | Source | Link | Access Date | Status |
 | --- | --- | --- | --- | --- |
-| Garis Panduan Pengurusan Rekod Perubatan | KKM | cari di `moh.gov.my` → Penerbitan / Garis Panduan | 2026-06-22 | `[sahkan]` |
-| Pekeliling Perkhidmatan berkaitan pengurusan rekod | JPA | cari di `jpa.gov.my` → Pekeliling | 2026-06-22 | `[sahkan]` |
-| Akta/Polisi berkaitan Lembaga Perubatan | KKM | cari di `moh.gov.my` | 2026-06-22 | `[sahkan]` |
-| Statistik Kesihatan Malaysia (set data awam) | data.gov.my | cari "kesihatan" di `data.gov.my` | 2026-06-22 | `[sahkan]` |
+| Medical Records Management Guideline | MOH | search `moh.gov.my` → Publications / Guidelines | 2026-06-22 | `[verify]` |
+| Service Circular related to records management | JPA | search `jpa.gov.my` → Circulars | 2026-06-22 | `[verify]` |
+| Act/Policy related to the Medical Board | MOH | search `moh.gov.my` | 2026-06-22 | `[verify]` |
+| Malaysia Health Statistics (public dataset) | data.gov.my | search "health" on `data.gov.my` | 2026-06-22 | `[verify]` |
 
 ---
 
-## Nota untuk penceramah (sebelum kursus)
+## Note for the presenter (before the course)
 
-> Sebelum 25 Jun 2026, sahkan setiap pautan `[sahkan]` di atas:
-> 1. Buka portal, cari dokumen sebenar, salin URL muat turun yang tepat.
-> 2. Kemas kini lajur **Pautan** dan tukar **Status** kepada `✅ disahkan`.
-> 3. Muat turun salinan sandaran (backup) sekiranya WiFi tempat kursus tidak
->    stabil — peserta boleh salin fail dari pemacu USB.
+> Before 25 June 2026, verify each `[verify]` link above:
+> 1. Open the portal, find the actual document, copy the exact download URL.
+> 2. Update the **Link** column and change **Status** to `✅ verified`.
+> 3. Download a backup copy in case the venue's WiFi is unstable —
+>    participants can copy the file from a USB drive.

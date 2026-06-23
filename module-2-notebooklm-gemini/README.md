@@ -1,65 +1,65 @@
-# Modul 2: NotebookLM dan Gemini
+# Module 2: NotebookLM and Gemini
 
-**Slot 2 — 25 Jun 2026 (Khamis), 11:30 tgh – 4:00 ptg**
-Penceramah: Dr. Muhammad Naufal bin Nordin
+**Slot 2 — 25 June 2026 (Thursday), 11:30 am – 4:00 pm**
+Presenter: Dr. Muhammad Naufal bin Nordin
 
-*Potensi Kecerdasan Buatan (AI) dalam Automasi Data & Dokumentasi.*
+*The Potential of Artificial Intelligence (AI) in Data & Documentation Automation.*
 
-Modul ini menunjukkan bagaimana AI boleh membantu kerja harian pengurusan rekod:
-menjawab soalan daripada timbunan dokumen rujukan, menukar kertas projek kepada
-slaid, dan menyediakan minit mesyuarat daripada rakaman audio.
+This module shows how AI can support the day-to-day work of records management:
+answering questions from a stack of reference documents, turning a project paper
+into slides, and producing meeting minutes from an audio recording.
 
 ---
 
-## Pengenalan (Ceramah ~20 min)
+## Introduction (Lecture ~20 min)
 
-### NotebookLM vs Gemini — apa bezanya?
+### NotebookLM vs Gemini — what's the difference?
 
 | | **NotebookLM** | **Gemini** |
 | --- | --- | --- |
-| Sifat | AI *grounded* — jawapan berdasarkan **dokumen yang anda upload** | AI generatif umum |
-| Kekuatan | Jawapan disertai **petikan (citation)** ke sumber asal | Menjana & mengolah teks bebas |
-| Guna untuk | Tanya korpus rujukan, ringkasan dokumen | Draf memo, olah slaid, idea umum |
+| Nature | *Grounded* AI — answers based on **documents you upload** | General generative AI |
+| Strength | Answers come with **citations** to the original source | Generates & drafts free-form text |
+| Use for | Querying a reference corpus, document summaries | Drafting memos, working on slides, general ideas |
 
-### Kenapa relevan untuk pengurusan rekod?
-Anda menyimpan banyak surat PUU, surat edaran, garis panduan, dan prosedur.
-Untuk menjawab satu soalan, selalunya perlu *flip* banyak muka surat. Dengan
-NotebookLM, anda upload semua dokumen sekali, kemudian **tanya sahaja** — dan
-jawapan datang dengan rujukan ke sumbernya.
+### Why is this relevant to records management?
+You keep many statutory letters (PUU), circulars, guidelines, and procedures.
+Answering a single question often means flipping through many pages. With
+NotebookLM, you upload all the documents once, then simply **ask** — and the
+answer comes with references to its source.
 
-### Konsep penting
-- **Grounding** — NotebookLM hanya menjawab berdasarkan dokumen yang anda beri,
-  bukan dari "pengetahuan umum" yang mungkin tidak tepat.
-- **Citation (petikan)** — setiap jawapan menunjukkan dari bahagian mana sumber
-  ia diambil, supaya anda boleh sahkan sebelum guna.
+### Key concepts
+- **Grounding** — NotebookLM only answers based on the documents you provide,
+  not from "general knowledge" that may be inaccurate.
+- **Citation** — every answer shows which part of the source it was drawn
+  from, so you can verify it before using it.
 
-### ⚠️ Amaran Data Sensitif
+### ⚠️ Sensitive Data Warning
 
-> **JANGAN** muat naik data pesakit sebenar, surat PUU sulit, atau dokumen
-> terhad ke akaun Google peribadi. Untuk latihan, gunakan **dokumen awam**
-> (lihat [`public-references.md`](public-references.md)) atau dokumen yang telah
-> di-*deidentify* (nyahkenal). Sentiasa patuhi dasar keselamatan maklumat
-> jabatan anda.
-
----
-
-## 3 Aliran Kerja Utama
-
-1. **Tanya korpus rujukan** — upload garis panduan/prosedur, tanya soalan,
-   dapat jawapan + citation.
-2. **Kertas projek → slaid** — tukar kertas projek kepada rangka slaid.
-3. **Audio mesyuarat → minit** — transkrip rakaman, draf minit mesyuarat.
+> **DO NOT** upload real patient data, confidential statutory letters (PUU), or
+> restricted documents to a personal Google account. For training, use **public
+> documents** (see [`public-references.md`](public-references.md)) or documents
+> that have been de-identified. Always comply with your department's
+> information security policy.
 
 ---
 
-## Peta Lab
+## 3 Main Workflows
 
-| Langkah | Fail | Anggaran masa |
+1. **Query the reference corpus** — upload guidelines/procedures, ask
+   questions, get answers + citations.
+2. **Project paper → slides** — turn a project paper into a slide outline.
+3. **Meeting audio → minutes** — transcribe a recording, draft meeting minutes.
+
+---
+
+## Lab Map
+
+| Step | File | Estimated time |
 | --- | --- | --- |
-| 1 | [Sediakan notebook](lab/01-set-up-notebook.md) | 20 min |
-| 2 | [Aliran 1: Tanya korpus](lab/02-query-the-corpus.md) | 30 min |
-| 3 | [Aliran 2: Kertas projek → slaid](lab/03-project-paper-to-slides.md) | 35 min |
-| 4 | [Aliran 3: Audio → minit mesyuarat](lab/04-meeting-audio-to-minutes.md) | 35 min |
-| 5 | [Explore lanjut](lab/05-explore-further.md) | 20 min |
+| 1 | [Set up the notebook](lab/01-set-up-notebook.md) | 20 min |
+| 2 | [Workflow 1: Query the corpus](lab/02-query-the-corpus.md) | 30 min |
+| 3 | [Workflow 2: Project paper → slides](lab/03-project-paper-to-slides.md) | 35 min |
+| 4 | [Workflow 3: Audio → meeting minutes](lab/04-meeting-audio-to-minutes.md) | 35 min |
+| 5 | [Explore further](lab/05-explore-further.md) | 20 min |
 
-Jumlah ~2.5–3 jam (termasuk buffer untuk soal jawab).
+Total ~2.5–3 hours (including buffer for Q&A).

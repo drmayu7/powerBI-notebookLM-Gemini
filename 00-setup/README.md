@@ -1,72 +1,72 @@
-# Persediaan Sebelum Kursus
+# Preparation Before the Course
 
-Sila lengkapkan persediaan ini **sebelum 25 Jun 2026** supaya kita boleh terus
-mula bengkel tanpa membuang masa memasang perisian.
+Please complete this preparation **before 25 Jun 2026** so that we can go
+straight into the workshop without wasting time installing software.
 
-> **Penting:** Power BI Desktop hanya berfungsi pada **Windows**. Jika laptop anda
-> menggunakan macOS, sila berhubung dengan urus setia kursus untuk alternatif.
-
----
-
-## 1. Pasang Power BI Desktop
-
-Pilih **salah satu** cara di bawah.
-
-### Cara A — Microsoft Store (disyorkan, paling mudah)
-1. Buka aplikasi **Microsoft Store** pada Windows.
-2. Cari **"Power BI Desktop"**.
-3. Klik **Get** / **Install**.
-4. Store akan mengemas kini Power BI secara automatik pada masa hadapan.
-
-### Cara B — Pemasang (installer) rasmi
-1. Layari laman muat turun rasmi Microsoft Power BI Desktop.
-2. Muat turun fail pemasang (`.exe`) untuk **64-bit**.
-3. Jalankan fail tersebut dan ikut arahan pemasangan.
-
-> **Hak admin / sekatan IT:** Sesetengah laptop jabatan menyekat pemasangan
-> perisian. Jika anda tidak dapat memasang (diminta kata laluan admin atau
-> dihalang), sila **hubungi unit IT anda lebih awal** untuk bantuan memasang
-> Power BI Desktop sebelum kursus.
+> **Important:** Power BI Desktop only works on **Windows**. If your laptop
+> runs macOS, please contact the course secretariat for an alternative.
 
 ---
 
-## 2. Semak Pemasangan Berjaya
+## 1. Install Power BI Desktop
 
-1. Buka **Power BI Desktop** dari menu Start.
-2. Pastikan **skrin permulaan (start screen)** muncul (kanvas kosong dengan
-   menu di atas).
+Choose **one** of the methods below.
 
-Jika skrin ini muncul, pemasangan anda berjaya. ✅
+### Method A — Microsoft Store (recommended, easiest)
+1. Open the **Microsoft Store** app on Windows.
+2. Search for **"Power BI Desktop"**.
+3. Click **Get** / **Install**.
+4. The Store will automatically update Power BI in the future.
+
+### Method B — Official installer
+1. Visit the official Microsoft Power BI Desktop download page.
+2. Download the installer file (`.exe`) for **64-bit**.
+3. Run the file and follow the installation instructions.
+
+> **Admin rights / IT restrictions:** Some department laptops restrict
+> software installation. If you are unable to install (prompted for an admin
+> password or blocked), please **contact your IT unit early** for help
+> installing Power BI Desktop before the course.
 
 ---
 
-## 3. Sedia Akaun Google (untuk Slot 2)
+## 2. Verify Successful Installation
 
-Slot petang menggunakan **NotebookLM** dan **Gemini** melalui pelayar web —
-tiada pemasangan diperlukan, tetapi anda perlukan akaun Google.
+1. Open **Power BI Desktop** from the Start menu.
+2. Make sure the **start screen** appears (an empty canvas with a
+   menu at the top).
 
-1. Pastikan anda boleh log masuk ke akaun Google anda.
-2. Uji buka kedua-dua laman ini dalam pelayar:
+If this screen appears, your installation was successful. ✅
+
+---
+
+## 3. Prepare a Google Account (for Slot 2)
+
+The afternoon slot uses **NotebookLM** and **Gemini** via a web browser —
+no installation is required, but you will need a Google account.
+
+1. Make sure you can log in to your Google account.
+2. Test opening both of these sites in a browser:
    - NotebookLM — `https://notebooklm.google.com`
    - Gemini — `https://gemini.google.com`
 
-> Jika anda belum ada akaun Google, daftar satu akaun percuma di
+> If you do not yet have a Google account, register a free account at
 > `https://accounts.google.com`.
 
 ---
 
-## 4. Senarai Semak
+## 4. Checklist
 
-- [ ] Power BI Desktop dipasang dan boleh dibuka
-- [ ] Akaun Google boleh log masuk (NotebookLM & Gemini)
-- [ ] Laptop dibawa ke kursus dan dicas penuh
-- [ ] (Pilihan) Pencas (charger) laptop dibawa
+- [ ] Power BI Desktop installed and can be opened
+- [ ] Able to log in to Google account (NotebookLM & Gemini)
+- [ ] Laptop brought to the course and fully charged
+- [ ] (Optional) Laptop charger brought
 
 ---
 
-## Nota
+## Note
 
-Anda **tidak perlu** membawa apa-apa data pesakit sebenar. Dataset latihan untuk
-Power BI sudah disediakan dalam repo ini di
-[`module-1-power-bi/data/`](../module-1-power-bi/data/) — dan ia **sepenuhnya
-sintetik** (rekaan).
+You do **not need** to bring any real patient data. The training dataset for
+Power BI is already provided in this repo at
+[`module-1-power-bi/data/`](../module-1-power-bi/data/) — and it is **entirely
+synthetic** (fabricated).

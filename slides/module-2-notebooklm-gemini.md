@@ -2,81 +2,81 @@
 marp: true
 theme: gaia
 paginate: true
-footer: 'Kursus Lanjutan KKM 2026 · Dr. Muhammad Naufal bin Nordin'
+footer: 'KKM 2026 Advanced Course · Dr. Muhammad Naufal bin Nordin'
 ---
 
 <!-- _class: lead -->
 <!-- _paginate: false -->
 
-# NotebookLM dan Gemini
+# NotebookLM and Gemini
 
-**Slot 2 — 25 Jun 2026 (Khamis)**
-Potensi Kecerdasan Buatan (AI) dalam Automasi Data & Dokumentasi
+**Slot 2 — 25 June 2026 (Thursday)**
+The Potential of Artificial Intelligence (AI) in Data & Documentation Automation
 
 Dr. Muhammad Naufal bin Nordin
 
 ---
 
-## NotebookLM vs Gemini — apa bezanya?
+## NotebookLM vs Gemini — what's the difference?
 
 | | **NotebookLM** | **Gemini** |
 |---|---|---|
-| Sifat | AI *grounded* pada dokumen anda | AI generatif umum |
-| Kekuatan | Jawapan + **petikan (citation)** | Menjana & mengolah teks bebas |
-| Guna untuk | Tanya korpus, ringkas dokumen | Draf memo, olah slaid, idea |
+| Nature | AI *grounded* on your documents | General generative AI |
+| Strength | Answers + **citations** | Generates & drafts free-form text |
+| Use for | Query a corpus, summarize documents | Draft memos, draft slides, brainstorm |
 
 ---
 
-## Kenapa relevan untuk pengurusan rekod?
+## Why is this relevant to records management?
 
-- Anda simpan banyak **surat PUU, edaran, garis panduan, prosedur**.
-- Untuk jawab satu soalan → selalunya perlu *flip* banyak muka surat.
-- Dengan NotebookLM: upload sekali, **tanya sahaja** — jawapan datang dengan **rujukan ke sumber**.
+- You keep many **circulars, memos, guidelines, and procedures**.
+- Answering a single question often means *flipping* through many pages.
+- With NotebookLM: upload once, **just ask** — answers come with **references to the source**.
 
 ---
 
-## Konsep penting
+## Key concepts
 
-- **Grounding** — NotebookLM jawab **hanya** berdasarkan dokumen yang anda beri, bukan "pengetahuan umum" yang mungkin tidak tepat.
-- **Citation (petikan)** — setiap jawapan tunjuk dari bahagian mana sumber ia diambil, supaya boleh **disahkan** sebelum guna.
+- **Grounding** — NotebookLM answers **only** based on the documents you provide, not "general knowledge" that may be inaccurate.
+- **Citation** — every answer shows which part of the source it was drawn from, so it can be **verified** before use.
 
 ---
 
 <!-- _class: lead -->
 
-# ⚠️ Amaran Data Sensitif
+# ⚠️ Sensitive Data Warning
 
-**JANGAN** upload data pesakit sebenar, surat PUU sulit, atau dokumen terhad ke akaun Google peribadi.
+**DO NOT** upload real patient data, confidential circulars, or restricted documents to a personal Google account.
 
-Gunakan **dokumen awam** atau dokumen yang telah **di-deidentify**.
-Sentiasa patuhi dasar keselamatan maklumat jabatan.
-
----
-
-## 3 aliran kerja utama
-
-1. **Tanya korpus rujukan** — upload garis panduan, tanya, dapat jawapan + citation.
-2. **Kertas projek → slaid** — tukar kertas projek kepada rangka slaid.
-3. **Audio mesyuarat → minit** — transkrip rakaman, draf minit mesyuarat.
-
-➕ **Explore lanjut** — Audio Overview, FAQ, Study Guide, Mind Map, draf memo Gemini.
+Use **public documents** or documents that have been **de-identified**.
+Always comply with departmental information security policy.
 
 ---
 
-## Apa yang kita buat hari ini
+## 3 main workflows
 
-| # | Lab | Masa |
+1. **Query a reference corpus** — upload guidelines, ask questions, get answers + citations.
+2. **Project paper → slides** — turn a project paper into a slide outline.
+3. **Meeting audio → minutes** — transcribe a recording, draft meeting minutes.
+
+➕ **Further exploration** — Audio Overview, FAQ, Study Guide, Mind Map, drafting memos with Gemini.
+
+---
+
+## What we'll do today
+
+| # | Lab | Time |
 |---|-----|------|
-| 1 | Sediakan notebook | 20 min |
-| 2 | Aliran 1: Tanya korpus | 30 min |
-| 3 | Aliran 2: Kertas projek → slaid | 35 min |
-| 4 | Aliran 3: Audio → minit | 35 min |
-| 5 | Explore lanjut | 20 min |
+| 1 | Set up a notebook | 20 min |
+| 2 | Workflow 1: Query a corpus | 30 min |
+| 3 | Workflow 2: Project paper → slides | 35 min |
+| 4 | Workflow 3: Audio → minutes | 35 min |
+| 5 | Further exploration | 20 min |
 
-Dokumen latihan: lihat `public-references.md` (pautan awam KKM/JPA).
+Training documents: see `public-references.md` (public KKM/JPA links).
 
 ---
 
 <!-- _class: lead -->
 
-# Mari mula → Lab 1
+# Let's begin → Lab 1

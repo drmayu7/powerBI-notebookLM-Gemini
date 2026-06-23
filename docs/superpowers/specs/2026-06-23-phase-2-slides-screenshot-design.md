@@ -1,101 +1,101 @@
-# Reka Bentuk: Fasa 2 — Slaid Pengenalan + Screenshot Lab
+# Design: Phase 2 — Intro Slides + Lab Screenshots
 
-**Tarikh:** 2026-06-23
-**Penceramah:** Dr. Muhammad Naufal bin Nordin
-**Kursus:** Kursus Lanjutan (Advanced) — Pegawai Tadbir (Rekod Perubatan) & Penolong, KKM 2026
-**Slot:** 25 Jun 2026 (Khamis)
-**Rujukan:** Sambungan kepada [reka bentuk Fasa 1](2026-06-22-training-module-powerbi-notebooklm-gemini-design.md)
+**Date:** 2026-06-23
+**Presenter:** Dr. Muhammad Naufal bin Nordin
+**Course:** Advanced Course — Administrative Officer (Medical Records) & Assistants, KKM 2026
+**Slot:** 25 June 2026 (Thursday)
+**Reference:** Follow-up to [Phase 1 design](2026-06-22-training-module-powerbi-notebooklm-gemini-design.md)
 
-## 1. Konteks & Matlamat
+## 1. Context & Goals
 
-Fasa 1 (tulang belakang kandungan markdown + dataset sintetik + pautan awam) telah siap dan di-commit. Fasa 2 asalnya membungkus empat perkara: slaid, screenshot, fail `.pbix` siap, dan fail audio. Sesi ini memberi tumpuan kepada **dua sahaja** yang paling perlu sebelum kursus:
+Phase 1 (markdown content backbone + synthetic dataset + public links) is complete and committed. Phase 2 originally bundled four items: slides, screenshots, finished `.pbix` files, and audio files. This session focuses on the **two** most needed before the course:
 
-1. **Slaid pengenalan** untuk ceramah ~20 minit setiap slot (2 deck).
-2. **Screenshot dalam lab** — gantikan placeholder dengan struktur konsisten + manifest tangkapan.
+1. **Intro slides** for the ~20-minute lecture in each slot (2 decks).
+2. **In-lab screenshots** — replace placeholders with a consistent structure + a capture manifest.
 
-`.pbix` siap dan fail audio **dikecualikan** daripada sesi ini (kekal Fasa 2 lanjutan).
+Finished `.pbix` files and audio files are **excluded** from this session (remain a later Phase 2 item).
 
-## 2. Keputusan Reka Bentuk (terkunci)
+## 2. Design Decisions (locked)
 
-| # | Keputusan |
+| # | Decision |
 |---|---|
-| Tooling slaid | **Marp** (Markdown → PPTX/PDF/HTML) |
-| Render slaid | **Marp CLI via `npx @marp-team/marp-cli`** (Approach A). `.md` ialah sumber kanonik; PDF dirender & di-commit |
-| Skop slaid | **Dua deck pengenalan sahaja** (satu setiap slot, ~20 min / ~12–15 slaid) |
-| Sumber kandungan slaid | Nota pengenalan sedia ada dalam `README.md` setiap modul (slaid & lab kekal selaras) |
-| Tema | **Tema terbina-dalam Marp yang bersih** (cth. `default`/`gaia`) + footer kursus; tiada logo rasmi di-commit |
-| Bahasa | BM primary, istilah teknikal English dalam `code`/petikan (sama dengan repo) |
-| Screenshot | **Manifest + placeholder + folder** — audit semua lab, seragamkan rujukan, sediakan checklist tangkapan |
-| Tangkapan imej sebenar | Dilakukan oleh pengguna (tidak boleh dijana AI); repo sediakan struktur sahaja |
+| Slide tooling | **Marp** (Markdown → PPTX/PDF/HTML) |
+| Slide rendering | **Marp CLI via `npx @marp-team/marp-cli`** (Approach A). `.md` is the canonical source; PDF is rendered & committed |
+| Slide scope | **Two intro decks only** (one per slot, ~20 min / ~12–15 slides) |
+| Slide content source | Existing intro notes in each module's `README.md` (slides & lab stay aligned) |
+| Theme | **Clean built-in Marp theme** (e.g. `default`/`gaia`) + course footer; no official logo committed |
+| Language | Bahasa Melayu primary, technical terms in English in `code`/quotes (consistent with the repo) |
+| Screenshots | **Manifest + placeholder + folder** — audit all labs, standardize references, provide a capture checklist |
+| Actual image capture | Done by the user (cannot be AI-generated); the repo provides the structure only |
 
-## 3. Seni Bina Repositori (fail baharu)
+## 3. Repository Architecture (new files)
 
 ```
 slides/
-  README.md                     ← cara render (arahan npx Marp CLI), nota tema
-  module-1-power-bi.md           ← Marp deck: pengenalan Slot 1 (~20 min)
-  module-2-notebooklm-gemini.md  ← Marp deck: pengenalan Slot 2 (~20 min)
+  README.md                     ← how to render (npx Marp CLI commands), theme notes
+  module-1-power-bi.md           ← Marp deck: Slot 1 intro (~20 min)
+  module-2-notebooklm-gemini.md  ← Marp deck: Slot 2 intro (~20 min)
   build/
-    module-1-power-bi.pdf        ← PDF dirender (di-commit; presentable tanpa setup)
+    module-1-power-bi.pdf        ← rendered PDF (committed; presentable with no setup)
     module-2-notebooklm-gemini.pdf
-module-1-power-bi/lab/img/       ← folder screenshot (.gitkeep)
+module-1-power-bi/lab/img/       ← screenshot folder (.gitkeep)
 module-2-notebooklm-gemini/lab/img/
-docs/SCREENSHOTS.md             ← manifest/checklist tangkapan (semua shot, ikut lab/langkah)
+docs/SCREENSHOTS.md             ← capture manifest/checklist (every shot, by lab/step)
 ```
 
-**Nota commit PDF:** PDF dirender guna `npx @marp-team/marp-cli` dan di-commit supaya ada fail presentable pada hari kursus tanpa sebarang setup. Jika rangkaian menghalang muat turun pakej Marp, fallback = commit sumber `.md` + resipi build sahaja.
+**Note on committing PDFs:** PDFs are rendered using `npx @marp-team/marp-cli` and committed so there's a presentable file on course day with no setup required. If the network blocks the Marp package download, the fallback is to commit the `.md` source + the build recipe only.
 
-## 4. Slaid — Kandungan
+## 4. Slides — Content
 
-Kedua-dua deck bersumberkan nota pengenalan sedia ada dalam `README.md` setiap modul. Tahap tajuk (titles + beberapa bullet) sahaja — detail langkah-demi-langkah kekal dalam lab, bukan slaid. ~12–15 slaid setiap deck.
+Both decks are sourced from the existing intro notes in each module's `README.md`. Title level only (titles + a few bullets) — step-by-step detail stays in the lab, not the slides. ~12–15 slides per deck.
 
-**Deck 1 — `slides/module-1-power-bi.md` (pengenalan Slot 1):**
+**Deck 1 — `slides/module-1-power-bi.md` (Slot 1 intro):**
 
-1. Tajuk (kursus, slot, penceramah, tarikh)
-2. Apa itu Power BI & kenapa relevan untuk statistik perubatan (Excel manual → dashboard automatik)
-3. Aliran kerja: Get Data → Transform → Model → Visualize → Share
-4. Lawatan antara muka: Report / Data / Model views
-5. Pratonton dashboard akhir (KPI cards, bar, line, slicer)
-6. Apa yang kita bina hari ini (peta 7 lab)
-7. Nota keselamatan data (dataset sintetik) + jangkaan hands-on
-8. Mari mula → Lab 1
+1. Title (course, slot, presenter, date)
+2. What Power BI is & why it's relevant for medical statistics (manual Excel → automated dashboard)
+3. Workflow: Get Data → Transform → Model → Visualize → Share
+4. Interface tour: Report / Data / Model views
+5. Preview of the final dashboard (KPI cards, bar, line, slicer)
+6. What we're building today (7-lab roadmap)
+7. Data-safety note (synthetic dataset) + hands-on expectations
+8. Let's begin → Lab 1
 
-**Deck 2 — `slides/module-2-notebooklm-gemini.md` (pengenalan Slot 2):**
+**Deck 2 — `slides/module-2-notebooklm-gemini.md` (Slot 2 intro):**
 
-1. Tajuk
-2. NotebookLM (grounded + citation) vs Gemini (generatif umum)
-3. Kenapa relevan: berhenti "flip-flip paper" → tanya korpus
-4. Konsep: *grounding*, *citation*
-5. ⚠️ Amaran data sensitif (jangan upload data pesakit sebenar)
-6. 3 aliran kerja teras (tanya korpus / kertas→slaid / audio→minit) + explore
-7. Peta 5 lab + rujukan awam
-8. Mari mula → Lab 1
+1. Title
+2. NotebookLM (grounded + citation) vs Gemini (general generative)
+3. Why it's relevant: stop "flipping through papers" → query the corpus
+4. Concepts: *grounding*, *citation*
+5. ⚠️ Sensitive-data warning (do not upload real patient data)
+6. 3 core workflows (query the corpus / paper→slides / audio→minutes) + explore
+7. 5-lab roadmap + public references
+8. Let's begin → Lab 1
 
-**Marp front-matter setiap deck:** `marp: true`, tema terbina-dalam terpilih, `paginate: true`, footer kursus + penceramah.
+**Marp front-matter for each deck:** `marp: true`, a chosen built-in theme, `paginate: true`, course + presenter footer.
 
-## 5. Screenshot — Manifest, Placeholder, Folder
+## 5. Screenshots — Manifest, Placeholder, Folder
 
-**Folder:** cipta `module-1-power-bi/lab/img/` dan `module-2-notebooklm-gemini/lab/img/` (dengan `.gitkeep` supaya folder kosong boleh commit).
+**Folder:** create `module-1-power-bi/lab/img/` and `module-2-notebooklm-gemini/lab/img/` (with `.gitkeep` so the empty folders can be committed).
 
-**Konvensyen placeholder:** setiap rujukan screenshot diseragamkan sebagai `![Keterangan ringkas](img/NN-nama.png)`, diletak betul-betul selepas langkah yang diilustrasikan. Penamaan = nombor lab + slug pendek (cth. `02-power-query.png`). Rujukan sedia ada yang tidak konsisten (lab 01/03/05/06 modul-1) diperbetulkan; yang tiada ditambah merentas semua lab.
+**Placeholder convention:** every screenshot reference is standardized as `![Brief description](img/NN-name.png)`, placed right after the step it illustrates. Naming = lab number + short slug (e.g. `02-power-query.png`). Existing inconsistent references (module-1 labs 01/03/05/06) are corrected; missing ones are added across all labs.
 
-**Liputan:** satu screenshot bagi setiap langkah visual penting (bukan setiap langkah) — biasanya 1–3 setiap lab, pada saat pelajar paling perlu sahkan "adakah saya di skrin yang betul". Lab NotebookLM/Gemini turut dapat placeholder, dengan nota bahawa UI mereka berubah dari masa ke masa.
+**Coverage:** one screenshot per important visual step (not every step) — typically 1–3 per lab, at the moment a learner most needs to confirm "am I on the right screen". NotebookLM/Gemini labs also get placeholders, with a note that their UI changes over time.
 
-**`docs/SCREENSHOTS.md` manifest:** jadual checklist — `[ ]` | nama fail | lab/langkah | apa yang ditangkap | nota — dikumpul ikut modul, supaya pengguna boleh tangkap & letak setiap PNG tanpa baca semula lab.
+**`docs/SCREENSHOTS.md` manifest:** a checklist table — `[ ]` | filename | lab/step | what to capture | notes — grouped by module, so the user can capture and drop in each PNG without rereading the lab.
 
-**Caveat:** placeholder tidak akan render sehingga imej ditangkap — ikon imej rosak akan muncul dalam pratonton markdown sementara itu. Ini dijangka; manifest menjejak apa yang belum siap.
+**Caveat:** placeholders won't render until the image is captured — a broken-image icon will appear in the markdown preview meanwhile. This is expected; the manifest tracks what's still pending.
 
-## 6. Skop yang Dikecualikan (YAGNI)
+## 6. Excluded Scope (YAGNI)
 
-- Fail `.pbix` siap (kekal Fasa 2 lanjutan)
-- Fail audio contoh / transkrip (kekal Fasa 2 lanjutan)
-- Tema/branding KKM rasmi + logo (boleh ditambah kemudian; tema bersih sekarang)
-- Slaid divider per-lab atau deck pengajaran penuh (pengenalan sahaja)
-- Tangkapan imej sebenar (dilakukan oleh pengguna di mesin sendiri)
+- Finished `.pbix` files (remain a later Phase 2 item)
+- Sample audio files / transcripts (remain a later Phase 2 item)
+- Official KKM theme/branding + logo (can be added later; clean theme for now)
+- Per-lab divider slides or a full teaching deck (intro only)
+- Actual image capture (done by the user on their own machine)
 
-## 7. Pengesahan (verification)
+## 7. Verification
 
-- `npx @marp-team/marp-cli slides/module-1-power-bi.md --pdf` menghasilkan PDF tanpa error; sama untuk deck 2.
-- Setiap deck dibuka & semua slaid render (teks BM + istilah English betul).
-- Semua lab: rujukan placeholder mengikut konvensyen `![...](img/NN-nama.png)`; folder `img/` wujud.
-- `docs/SCREENSHOTS.md` menyenaraikan setiap fail screenshot yang dirujuk dalam mana-mana lab (tiada rujukan tertinggal).
+- `npx @marp-team/marp-cli slides/module-1-power-bi.md --pdf` produces a PDF with no error; same for deck 2.
+- Each deck opens & all slides render correctly (BM text + English terms correct).
+- All labs: placeholder references follow the `![...](img/NN-name.png)` convention; the `img/` folder exists.
+- `docs/SCREENSHOTS.md` lists every screenshot file referenced in any lab (no reference left out).

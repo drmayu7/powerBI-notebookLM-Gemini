@@ -82,10 +82,10 @@ Note: `surat jemputan peserta.docx` (the source invitation) stays out of the pub
 
 - [ ] **Step 1: Write `README.md`** (Bahasa Melayu). Include these sections:
   - `# Modul Latihan: Power BI, NotebookLM & Gemini`
-  - Intro: who it's for (Pegawai Tadbir Rekod Perubatan & Penolong, Kursus Lanjutan KKM 2026).
+  - Intro: who it's for (Medical Records Administrative Officers & Assistants, Advanced Course KKM 2026).
   - `## Slot Latihan (25 Jun 2026, Khamis)` — table: Slot 1 8:00–11:30 Power BI; Slot 2 11:30–16:00 NotebookLM & Gemini.
-  - `## Cara Guna Repo Ini` — bullet links: mula di `00-setup/`, kemudian `module-1-power-bi/`, kemudian `module-2-notebooklm-gemini/`.
-  - `## Nota Keselamatan Data` — semua data dalam repo adalah **sintetik**; jangan muat naik / commit dokumen pesakit, surat PUU, atau data sebenar.
+  - `## Cara Guna Repo Ini` — bullet links: start at `00-setup/`, then `module-1-power-bi/`, then `module-2-notebooklm-gemini/`.
+  - `## Nota Keselamatan Data` — all data in the repo is **synthetic**; do not upload / commit real patient documents, PUU letters, or real data.
   - `## Lesen` — CC BY 4.0.
 
 - [ ] **Step 2: Write `LICENSE`** — paste the full Creative Commons Attribution 4.0 International license text; attribution line: "© 2026 Dr. Muhammad Naufal bin Nordin".
@@ -144,11 +144,11 @@ git commit -m "chore: repo scaffold, README, LICENSE, gitignore"
 
 - [ ] **Step 1: Write `00-setup/README.md`** (BM) with sections:
   - `# Persediaan Sebelum Kursus`
-  - `## 1. Pasang Power BI Desktop` — Cara A (Microsoft Store: search "Power BI Desktop" → Install), Cara B (muat turun installer dari laman rasmi Microsoft → run `.exe`). Nota: Windows sahaja, mungkin perlu hak admin → rujuk IT jika disekat.
-  - `## 2. Semak Pemasangan` — buka Power BI Desktop, pastikan skrin mula (start screen) muncul.
-  - `## 3. Sedia Akaun Google` — pastikan boleh log masuk ke `notebooklm.google.com` dan `gemini.google.com`.
-  - `## 4. Senarai Semak` — checkbox: [ ] Power BI Desktop dipasang & dibuka, [ ] Akaun Google boleh log masuk, [ ] Laptop dibawa & dicas.
-  - `## Nota` — tiada data pesakit sebenar diperlukan; dataset latihan disediakan dalam repo (`module-1-power-bi/data/`).
+  - `## 1. Pasang Power BI Desktop` — Method A (Microsoft Store: search "Power BI Desktop" → Install), Method B (download the installer from the official Microsoft site → run `.exe`). Note: Windows only, admin rights may be required → contact IT if blocked.
+  - `## 2. Semak Pemasangan` — open Power BI Desktop, confirm the start screen appears.
+  - `## 3. Sedia Akaun Google` — confirm you can sign in to `notebooklm.google.com` and `gemini.google.com`.
+  - `## 4. Senarai Semak` — checkbox: [ ] Power BI Desktop installed & opened, [ ] Google account can sign in, [ ] Laptop brought & charged.
+  - `## Nota` — no real patient data needed; the training dataset is provided in the repo (`module-1-power-bi/data/`).
 
 - [ ] **Step 2: Commit**
 ```bash
@@ -299,13 +299,13 @@ git commit -m "feat: jana dataset statistik perubatan sintetik (CSV star schema)
 
 **Steps:**
 
-- [ ] **Step 1: Write `module-1-power-bi/README.md`** — sections: `# Modul 1: Transformasi Statistik Perubatan menggunakan Power BI`; `## Pengenalan (Ceramah ~20 min)` (apa itu Power BI & kenapa relevan; aliran kerja; lawatan antara muka; pratonton dashboard); `## Peta Lab` (numbered links 01–07 with ~time each, total ~2.5 jam); `## Dataset` (terangkan `data/` — kemasukan + wad + disiplin + tarikh; sintetik).
+- [ ] **Step 1: Write `module-1-power-bi/README.md`** — sections: `# Modul 1: Transformasi Statistik Perubatan menggunakan Power BI`; `## Pengenalan (Ceramah ~20 min)` (what Power BI is & why it's relevant; workflow; interface tour; dashboard preview); `## Peta Lab` (numbered links 01–07 with ~time each, total ~2.5 hours); `## Dataset` (describe `data/` — kemasukan + wad + disiplin + tarikh; synthetic).
 
-- [ ] **Step 2: Write `lab/01-import-data.md`** — Buka Power BI Desktop → Home → Get Data → Text/CSV → pilih `kemasukan.csv`, `wad.csv`, `disiplin.csv`, `tarikh.csv` (satu per satu) → Load. **Hasil yang dijangka:** 4 jadual muncul di panel Data. Include `![Get Data](../img/01-get-data.png)` placeholder.
+- [ ] **Step 2: Write `lab/01-import-data.md`** — Open Power BI Desktop → Home → Get Data → Text/CSV → select `kemasukan.csv`, `wad.csv`, `disiplin.csv`, `tarikh.csv` (one at a time) → Load. **Expected result:** 4 tables appear in the Data panel. Include `![Get Data](../img/01-get-data.png)` placeholder.
 
-- [ ] **Step 3: Write `lab/02-power-query-bersih.md`** — Transform Data (buka Power Query). Untuk `kemasukan`: sahkan `Tarikh_Masuk`/`Tarikh_Discaj` jenis Date, `Umur` Whole Number, `Kod_Wad`/`Kod_Disiplin` Text; buang ruang (Trim) pada kolum teks; Remove Errors. Close & Apply. **Hasil:** jenis data betul, tiada error. Nota: tambah kolum `Tempoh_Tinggal` (LOS) di sini sebagai langkah pilihan ATAU sebagai measure di lab 04 (we put LOS as a DAX-friendly approach in 04). Keep it: add custom column `Tempoh_Tinggal = Duration.Days([Tarikh_Discaj] - [Tarikh_Masuk])` and set to Whole Number.
+- [ ] **Step 3: Write `lab/02-power-query-bersih.md`** — Transform Data (open Power Query). For `kemasukan`: confirm `Tarikh_Masuk`/`Tarikh_Discaj` are type Date, `Umur` Whole Number, `Kod_Wad`/`Kod_Disiplin` Text; trim whitespace on text columns; Remove Errors. Close & Apply. **Result:** correct data types, no errors. Note: add the `Tempoh_Tinggal` (LOS) column here as an optional step OR as a measure in lab 04 (we put LOS as a DAX-friendly approach in 04). Keep it: add custom column `Tempoh_Tinggal = Duration.Days([Tarikh_Discaj] - [Tarikh_Masuk])` and set to Whole Number.
 
-- [ ] **Step 4: Write `lab/03-model-hubungan.md`** — Model view → drag `kemasukan[Kod_Wad]` → `wad[Kod_Wad]`, `kemasukan[Kod_Disiplin]` → `disiplin[Kod_Disiplin]`, `kemasukan[Tarikh_Masuk]` → `tarikh[Tarikh]`. Sahkan hubungan one-to-many (1 di dimensi, * di fakta). **Hasil:** star schema dengan 3 hubungan.
+- [ ] **Step 4: Write `lab/03-model-hubungan.md`** — Model view → drag `kemasukan[Kod_Wad]` → `wad[Kod_Wad]`, `kemasukan[Kod_Disiplin]` → `disiplin[Kod_Disiplin]`, `kemasukan[Tarikh_Masuk]` → `tarikh[Tarikh]`. Confirm one-to-many relationships (1 on the dimension side, * on the fact side). **Result:** a star schema with 3 relationships.
 
 - [ ] **Step 5: Write `lab/04-ukuran-dax.md`** — New Measure for each (copy-paste, with one-line BM explanation each):
 ```DAX
@@ -330,13 +330,13 @@ BOR % = DIVIDE([Jumlah Hari Pesakit], [Jumlah Hari Katil Tersedia]) * 100
 ```DAX
 Bilangan Pesakit ikut Wad = DISTINCTCOUNT('kemasukan'[ID_Kemasukan])
 ```
-Add note: "Bilangan Pesakit ikut Wad" dipaparkan dengan `Nama_Wad` pada paksi dalam lab 05. **Hasil:** 7 measure (incl. 2 measure bantuan untuk BOR) muncul.
+Add note: "Bilangan Pesakit ikut Wad" is displayed with `Nama_Wad` on the axis in lab 05. **Result:** 7 measures (incl. 2 helper measures for BOR) appear.
 
-- [ ] **Step 6: Write `lab/05-visual-asas.md`** — Add visuals on Report page: (a) 3 Card visuals → Jumlah Kemasukan, ALOS, BOR %; (b) Clustered bar chart: Axis `disiplin[Nama_Disiplin]`, Values `[Jumlah Kemasukan]`; (c) Clustered bar chart: Axis `wad[Nama_Wad]`, Values `[Bilangan Pesakit ikut Wad]`; (d) Line chart: Axis `tarikh[Nama_Bulan]` (atau `Bulan` untuk urutan), Values `[Jumlah Kemasukan]`. **Hasil:** 3 kad + 2 bar + 1 line.
+- [ ] **Step 6: Write `lab/05-visual-asas.md`** — Add visuals on Report page: (a) 3 Card visuals → Jumlah Kemasukan, ALOS, BOR %; (b) Clustered bar chart: Axis `disiplin[Nama_Disiplin]`, Values `[Jumlah Kemasukan]`; (c) Clustered bar chart: Axis `wad[Nama_Wad]`, Values `[Bilangan Pesakit ikut Wad]`; (d) Line chart: Axis `tarikh[Nama_Bulan]` (or `Bulan` for ordering), Values `[Jumlah Kemasukan]`. **Result:** 3 cards + 2 bar charts + 1 line chart.
 
-- [ ] **Step 7: Write `lab/06-dashboard-interaktif.md`** — Susun visuals kemas pada satu halaman; tambah 3 Slicers: `disiplin[Nama_Disiplin]`, `wad[Nama_Wad]`, `tarikh[Bulan]`. Tunjuk cara klik slicer menapis semua visual (cross-filter). Tambah tajuk halaman "Dashboard Statistik Perubatan". **Hasil:** dashboard interaktif satu halaman.
+- [ ] **Step 7: Write `lab/06-dashboard-interaktif.md`** — Arrange visuals neatly on one page; add 3 Slicers: `disiplin[Nama_Disiplin]`, `wad[Nama_Wad]`, `tarikh[Bulan]`. Show how clicking a slicer filters all visuals (cross-filter). Add the page title "Dashboard Statistik Perubatan". **Result:** an interactive one-page dashboard.
 
-- [ ] **Step 8: Write `lab/07-eksport-simpan.md`** — File → Save As `dashboard-statistik-perubatan.pbix`. Export → PDF. Nota ringkas: publish ke Power BI Service adalah pilihan/Fasa 2 (kursus ini tempatan sahaja). **Hasil:** fail `.pbix` disimpan + PDF dieksport.
+- [ ] **Step 8: Write `lab/07-eksport-simpan.md`** — File → Save As `dashboard-statistik-perubatan.pbix`. Export → PDF. Brief note: publishing to Power BI Service is optional/Phase 2 (this course is local only). **Result:** `.pbix` file saved + PDF exported.
 
 - [ ] **Step 9: Verify and commit**
 ```bash
@@ -359,11 +359,11 @@ git commit -m "docs: modul 1 Power BI — pengenalan + 7 langkah lab"
 - Delete: `module-2-notebooklm-gemini/lab/.gitkeep`
 
 **Acceptance Criteria:**
-- [ ] `README.md` explains NotebookLM (grounded + citation) vs Gemini (generatif umum), why relevant (berhenti flip2 paper), key concepts (grounding, citation), and a prominent **amaran data sensitif** box.
+- [ ] `README.md` explains NotebookLM (grounded + citation) vs Gemini (general generative), why it's relevant (stop flipping through papers), key concepts (grounding, citation), and a prominent **sensitive-data warning** box.
 - [ ] `02-query-the-corpus.md` covers asking procedure questions and verifying answers via citations.
 - [ ] `03-project-paper-to-slides.md` covers NotebookLM Studio outputs + Gemini prompting to turn a project paper into slide content; notes the UI evolves.
-- [ ] `04-meeting-audio-to-minutes.md` covers transcribing a meeting recording → drafting minit mesyuarat.
-- [ ] `05-explore-further.md` covers Audio Overview, FAQ, Study Guide, Mind Map, and Gemini for memo/laporan drafting.
+- [ ] `04-meeting-audio-to-minutes.md` covers transcribing a meeting recording → drafting meeting minutes.
+- [ ] `05-explore-further.md` covers Audio Overview, FAQ, Study Guide, Mind Map, and Gemini for memo/report drafting.
 - [ ] `public-references.md` lists genuinely public KKM/JPA document links with access-date notes and a caveat that links may change; participants may swap in their own documents live.
 - [ ] Every lab file has a "Hasil yang dijangka" line and a data-safety reminder where uploads happen.
 
@@ -371,19 +371,19 @@ git commit -m "docs: modul 1 Power BI — pengenalan + 7 langkah lab"
 
 **Steps:**
 
-- [ ] **Step 1: Write `module-2-notebooklm-gemini/README.md`** — sections: `# Modul 2: NotebookLM dan Gemini`; `## Pengenalan (Ceramah ~20 min)` (NotebookLM vs Gemini; kenapa relevan untuk pengurusan rekod; konsep grounding & citation); `> ⚠️ **Amaran Data Sensitif**` blockquote (jangan muat naik data pesakit sebenar / dokumen PUU sulit ke akaun peribadi; guna dokumen awam atau de-identified); `## Peta Lab` (links 01–05 + ~time each); `## 3 Aliran Kerja Utama` (ringkasan tanya korpus / kertas projek→slaid / audio→minit).
+- [ ] **Step 1: Write `module-2-notebooklm-gemini/README.md`** — sections: `# Modul 2: NotebookLM dan Gemini`; `## Pengenalan (Ceramah ~20 min)` (NotebookLM vs Gemini; why it's relevant for records management; grounding & citation concepts); `> ⚠️ **Amaran Data Sensitif**` blockquote (do not upload real patient data / confidential PUU documents to personal accounts; use public or de-identified documents); `## Peta Lab` (links 01–05 + ~time each); `## 3 Aliran Kerja Utama` (summary of query the corpus / project paper→slides / audio→minutes).
 
-- [ ] **Step 2: Write `lab/01-set-up-notebook.md`** — Pergi `notebooklm.google.com` → log masuk → Create new notebook → Add sources → muat turun 2–3 dokumen awam dari `../public-references.md` → upload. **Amaran:** hanya dokumen awam. **Hasil:** notebook dengan beberapa sumber sedia.
+- [ ] **Step 2: Write `lab/01-set-up-notebook.md`** — Go to `notebooklm.google.com` → sign in → Create new notebook → Add sources → download 2–3 public documents from `../public-references.md` → upload. **Warning:** public documents only. **Result:** a notebook with several sources ready.
 
-- [ ] **Step 3: Write `lab/02-query-the-corpus.md`** (Aliran 1) — Taip soalan prosedur (cth. "Apakah prosedur permohonan laporan perubatan?") di chat → baca jawapan → klik nombor citation untuk lihat petikan sumber → sahkan ketepatan. Tip: tanya soalan spesifik; sentiasa sahkan citation sebelum guna. **Hasil:** jawapan bersumber + tahu cara sahkan.
+- [ ] **Step 3: Write `lab/02-query-the-corpus.md`** (Workflow 1) — Type a procedure question (e.g. "What is the procedure for requesting a medical report?") in the chat → read the answer → click the citation number to view the source excerpt → verify accuracy. Tip: ask specific questions; always verify the citation before use. **Result:** a sourced answer + knowing how to verify it.
 
-- [ ] **Step 4: Write `lab/03-project-paper-to-slides.md`** (Aliran 2) — Upload kertas projek (atau dokumen contoh) sebagai sumber → guna Studio: jana "Briefing doc" / "Study guide" untuk struktur → salin rangka. Kemudian di `gemini.google.com`: prompt contoh — "Berdasarkan ringkasan ini, jana rangka slaid pembentangan 8 slaid dengan tajuk dan 3 bullet setiap slaid: [tampal teks]". Nota: ciri Studio berubah dari masa ke masa; semak pilihan semasa. **Hasil:** rangka slaid sedia untuk diolah.
+- [ ] **Step 4: Write `lab/03-project-paper-to-slides.md`** (Workflow 2) — Upload a project paper (or sample document) as a source → use Studio: generate a "Briefing doc" / "Study guide" for structure → copy the outline. Then on `gemini.google.com`: example prompt — "Based on this summary, generate an 8-slide presentation outline with a title and 3 bullets per slide: [paste text]". Note: Studio features change over time; check what's currently available. **Result:** a slide outline ready to be developed.
 
-- [ ] **Step 5: Write `lab/04-meeting-audio-to-minutes.md`** (Aliran 3) — Terangkan: rakam mesyuarat (audio) → muat naik fail audio sebagai sumber dalam NotebookLM (atau guna transkrip) → minta ringkasan / poin tindakan → prompt untuk format minit mesyuarat (Bil, Perkara, Tindakan, PIC, Tarikh). Contoh prompt Gemini untuk kemaskan minit. **Amaran:** dapatkan kebenaran merakam; elak maklumat sulit. **Hasil:** draf minit mesyuarat berstruktur.
+- [ ] **Step 5: Write `lab/04-meeting-audio-to-minutes.md`** (Workflow 3) — Explain: record the meeting (audio) → upload the audio file as a source in NotebookLM (or use a transcript) → ask for a summary / action points → prompt to format meeting minutes (No., Item, Action, PIC, Date). Example Gemini prompt to tidy up the minutes. **Warning:** get consent to record; avoid confidential information. **Result:** a structured meeting-minutes draft.
 
-- [ ] **Step 6: Write `lab/05-explore-further.md`** — Tunjuk ringkas: Audio Overview (podcast ringkasan), FAQ, Study Guide, Mind Map dalam NotebookLM; dan Gemini untuk draf memo/laporan rasmi (contoh prompt). Galak peserta eksperimen dengan dokumen sendiri selepas kursus. **Hasil:** peserta tahu ciri tambahan untuk diterokai.
+- [ ] **Step 6: Write `lab/05-explore-further.md`** — Briefly demonstrate: Audio Overview (summary podcast), FAQ, Study Guide, Mind Map in NotebookLM; and Gemini for drafting official memos/reports (example prompt). Encourage participants to experiment with their own documents after the course. **Result:** participants know what additional features to explore.
 
-- [ ] **Step 7: Write `public-references.md`** — `# Rujukan Dokumen Awam` + intro (dokumen ini awam; muat turun untuk lab; pautan mungkin berubah — tarikh akses dicatat; anda boleh ganti dengan dokumen sendiri semasa bengkel). Provide a markdown table: Tajuk | Sumber (KKM/JPA/MyGov) | Pautan | Tarikh Akses. Seed with placeholder rows pointing to known public portals (e.g., moh.gov.my muat turun/garis panduan, jpa.gov.my pekeliling, data.gov.my) — and a clear instruction to confirm each link is live before the course. (Links are confirmed live as a Phase-2/pre-course check; mark any unverified as `[sahkan]`.)
+- [ ] **Step 7: Write `public-references.md`** — `# Rujukan Dokumen Awam` + intro (these documents are public; download for the lab; links may change — access date is noted; you may swap in your own documents during the workshop). Provide a markdown table: Title | Source (KKM/JPA/MyGov) | Link | Access Date. Seed with placeholder rows pointing to known public portals (e.g., moh.gov.my downloads/guidelines, jpa.gov.my circulars, data.gov.my) — and a clear instruction to confirm each link is live before the course. (Links are confirmed live as a Phase-2/pre-course check; mark any unverified as `[confirm]`.)
 
 - [ ] **Step 8: Verify and commit**
 ```bash

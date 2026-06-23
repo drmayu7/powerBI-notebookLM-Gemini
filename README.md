@@ -1,26 +1,26 @@
-# Modul Latihan: Power BI, NotebookLM & Gemini
+# Training Module: Power BI, NotebookLM & Gemini
 
-Modul latihan praktikal (hands-on) untuk **Pegawai Tadbir (Rekod Perubatan)** dan **Penolong Pegawai Tadbir**, di bawah **Kursus Lanjutan (Advanced) Peringkat Kebangsaan KKM 2026**.
+A hands-on training module for **Administrative Officers (Medical Records)** and **Assistant Administrative Officers**, under the **KKM 2026 National Advanced Course**.
 
-Penceramah: **Dr. Muhammad Naufal bin Nordin**.
+Presenter: **Dr. Muhammad Naufal bin Nordin**.
 
-## Slot Latihan (25 Jun 2026, Khamis)
+## Training Slots (25 Jun 2026, Thursday)
 
-| Slot | Masa | Tajuk |
+| Slot | Time | Title |
 | --- | --- | --- |
-| Slot 1 | 8:00 pg – 11:30 tgh | Transformasi Statistik Perubatan menggunakan Power BI |
-| Slot 2 | 11:30 tgh – 4:00 ptg | NotebookLM dan Gemini: Potensi Kecerdasan Buatan dalam Automasi Data & Dokumentasi |
+| Slot 1 | 8:00 am – 11:30 am | Medical Statistics Transformation using Power BI |
+| Slot 2 | 11:30 am – 4:00 pm | NotebookLM and Gemini: The Potential of Artificial Intelligence in Data & Documentation Automation |
 
-## Cara Guna Repo Ini
+## How to Use This Repo
 
-- Mula di [`00-setup/`](00-setup/) untuk persediaan awal.
-- Kemudian teruskan ke [`module-1-power-bi/`](module-1-power-bi/) untuk Slot 1.
-- Akhir sekali ke [`module-2-notebooklm-gemini/`](module-2-notebooklm-gemini/) untuk Slot 2.
+- Start at [`00-setup/`](00-setup/) for initial preparation.
+- Then proceed to [`module-1-power-bi/`](module-1-power-bi/) for Slot 1.
+- Finally, go to [`module-2-notebooklm-gemini/`](module-2-notebooklm-gemini/) for Slot 2.
 
-## Nota Keselamatan Data
+## Data Security Note
 
-Semua data dalam repo ini adalah **sintetik** (rekaan). JANGAN muat naik atau commit dokumen pesakit sebenar, surat PUU sulit, atau apa-apa data sebenar ke dalam repo ini.
+All data in this repo is **synthetic** (fabricated). DO NOT upload or commit real patient documents, confidential PUU letters, or any real data into this repo.
 
-## Lesen
+## Licence
 
-Kandungan dilesenkan di bawah [CC BY 4.0](LICENSE) (Creative Commons Attribution 4.0 International).
+Content is licensed under [CC BY 4.0](LICENSE) (Creative Commons Attribution 4.0 International).

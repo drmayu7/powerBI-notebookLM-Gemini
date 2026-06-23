@@ -1,4 +1,4 @@
-# Fasa 2 — Slaid Pengenalan + Screenshot Lab Implementation Plan
+# Phase 2 — Intro Slides + Lab Screenshots Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers-extended-cc:subagent-driven-development (recommended) or superpowers-extended-cc:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 

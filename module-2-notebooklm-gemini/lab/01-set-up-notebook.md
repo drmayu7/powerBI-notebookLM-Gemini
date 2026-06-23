@@ -1,44 +1,45 @@
-# Lab 1: Sediakan Notebook
+# Lab 1: Set Up the Notebook
 
-**Matlamat:** Cipta notebook pertama anda dalam NotebookLM dan muat naik
-beberapa dokumen rujukan awam.
+**Goal:** Create your first notebook in NotebookLM and upload a few public
+reference documents.
 
-> **⚠️ Amaran:** Gunakan **dokumen awam sahaja** untuk latihan ini. Jangan upload
-> dokumen sulit atau data pesakit ke akaun peribadi.
-
----
-
-## Langkah
-
-1. Layari `https://notebooklm.google.com` dan log masuk dengan akaun Google anda.
-
-2. Klik **Create** / **New notebook** (Cipta notebook baharu).
-
-3. Klik **Add sources** (Tambah sumber).
-
-   ![Add sources di NotebookLM](img/01-add-sources.png)
-
-4. Sediakan 2–3 dokumen awam terlebih dahulu:
-   - Buka [`public-references.md`](../public-references.md).
-   - Muat turun 2–3 dokumen (cth. PDF garis panduan) dari pautan yang
-     disenaraikan.
-
-5. Upload dokumen tersebut ke NotebookLM:
-   - Pilih **Upload** dan pilih fail PDF yang dimuat turun, **atau**
-   - Gunakan pilihan **Website / Link** dan tampal pautan terus (jika disokong).
-
-6. Tunggu NotebookLM memproses (*index*) dokumen. Anda akan nampak senarai
-   sumber di panel kiri.
-
-> **Tip:** Beri notebook anda nama yang bermakna, cth. "Rujukan Pengurusan Rekod".
+> **⚠️ Warning:** Use **public documents only** for this exercise. Do not
+> upload confidential documents or patient data to a personal account.
 
 ---
 
-## Hasil yang dijangka
+## Steps
 
-Satu notebook dengan **2–3 sumber** yang telah diproses dan tersenarai di panel
-sumber (kiri). NotebookLM bersedia untuk menjawab soalan.
+1. Go to `https://notebooklm.google.com` and sign in with your Google account.
 
-![Sumber diproses & tersenarai](img/01-sources-processed.png)
+2. Click **Create** / **New notebook**.
 
-➡️ Seterusnya: [Lab 2 — Tanya korpus](02-query-the-corpus.md)
+3. Click the **Add sources** button.
+
+   ![Add sources in NotebookLM](img/01-add-sources.png)
+
+4. Prepare 2–3 public documents beforehand:
+   - Open [`public-references.md`](../public-references.md).
+   - Download 2–3 documents (e.g. guideline PDFs) from the listed links.
+
+5. Upload those documents to NotebookLM:
+   - Choose **Upload** and select the downloaded PDF file, **or**
+   - Use the **Website / Link** option and paste the link directly (if
+     supported).
+
+6. Wait for NotebookLM to process (index) the documents. You will see a list
+   of sources in the left panel.
+
+> **Tip:** Give your notebook a meaningful name, e.g. "Records Management
+> References".
+
+---
+
+## Expected outcome
+
+A notebook with **2–3 sources** that have been processed and are listed in the
+sources panel (left). NotebookLM is ready to answer questions.
+
+![Sources processed and listed](img/01-sources-processed.png)
+
+➡️ Next: [Lab 2 — Query the corpus](02-query-the-corpus.md)
