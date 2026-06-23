@@ -6,7 +6,7 @@ surat jemputan peserta.docx
 .venv/
 
 # Power BI & pejabat
-*.pbix
+#*.pbix
 ~$*
 
 # OS
