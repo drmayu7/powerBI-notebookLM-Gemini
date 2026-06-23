@@ -13,9 +13,9 @@ Penceramah: **Dr. Muhammad Naufal bin Nordin**.
 
 ## Cara Guna Repo Ini
 
-- Mula di [`00-persediaan/`](00-persediaan/) untuk persediaan awal.
-- Kemudian teruskan ke [`modul-1-power-bi/`](modul-1-power-bi/) untuk Slot 1.
-- Akhir sekali ke [`modul-2-notebooklm-gemini/`](modul-2-notebooklm-gemini/) untuk Slot 2.
+- Mula di [`00-setup/`](00-setup/) untuk persediaan awal.
+- Kemudian teruskan ke [`module-1-power-bi/`](module-1-power-bi/) untuk Slot 1.
+- Akhir sekali ke [`module-2-notebooklm-gemini/`](module-2-notebooklm-gemini/) untuk Slot 2.
 
 ## Nota Keselamatan Data
 

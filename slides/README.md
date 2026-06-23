@@ -6,8 +6,8 @@ di-commit supaya boleh terus dibentangkan tanpa sebarang pemasangan.
 
 | Fail | Slot |
 |------|------|
-| `modul-1-power-bi.md` | Slot 1 — Power BI (~30 min, English) |
-| `modul-2-notebooklm-gemini.md` | Slot 2 — NotebookLM & Gemini (~20 min) |
+| `module-1-power-bi.md` | Slot 1 — Power BI (~30 min, English) |
+| `module-2-notebooklm-gemini.md` | Slot 2 — NotebookLM & Gemini (~20 min) |
 
 ## Render semula
 
@@ -16,13 +16,13 @@ secara automatik kali pertama.
 
 ```bash
 # PDF (untuk bentang/cetak)
-npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf
+npx -y @marp-team/marp-cli slides/module-1-power-bi.md --pdf -o slides/build/module-1-power-bi.pdf
 
 # PowerPoint (untuk edit dalam PowerPoint)
-npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --pptx -o slides/build/modul-1-power-bi.pptx
+npx -y @marp-team/marp-cli slides/module-1-power-bi.md --pptx -o slides/build/module-1-power-bi.pptx
 
 # HTML (untuk bentang dari pelayar)
-npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --html -o slides/build/modul-1-power-bi.html
+npx -y @marp-team/marp-cli slides/module-1-power-bi.md --html -o slides/build/module-1-power-bi.html
 ```
 
 Tema: `gaia` (terbina-dalam Marp). Untuk tukar tema, edit `theme:` dalam

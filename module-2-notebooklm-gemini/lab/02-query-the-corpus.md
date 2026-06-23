@@ -39,4 +39,4 @@ jawapan melalui citation** — tanpa perlu *flip* banyak muka surat.
 Anda memperoleh jawapan **bersumber** kepada soalan prosedur, dan tahu cara
 **mengklik citation** untuk mengesahkan ketepatannya terhadap dokumen asal.
 
-➡️ Seterusnya: [Lab 3 — Kertas projek → slaid](03-kertas-projek-ke-slaid.md)
+➡️ Seterusnya: [Lab 3 — Kertas projek → slaid](03-project-paper-to-slides.md)

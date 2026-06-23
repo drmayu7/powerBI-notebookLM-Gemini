@@ -112,7 +112,7 @@ depends on live internet.
 | Optional context | `covid_cases.parquet` | `https://storage.data.gov.my/healthcare/covid_cases.parquet` |
 
 **Teaching approach:** the facilitator demos **Get Data → Web** (URL ingestion) once
-on screen, then everyone loads the **local copies** in `modul-1-power-bi/data/` as
+on screen, then everyone loads the **local copies** in `module-1-power-bi/data/` as
 the reliable path. A `data/fetch_data.py` script (using duckdb/httpfs) regenerates
 the local files.
 
@@ -225,11 +225,11 @@ Cross-filtering between visuals, slicer behaviour, drill-down, tooltips.
 ## 11. Deliverables & repo changes
 
 ### New / rewritten
-- `slides/modul-1-power-bi.md` — rewritten theory deck (English, ~14 slides).
-- `modul-1-power-bi/README.md` — rewritten (English: theory + build overview).
-- `modul-1-power-bi/hands-on-guide.md` — written follow-along guide (English;
+- `slides/module-1-power-bi.md` — rewritten theory deck (English, ~14 slides).
+- `module-1-power-bi/README.md` — rewritten (English: theory + build overview).
+- `module-1-power-bi/hands-on-guide.md` — written follow-along guide (English;
   stragglers' safety net mirroring the live steps).
-- `modul-1-power-bi/data/` — pre-downloaded parquet/CSV + `fetch_data.py`.
+- `module-1-power-bi/data/` — pre-downloaded parquet/CSV + `fetch_data.py`.
 - Facilitator pacing notes + checkpoint list.
 
 ### Checkpoint `.pbix` files
@@ -238,7 +238,7 @@ repo provides the data + step guide so each checkpoint (`00-start` → `05-final
 can be regenerated. The checkpoint sequence is documented in the hands-on guide.
 
 ### Retired
-- `modul-1-power-bi/lab/01–07`
+- `module-1-power-bi/lab/01–07`
 - `data/jana_data.py` and synthetic CSVs
 - BOR/ALOS framing
 
@@ -249,7 +249,7 @@ can be regenerated. The checkpoint sequence is documented in the hands-on guide.
 | Risk | Mitigation |
 |---|---|
 | Room internet unreliable | Pre-download all data into repo; URL ingestion is a one-time demo only |
-| Laptops without Power BI Desktop | Reinforce `00-persediaan/` prerequisite; have a spare install plan |
+| Laptops without Power BI Desktop | Reinforce `00-setup/` prerequisite; have a spare install plan |
 | Map visuals blocked on govt tenant | Core dashboard uses bar-by-state; map is optional swap |
 | Participants fall behind | Per-stage checkpoint `.pbix` + written hands-on guide to rejoin |
 | Build overruns 3.5 hrs | Showcase extras are explicitly optional; core is sized to finish |

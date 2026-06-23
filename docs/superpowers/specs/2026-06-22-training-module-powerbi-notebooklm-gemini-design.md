@@ -34,16 +34,16 @@ Repositori awam GitHub yang mengandungi modul latihan untuk dirujuk oleh peserta
 ```
 README.md                      ← gambaran kursus, 2 slot, agenda, "cara guna repo ini"
 LICENSE                        ← lesen permisif (repo awam/boleh guna semula)
-00-persediaan/
+00-setup/
   README.md                    ← persediaan sebelum kursus: pasang Power BI Desktop, sedia akaun Google
-modul-1-power-bi/
+module-1-power-bi/
   README.md                    ← nota ceramah pengenalan + peta lab
   lab/                         ← fail langkah fokus (satu tugas setiap fail, bernombor)
   data/                        ← dataset perubatan sintetik (CSV) + skrip penjana
-modul-2-notebooklm-gemini/
+module-2-notebooklm-gemini/
   README.md                    ← pengenalan + 3 aliran kerja
   lab/                         ← panduan aliran kerja
-  rujukan-awam.md              ← senarai pautan dokumen awam KKM/JPA
+  public-references.md              ← senarai pautan dokumen awam KKM/JPA
 docs/superpowers/specs/        ← dokumen reka bentuk ini
 ```
 
@@ -61,7 +61,7 @@ docs/superpowers/specs/        ← dokumen reka bentuk ini
 
 **Prinsip:** pengguna kali pertama → satu konsep baharu pada satu masa, sentiasa berkait dengan output statistik perubatan yang mereka kenali.
 
-**`modul-1-power-bi/README.md` — nota ceramah pengenalan (~20 min):**
+**`module-1-power-bi/README.md` — nota ceramah pengenalan (~20 min):**
 - Apa itu Power BI & kenapa relevan untuk statistik perubatan (dari Excel manual → dashboard automatik)
 - Aliran kerja Power BI: Get Data → Transform → Model → Visualize → Share
 - Lawatan ringkas antara muka (Report / Data / Model views)
@@ -83,7 +83,7 @@ docs/superpowers/specs/        ← dokumen reka bentuk ini
 
 ## 5. Modul 2 — NotebookLM + Gemini (3.5 jam)
 
-**`modul-2-notebooklm-gemini/README.md` — nota ceramah pengenalan (~20 min):**
+**`module-2-notebooklm-gemini/README.md` — nota ceramah pengenalan (~20 min):**
 - Apa itu NotebookLM (AI *grounded* pada dokumen anda + petikan/citation) vs Gemini (AI generatif umum)
 - Kenapa relevan: berhenti "flip2 paper" — tanya terus korpus rujukan
 - Konsep penting: *grounding*, *citation*, dan **amaran data sensitif** (jangan upload data pesakit sebenar ke akaun peribadi)
@@ -92,15 +92,15 @@ docs/superpowers/specs/        ← dokumen reka bentuk ini
 
 | Fail | Aliran kerja |
 |---|---|
-| `01-sediakan-notebook.md` | Buka NotebookLM, cipta notebook, muat naik dokumen contoh (dari pautan awam di `rujukan-awam.md`) |
-| `02-tanya-korpus.md` | **Aliran 1:** tanya soalan prosedur/garis panduan, baca jawapan + citation, sahkan sumber |
-| `03-kertas-projek-ke-slaid.md` | **Aliran 2:** dari kertas projek → guna Studio (briefing doc, struktur slaid) + prompt Gemini untuk olah jadi slaid |
-| `04-audio-mesyuarat-ke-minit.md` | **Aliran 3:** transkrip rakaman mesyuarat → draf minit mesyuarat (guna sampel/transkrip contoh) |
-| `05-explore-lanjut.md` | Audio Overview, FAQ, Study Guide, Mind Map; Gemini untuk draf memo/laporan rasmi |
+| `01-set-up-notebook.md` | Buka NotebookLM, cipta notebook, muat naik dokumen contoh (dari pautan awam di `public-references.md`) |
+| `02-query-the-corpus.md` | **Aliran 1:** tanya soalan prosedur/garis panduan, baca jawapan + citation, sahkan sumber |
+| `03-project-paper-to-slides.md` | **Aliran 2:** dari kertas projek → guna Studio (briefing doc, struktur slaid) + prompt Gemini untuk olah jadi slaid |
+| `04-meeting-audio-to-minutes.md` | **Aliran 3:** transkrip rakaman mesyuarat → draf minit mesyuarat (guna sampel/transkrip contoh) |
+| `05-explore-further.md` | Audio Overview, FAQ, Study Guide, Mind Map; Gemini untuk draf memo/laporan rasmi |
 
 **Nota merentas modul:** kotak **garis panduan keselamatan data** yang jelas — peserta akan tergoda untuk upload PUU/dokumen pesakit sebenar; modul berulang kali tandakan apa yang selamat (dokumen awam, de-identified) vs tidak.
 
-**`rujukan-awam.md`:** senarai dokumen awam KKM/JPA sebenar (garis panduan pengurusan rekod, pekeliling, dll.) yang peserta muat turun dan upload ke NotebookLM untuk lab. Nota: pautan boleh berubah/luput; akan ditulis dengan tarikh akses.
+**`public-references.md`:** senarai dokumen awam KKM/JPA sebenar (garis panduan pengurusan rekod, pekeliling, dll.) yang peserta muat turun dan upload ke NotebookLM untuk lab. Nota: pautan boleh berubah/luput; akan ditulis dengan tarikh akses.
 
 **Catatan:** Aliran 2 bergantung pada ciri NotebookLM Studio semasa — ditulis mengikut apa yang ada sekarang, dengan nota bahawa UI sentiasa berkembang.
 
@@ -121,7 +121,7 @@ Direka sebagai **star schema** kecil supaya langkah modeling bermakna dan setiap
 
 **Jadual dimensi — `tarikh.csv`:** date table untuk trend bulanan — *atau* dibina dalam Power Query semasa lab; CSV disediakan sebagai fallback supaya tiada peserta tersekat.
 
-**Penjanaan:** skrip Python kecil (`modul-1-power-bi/data/jana_data.py`) menggunakan stdlib sahaja — data boleh dihasilkan semula (`random.seed`), boleh ubah volum. CSV yang dijana di-commit bersama. Sepenuhnya sintetik, taburan realistik (seasonality, LOS munasabah, BOR dalam julat dipercayai).
+**Penjanaan:** skrip Python kecil (`module-1-power-bi/data/jana_data.py`) menggunakan stdlib sahaja — data boleh dihasilkan semula (`random.seed`), boleh ubah volum. CSV yang dijana di-commit bersama. Sepenuhnya sintetik, taburan realistik (seasonality, LOS munasabah, BOR dalam julat dipercayai).
 
 **Format:** CSV sahaja.
 
@@ -129,9 +129,9 @@ Direka sebagai **star schema** kecil supaya langkah modeling bermakna dan setiap
 
 Termasuk:
 - `README.md` (akar), `LICENSE`
-- `00-persediaan/README.md`
-- `modul-1-power-bi/` — README + semua fail lab + dataset CSV + skrip penjana
-- `modul-2-notebooklm-gemini/` — README + semua fail lab + `rujukan-awam.md`
+- `00-setup/README.md`
+- `module-1-power-bi/` — README + semua fail lab + dataset CSV + skrip penjana
+- `module-2-notebooklm-gemini/` — README + semua fail lab + `public-references.md`
 
 **Tidak termasuk (Fasa 2):** slaid sebenar, screenshot/imej, fail `.pbix` siap, fail audio contoh.
 

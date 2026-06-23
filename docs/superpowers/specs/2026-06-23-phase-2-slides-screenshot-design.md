@@ -4,7 +4,7 @@
 **Penceramah:** Dr. Muhammad Naufal bin Nordin
 **Kursus:** Kursus Lanjutan (Advanced) — Pegawai Tadbir (Rekod Perubatan) & Penolong, KKM 2026
 **Slot:** 25 Jun 2026 (Khamis)
-**Rujukan:** Sambungan kepada [reka bentuk Fasa 1](2026-06-22-modul-latihan-powerbi-notebooklm-gemini-design.md)
+**Rujukan:** Sambungan kepada [reka bentuk Fasa 1](2026-06-22-training-module-powerbi-notebooklm-gemini-design.md)
 
 ## 1. Konteks & Matlamat
 
@@ -33,13 +33,13 @@ Fasa 1 (tulang belakang kandungan markdown + dataset sintetik + pautan awam) tel
 ```
 slides/
   README.md                     ← cara render (arahan npx Marp CLI), nota tema
-  modul-1-power-bi.md           ← Marp deck: pengenalan Slot 1 (~20 min)
-  modul-2-notebooklm-gemini.md  ← Marp deck: pengenalan Slot 2 (~20 min)
+  module-1-power-bi.md           ← Marp deck: pengenalan Slot 1 (~20 min)
+  module-2-notebooklm-gemini.md  ← Marp deck: pengenalan Slot 2 (~20 min)
   build/
-    modul-1-power-bi.pdf        ← PDF dirender (di-commit; presentable tanpa setup)
-    modul-2-notebooklm-gemini.pdf
-modul-1-power-bi/lab/img/       ← folder screenshot (.gitkeep)
-modul-2-notebooklm-gemini/lab/img/
+    module-1-power-bi.pdf        ← PDF dirender (di-commit; presentable tanpa setup)
+    module-2-notebooklm-gemini.pdf
+module-1-power-bi/lab/img/       ← folder screenshot (.gitkeep)
+module-2-notebooklm-gemini/lab/img/
 docs/SCREENSHOTS.md             ← manifest/checklist tangkapan (semua shot, ikut lab/langkah)
 ```
 
@@ -49,7 +49,7 @@ docs/SCREENSHOTS.md             ← manifest/checklist tangkapan (semua shot, ik
 
 Kedua-dua deck bersumberkan nota pengenalan sedia ada dalam `README.md` setiap modul. Tahap tajuk (titles + beberapa bullet) sahaja — detail langkah-demi-langkah kekal dalam lab, bukan slaid. ~12–15 slaid setiap deck.
 
-**Deck 1 — `slides/modul-1-power-bi.md` (pengenalan Slot 1):**
+**Deck 1 — `slides/module-1-power-bi.md` (pengenalan Slot 1):**
 
 1. Tajuk (kursus, slot, penceramah, tarikh)
 2. Apa itu Power BI & kenapa relevan untuk statistik perubatan (Excel manual → dashboard automatik)
@@ -60,7 +60,7 @@ Kedua-dua deck bersumberkan nota pengenalan sedia ada dalam `README.md` setiap m
 7. Nota keselamatan data (dataset sintetik) + jangkaan hands-on
 8. Mari mula → Lab 1
 
-**Deck 2 — `slides/modul-2-notebooklm-gemini.md` (pengenalan Slot 2):**
+**Deck 2 — `slides/module-2-notebooklm-gemini.md` (pengenalan Slot 2):**
 
 1. Tajuk
 2. NotebookLM (grounded + citation) vs Gemini (generatif umum)
@@ -75,7 +75,7 @@ Kedua-dua deck bersumberkan nota pengenalan sedia ada dalam `README.md` setiap m
 
 ## 5. Screenshot — Manifest, Placeholder, Folder
 
-**Folder:** cipta `modul-1-power-bi/lab/img/` dan `modul-2-notebooklm-gemini/lab/img/` (dengan `.gitkeep` supaya folder kosong boleh commit).
+**Folder:** cipta `module-1-power-bi/lab/img/` dan `module-2-notebooklm-gemini/lab/img/` (dengan `.gitkeep` supaya folder kosong boleh commit).
 
 **Konvensyen placeholder:** setiap rujukan screenshot diseragamkan sebagai `![Keterangan ringkas](img/NN-nama.png)`, diletak betul-betul selepas langkah yang diilustrasikan. Penamaan = nombor lab + slug pendek (cth. `02-power-query.png`). Rujukan sedia ada yang tidak konsisten (lab 01/03/05/06 modul-1) diperbetulkan; yang tiada ditambah merentas semua lab.
 
@@ -95,7 +95,7 @@ Kedua-dua deck bersumberkan nota pengenalan sedia ada dalam `README.md` setiap m
 
 ## 7. Pengesahan (verification)
 
-- `npx @marp-team/marp-cli slides/modul-1-power-bi.md --pdf` menghasilkan PDF tanpa error; sama untuk deck 2.
+- `npx @marp-team/marp-cli slides/module-1-power-bi.md --pdf` menghasilkan PDF tanpa error; sama untuk deck 2.
 - Setiap deck dibuka & semua slaid render (teks BM + istilah English betul).
 - Semua lab: rujukan placeholder mengikut konvensyen `![...](img/NN-nama.png)`; folder `img/` wujud.
 - `docs/SCREENSHOTS.md` menyenaraikan setiap fail screenshot yang dirujuk dalam mana-mana lab (tiada rujukan tertinggal).

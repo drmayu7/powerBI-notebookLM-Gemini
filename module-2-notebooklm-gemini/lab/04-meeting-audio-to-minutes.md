@@ -50,4 +50,4 @@ Satu **draf minit mesyuarat** berstruktur (Bil, Perkara, Tindakan, Pegawai,
 Tarikh) yang dijana daripada rakaman/transkrip, sedia untuk disemak dan
 dimuktamadkan.
 
-➡️ Seterusnya: [Lab 5 — Explore lanjut](05-explore-lanjut.md)
+➡️ Seterusnya: [Lab 5 — Explore lanjut](05-explore-further.md)

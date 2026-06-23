@@ -57,4 +57,4 @@ pembentangan menggunakan NotebookLM Studio dan Gemini.
 Satu **rangka slaid** (8 slaid: tajuk + 3 bullet setiap satu) yang dijana dari
 kertas projek anda, sedia untuk dipindahkan ke alat pembentangan.
 
-➡️ Seterusnya: [Lab 4 — Audio → minit mesyuarat](04-audio-mesyuarat-ke-minit.md)
+➡️ Seterusnya: [Lab 4 — Audio → minit mesyuarat](04-meeting-audio-to-minutes.md)

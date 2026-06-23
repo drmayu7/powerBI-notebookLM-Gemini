@@ -18,7 +18,7 @@
 - Age bands: 0–17 / 18–39 / 40–59 / 60–79 / 80+.
 - Include `covid_cases` for now (Case Fatality measure); may drop later.
 
-**Reference spec:** `docs/superpowers/specs/2026-06-23-modul1-powerbi-rework-design.md`
+**Reference spec:** `docs/superpowers/specs/2026-06-23-module-1-powerbi-rework-design.md`
 
 ---
 
@@ -27,18 +27,18 @@
 | Path | Responsibility | Action |
 |---|---|---|
 | `pyproject.toml` | add `duckdb` dependency | Modify |
-| `modul-1-power-bi/data/fetch_data.py` | download + pin 3 datasets to CSV | Create |
-| `modul-1-power-bi/data/covid_deaths_linelist.csv` | fact data (committed) | Generated |
-| `modul-1-power-bi/data/covid_cases.csv` | cases context (committed) | Generated |
-| `modul-1-power-bi/data/population_state.csv` | population dim input (committed) | Generated |
-| `slides/modul-1-power-bi.md` | theory deck (English Marp) | Rewrite |
-| `slides/build/modul-1-power-bi.pdf` | rendered deck (committed) | Regenerate |
+| `module-1-power-bi/data/fetch_data.py` | download + pin 3 datasets to CSV | Create |
+| `module-1-power-bi/data/covid_deaths_linelist.csv` | fact data (committed) | Generated |
+| `module-1-power-bi/data/covid_cases.csv` | cases context (committed) | Generated |
+| `module-1-power-bi/data/population_state.csv` | population dim input (committed) | Generated |
+| `slides/module-1-power-bi.md` | theory deck (English Marp) | Rewrite |
+| `slides/build/module-1-power-bi.pdf` | rendered deck (committed) | Regenerate |
 | `slides/README.md` | fix Slot 1 timing/language note | Modify |
-| `modul-1-power-bi/README.md` | English module overview | Rewrite |
-| `modul-1-power-bi/hands-on-guide.md` | follow-along build guide | Create |
+| `module-1-power-bi/README.md` | English module overview | Rewrite |
+| `module-1-power-bi/hands-on-guide.md` | follow-along build guide | Create |
 | `docs/SCREENSHOTS.md` | Modul 1 screenshot manifest | Modify |
-| `modul-1-power-bi/lab/**`, `data/jana_data.py`, synthetic CSVs | old content | Delete |
-| `modul-1-power-bi/img/.gitkeep` | screenshot folder for new guide | Create |
+| `module-1-power-bi/lab/**`, `data/jana_data.py`, synthetic CSVs | old content | Delete |
+| `module-1-power-bi/img/.gitkeep` | screenshot folder for new guide | Create |
 
 **Canonical technical artifacts** (single source of truth — every task that needs these uses these exact strings; do not improvise variants):
 
@@ -114,36 +114,36 @@ Format `% …` measures as Percentage; `Deaths per 100k` as 1 decimal.
 **Goal:** Remove the synthetic-admissions labs, generator, and CSVs so only the new COVID storyline remains.
 
 **Files:**
-- Delete: `modul-1-power-bi/lab/01-import-data.md` … `07-eksport-simpan.md` (all 7)
-- Delete: `modul-1-power-bi/lab/img/.gitkeep` (and the now-empty `lab/` dir)
-- Delete: `modul-1-power-bi/data/jana_data.py`
-- Delete: `modul-1-power-bi/data/disiplin.csv`, `kemasukan.csv`, `tarikh.csv`, `wad.csv`
-- Create: `modul-1-power-bi/img/.gitkeep` (folder for new guide screenshots)
+- Delete: `module-1-power-bi/lab/01-import-data.md` … `07-eksport-simpan.md` (all 7)
+- Delete: `module-1-power-bi/lab/img/.gitkeep` (and the now-empty `lab/` dir)
+- Delete: `module-1-power-bi/data/jana_data.py`
+- Delete: `module-1-power-bi/data/disiplin.csv`, `kemasukan.csv`, `tarikh.csv`, `wad.csv`
+- Create: `module-1-power-bi/img/.gitkeep` (folder for new guide screenshots)
 
 **Acceptance Criteria:**
-- [ ] `modul-1-power-bi/lab/` no longer exists.
-- [ ] No synthetic CSVs or `jana_data.py` remain under `modul-1-power-bi/data/`.
-- [ ] `modul-1-power-bi/img/.gitkeep` exists.
+- [ ] `module-1-power-bi/lab/` no longer exists.
+- [ ] No synthetic CSVs or `jana_data.py` remain under `module-1-power-bi/data/`.
+- [ ] `module-1-power-bi/img/.gitkeep` exists.
 
-**Verify:** `ls modul-1-power-bi/lab 2>/dev/null; ls modul-1-power-bi/data` → `lab` absent; `data` shows no `kemasukan.csv`/`jana_data.py`.
+**Verify:** `ls module-1-power-bi/lab 2>/dev/null; ls module-1-power-bi/data` → `lab` absent; `data` shows no `kemasukan.csv`/`jana_data.py`.
 
 **Steps:**
 
 - [ ] **Step 1: Delete old content**
 ```bash
 cd /d/Dev/training/powerBI-notebookLM-Gemini
-git rm -r modul-1-power-bi/lab
-git rm modul-1-power-bi/data/jana_data.py modul-1-power-bi/data/disiplin.csv \
-       modul-1-power-bi/data/kemasukan.csv modul-1-power-bi/data/tarikh.csv \
-       modul-1-power-bi/data/wad.csv
-mkdir -p modul-1-power-bi/img && touch modul-1-power-bi/img/.gitkeep
-git add modul-1-power-bi/img/.gitkeep
+git rm -r module-1-power-bi/lab
+git rm module-1-power-bi/data/jana_data.py module-1-power-bi/data/disiplin.csv \
+       module-1-power-bi/data/kemasukan.csv module-1-power-bi/data/tarikh.csv \
+       module-1-power-bi/data/wad.csv
+mkdir -p module-1-power-bi/img && touch module-1-power-bi/img/.gitkeep
+git add module-1-power-bi/img/.gitkeep
 ```
 
 - [ ] **Step 2: Verify**
 ```bash
-ls modul-1-power-bi/lab 2>/dev/null && echo "STILL THERE" || echo "lab removed"
-ls modul-1-power-bi/data
+ls module-1-power-bi/lab 2>/dev/null && echo "STILL THERE" || echo "lab removed"
+ls module-1-power-bi/data
 ```
 Expected: `lab removed`; `data` listing contains no synthetic CSVs.
 
@@ -160,8 +160,8 @@ git commit -m "chore: retire synthetic Modul 1 labs and data"
 
 **Files:**
 - Modify: `pyproject.toml` (add `duckdb` dependency)
-- Create: `modul-1-power-bi/data/fetch_data.py`
-- Generated (commit): `modul-1-power-bi/data/covid_deaths_linelist.csv`, `covid_cases.csv`, `population_state.csv`
+- Create: `module-1-power-bi/data/fetch_data.py`
+- Generated (commit): `module-1-power-bi/data/covid_deaths_linelist.csv`, `covid_cases.csv`, `population_state.csv`
 
 **Acceptance Criteria:**
 - [ ] `fetch_data.py` runs to completion and writes 3 CSVs.
@@ -169,7 +169,7 @@ git commit -m "chore: retire synthetic Modul 1 labs and data"
 - [ ] `population_state.csv` is pre-filtered to `sex=both, age=overall, ethnicity=overall` (16 rows per year, one row per state-year).
 - [ ] Script prints a row-count summary per file.
 
-**Verify:** `python modul-1-power-bi/data/fetch_data.py` → prints `covid_deaths_linelist: 37351 rows` (plus the other two counts) and exits 0.
+**Verify:** `python module-1-power-bi/data/fetch_data.py` → prints `covid_deaths_linelist: 37351 rows` (plus the other two counts) and exits 0.
 
 **Steps:**
 
@@ -190,7 +190,7 @@ Then install: `pip install duckdb` (or `uv pip install duckdb` if using uv).
 """Download and pin the open datasets used by Modul 1 to local CSV.
 
 Source: data.gov.my (MOH) and DOSM open data. Run from anywhere:
-    python modul-1-power-bi/data/fetch_data.py
+    python module-1-power-bi/data/fetch_data.py
 """
 from pathlib import Path
 import duckdb
@@ -238,16 +238,16 @@ if __name__ == "__main__":
 - [ ] **Step 3: Run and verify counts**
 ```bash
 cd /d/Dev/training/powerBI-notebookLM-Gemini
-python modul-1-power-bi/data/fetch_data.py
+python module-1-power-bi/data/fetch_data.py
 ```
 Expected output includes `covid_deaths_linelist: 37351 rows -> covid_deaths_linelist.csv`.
 
 - [ ] **Step 4: Commit script + data**
 ```bash
-git add pyproject.toml modul-1-power-bi/data/fetch_data.py \
-        modul-1-power-bi/data/covid_deaths_linelist.csv \
-        modul-1-power-bi/data/covid_cases.csv \
-        modul-1-power-bi/data/population_state.csv
+git add pyproject.toml module-1-power-bi/data/fetch_data.py \
+        module-1-power-bi/data/covid_deaths_linelist.csv \
+        module-1-power-bi/data/covid_cases.csv \
+        module-1-power-bi/data/population_state.csv
 git commit -m "feat: fetch script + pinned COVID/population datasets for Modul 1"
 ```
 
@@ -255,11 +255,11 @@ git commit -m "feat: fetch script + pinned COVID/population datasets for Modul 1
 
 ## Task 3: Theory slide deck (English, Marp)
 
-**Goal:** Rewrite `slides/modul-1-power-bi.md` in English (~14 slides incl. the 5-types-of-analytics slide), render the PDF, and fix the slides README note.
+**Goal:** Rewrite `slides/module-1-power-bi.md` in English (~14 slides incl. the 5-types-of-analytics slide), render the PDF, and fix the slides README note.
 
 **Files:**
-- Rewrite: `slides/modul-1-power-bi.md`
-- Regenerate (commit): `slides/build/modul-1-power-bi.pdf`
+- Rewrite: `slides/module-1-power-bi.md`
+- Regenerate (commit): `slides/build/module-1-power-bi.pdf`
 - Modify: `slides/README.md` (Slot 1 line: ~30 min, note English)
 
 **Acceptance Criteria:**
@@ -268,7 +268,7 @@ git commit -m "feat: fetch script + pinned COVID/population datasets for Modul 1
 - [ ] Includes slides for: what is BI, why for KKM, the workflow, the 3 views, what is a data model, what is a measure, today's data + open-data ethics, dashboard preview, follow-along ground rules.
 - [ ] Marp renders to PDF with no error.
 
-**Verify:** `npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf` → exits 0 and writes the PDF.
+**Verify:** `npx -y @marp-team/marp-cli slides/module-1-power-bi.md --pdf -o slides/build/module-1-power-bi.pdf` → exits 0 and writes the PDF.
 
 **Steps:**
 
@@ -296,7 +296,7 @@ The analytics slide content:
 
 - [ ] **Step 2: Render PDF**
 ```bash
-npx -y @marp-team/marp-cli slides/modul-1-power-bi.md --pdf -o slides/build/modul-1-power-bi.pdf
+npx -y @marp-team/marp-cli slides/module-1-power-bi.md --pdf -o slides/build/module-1-power-bi.pdf
 ```
 Expected: exit 0, PDF updated.
 
@@ -304,7 +304,7 @@ Expected: exit 0, PDF updated.
 
 - [ ] **Step 4: Commit**
 ```bash
-git add slides/modul-1-power-bi.md slides/build/modul-1-power-bi.pdf slides/README.md
+git add slides/module-1-power-bi.md slides/build/module-1-power-bi.pdf slides/README.md
 git commit -m "feat: English theory deck for Modul 1 (adds analytics types)"
 ```
 
@@ -312,10 +312,10 @@ git commit -m "feat: English theory deck for Modul 1 (adds analytics types)"
 
 ## Task 4: Hands-on follow-along guide
 
-**Goal:** Create `modul-1-power-bi/hands-on-guide.md` — the complete English follow-along build, using the canonical artifacts above, organized by the 5 build parts with checkpoints and a facilitator pacing note.
+**Goal:** Create `module-1-power-bi/hands-on-guide.md` — the complete English follow-along build, using the canonical artifacts above, organized by the 5 build parts with checkpoints and a facilitator pacing note.
 
 **Files:**
-- Create: `modul-1-power-bi/hands-on-guide.md`
+- Create: `module-1-power-bi/hands-on-guide.md`
 
 **Acceptance Criteria:**
 - [ ] Sections cover, in order: Part 1 Ingest + Power Query, Part 2 Data model, Break, Part 3 DAX, Part 4 Visuals, Part 5 Interactivity + optional showcase.
@@ -326,12 +326,12 @@ git commit -m "feat: English theory deck for Modul 1 (adds analytics types)"
 - [ ] Each of the 6 checkpoints (`00-start`…`05-final`) is named with what state it represents.
 - [ ] A short "Facilitator pacing" note maps the timetable (Section 4 of spec) to checkpoints.
 
-**Verify:** `grep -c "Vaccination_Status" modul-1-power-bi/hands-on-guide.md` ≥ 2 AND `grep -c "Deaths per 100k" modul-1-power-bi/hands-on-guide.md` ≥ 1 AND `grep -c "Mark as date table" modul-1-power-bi/hands-on-guide.md` ≥ 1.
+**Verify:** `grep -c "Vaccination_Status" module-1-power-bi/hands-on-guide.md` ≥ 2 AND `grep -c "Deaths per 100k" module-1-power-bi/hands-on-guide.md` ≥ 1 AND `grep -c "Mark as date table" module-1-power-bi/hands-on-guide.md` ≥ 1.
 
 **Steps:**
 
 - [ ] **Step 1: Write the guide** with these sections (embed the canonical artifacts verbatim):
-  1. **Intro & ground rules** — files in `modul-1-power-bi/data/`, raise hand if stuck, reload nearest checkpoint to rejoin.
+  1. **Intro & ground rules** — files in `module-1-power-bi/data/`, raise hand if stuck, reload nearest checkpoint to rejoin.
   2. **Part 1 — Ingest + Power Query** (8:30–9:20): Get Data → Text/CSV for the 3 CSVs; note the one-time "Get Data → Web" demo of the data.gov.my catalogue; open Power Query; set types; add the 6 custom columns (exact formulas); build `Dim_State` from `population_state` (filter + Population×1000 + Region). Checkpoint `01-powerquery`.
   3. **Part 2 — Data model** (9:20–9:45): add `Dim_Date` DAX table; Mark as date table; create the 4 relationships in Model view; explain star schema vs one-big-table. Checkpoint `02-model`.
   4. **Break** (9:45–10:00).
@@ -343,15 +343,15 @@ git commit -m "feat: English theory deck for Modul 1 (adds analytics types)"
 - [ ] **Step 2: Verify required content present**
 ```bash
 cd /d/Dev/training/powerBI-notebookLM-Gemini
-grep -c "Vaccination_Status" modul-1-power-bi/hands-on-guide.md
-grep -c "Deaths per 100k" modul-1-power-bi/hands-on-guide.md
-grep -c "Mark as date table" modul-1-power-bi/hands-on-guide.md
+grep -c "Vaccination_Status" module-1-power-bi/hands-on-guide.md
+grep -c "Deaths per 100k" module-1-power-bi/hands-on-guide.md
+grep -c "Mark as date table" module-1-power-bi/hands-on-guide.md
 ```
 Expected: first ≥ 2, others ≥ 1.
 
 - [ ] **Step 3: Commit**
 ```bash
-git add modul-1-power-bi/hands-on-guide.md
+git add module-1-power-bi/hands-on-guide.md
 git commit -m "feat: COVID dashboard follow-along hands-on guide"
 ```
 
@@ -359,35 +359,35 @@ git commit -m "feat: COVID dashboard follow-along hands-on guide"
 
 ## Task 5: Rewrite Modul 1 README (English)
 
-**Goal:** Rewrite `modul-1-power-bi/README.md` in English to describe the new theory + follow-along structure, dataset, and how to fetch data.
+**Goal:** Rewrite `module-1-power-bi/README.md` in English to describe the new theory + follow-along structure, dataset, and how to fetch data.
 
 **Files:**
-- Rewrite: `modul-1-power-bi/README.md`
+- Rewrite: `module-1-power-bi/README.md`
 
 **Acceptance Criteria:**
 - [ ] English. Describes the 30-min theory + ~2.5-hr follow-along split and the Slot 1 timetable.
 - [ ] Documents the 3 datasets + `python data/fetch_data.py` to (re)generate them.
 - [ ] Links to `hands-on-guide.md` and the slide deck.
-- [ ] States data is open/aggregate (no real patient data) and links the prerequisite `../00-persediaan/`.
+- [ ] States data is open/aggregate (no real patient data) and links the prerequisite `../00-setup/`.
 - [ ] No references to the deleted synthetic labs / `jana_data.py` / BOR-ALOS.
 
-**Verify:** `grep -i "jana_data\|kemasukan\|BOR\|ALOS" modul-1-power-bi/README.md` → no matches; `grep -c "hands-on-guide" modul-1-power-bi/README.md` ≥ 1.
+**Verify:** `grep -i "jana_data\|kemasukan\|BOR\|ALOS" module-1-power-bi/README.md` → no matches; `grep -c "hands-on-guide" module-1-power-bi/README.md` ≥ 1.
 
 **Steps:**
 
-- [ ] **Step 1: Rewrite** with sections: title + slot line; what you'll build (one-line dashboard description); Slot 1 timetable table (from spec Section 4); Datasets table (3 files + sources) and `python data/fetch_data.py`; how to follow (`hands-on-guide.md`, checkpoints); slide deck link (`../slides/modul-1-power-bi.md`); data-safety note; prerequisite link.
+- [ ] **Step 1: Rewrite** with sections: title + slot line; what you'll build (one-line dashboard description); Slot 1 timetable table (from spec Section 4); Datasets table (3 files + sources) and `python data/fetch_data.py`; how to follow (`hands-on-guide.md`, checkpoints); slide deck link (`../slides/module-1-power-bi.md`); data-safety note; prerequisite link.
 
 - [ ] **Step 2: Verify**
 ```bash
 cd /d/Dev/training/powerBI-notebookLM-Gemini
-grep -i "jana_data\|kemasukan\|BOR\|ALOS" modul-1-power-bi/README.md && echo "STALE REF" || echo "clean"
-grep -c "hands-on-guide" modul-1-power-bi/README.md
+grep -i "jana_data\|kemasukan\|BOR\|ALOS" module-1-power-bi/README.md && echo "STALE REF" || echo "clean"
+grep -c "hands-on-guide" module-1-power-bi/README.md
 ```
 Expected: `clean`; count ≥ 1.
 
 - [ ] **Step 3: Commit**
 ```bash
-git add modul-1-power-bi/README.md
+git add module-1-power-bi/README.md
 git commit -m "docs: rewrite Modul 1 README for COVID build (English)"
 ```
 
@@ -395,13 +395,13 @@ git commit -m "docs: rewrite Modul 1 README for COVID build (English)"
 
 ## Task 6: Update screenshot manifest for new build
 
-**Goal:** Replace the Modul 1 section of `docs/SCREENSHOTS.md` so it lists screenshots for the new follow-along guide (stored in `modul-1-power-bi/img/`), removing references to deleted labs.
+**Goal:** Replace the Modul 1 section of `docs/SCREENSHOTS.md` so it lists screenshots for the new follow-along guide (stored in `module-1-power-bi/img/`), removing references to deleted labs.
 
 **Files:**
 - Modify: `docs/SCREENSHOTS.md` (Modul 1 table only; leave Modul 2 untouched)
 
 **Acceptance Criteria:**
-- [ ] Modul 1 table points at `modul-1-power-bi/img/` (not `lab/img/`).
+- [ ] Modul 1 table points at `module-1-power-bi/img/` (not `lab/img/`).
 - [ ] Rows correspond to the new build steps (e.g. get-data CSV, Power Query custom column, model/relationships, new measure, core visuals, slicers/dashboard, optional map).
 - [ ] No rows reference old lab numbers/filenames (`01-get-data` admissions context, `kemasukan`, etc.).
 
@@ -409,7 +409,7 @@ git commit -m "docs: rewrite Modul 1 README for COVID build (English)"
 
 **Steps:**
 
-- [ ] **Step 1: Replace the Modul 1 table** with rows mapping the new guide (folder `modul-1-power-bi/img/`). Suggested rows:
+- [ ] **Step 1: Replace the Modul 1 table** with rows mapping the new guide (folder `module-1-power-bi/img/`). Suggested rows:
   `01-get-data-csv.png` (Get Data → Text/CSV), `02-custom-column-agegroup.png` (Age_Group conditional), `02-custom-column-vaccine.png` (Vaccination_Status), `03-model-star.png` (Model view, 4 relationships), `03-mark-date-table.png`, `04-new-measure.png` (Deaths per 100k), `05-cards-visuals.png` (core visuals), `06-slicers-dashboard.png` (slicers + cross-filter), `07-map-per100k.png` (optional filled map).
 
 - [ ] **Step 2: Verify**

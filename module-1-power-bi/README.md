@@ -8,7 +8,7 @@ dashboard** from scratch in **Power BI Desktop** — even if you have never
 used Power BI before.
 
 > **Haven't installed Power BI Desktop yet?** Please complete the
-> [setup guide](../00-persediaan/) before the session.
+> [setup guide](../00-setup/) before the session.
 
 ---
 
@@ -65,7 +65,7 @@ real-world Power BI reports.
   safety net — every formula, every measure, and the checkpoint `.pbix`
   files are documented there. Use it to follow along live or to redo the
   build on your own afterwards.
-- The **theory slide deck** is at [`../slides/modul-1-power-bi.md`](../slides/modul-1-power-bi.md).
+- The **theory slide deck** is at [`../slides/module-1-power-bi.md`](../slides/module-1-power-bi.md).
 
 ---
 

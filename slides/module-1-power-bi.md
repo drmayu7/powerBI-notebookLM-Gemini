@@ -118,7 +118,7 @@ A one-page dashboard with:
 ## Follow-along ground rules
 
 - Everyone builds on their **own laptop**.
-- Data files are in `modul-1-power-bi/data/`.
+- Data files are in `module-1-power-bi/data/`.
 - **Raise your hand** if you get stuck — don't wait.
 - We save **checkpoints** along the way so you can rejoin at any point.
 

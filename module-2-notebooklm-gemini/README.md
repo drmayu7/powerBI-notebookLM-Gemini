@@ -37,7 +37,7 @@ jawapan datang dengan rujukan ke sumbernya.
 
 > **JANGAN** muat naik data pesakit sebenar, surat PUU sulit, atau dokumen
 > terhad ke akaun Google peribadi. Untuk latihan, gunakan **dokumen awam**
-> (lihat [`rujukan-awam.md`](rujukan-awam.md)) atau dokumen yang telah
+> (lihat [`public-references.md`](public-references.md)) atau dokumen yang telah
 > di-*deidentify* (nyahkenal). Sentiasa patuhi dasar keselamatan maklumat
 > jabatan anda.
 
@@ -56,10 +56,10 @@ jawapan datang dengan rujukan ke sumbernya.
 
 | Langkah | Fail | Anggaran masa |
 | --- | --- | --- |
-| 1 | [Sediakan notebook](lab/01-sediakan-notebook.md) | 20 min |
-| 2 | [Aliran 1: Tanya korpus](lab/02-tanya-korpus.md) | 30 min |
-| 3 | [Aliran 2: Kertas projek → slaid](lab/03-kertas-projek-ke-slaid.md) | 35 min |
-| 4 | [Aliran 3: Audio → minit mesyuarat](lab/04-audio-mesyuarat-ke-minit.md) | 35 min |
-| 5 | [Explore lanjut](lab/05-explore-lanjut.md) | 20 min |
+| 1 | [Sediakan notebook](lab/01-set-up-notebook.md) | 20 min |
+| 2 | [Aliran 1: Tanya korpus](lab/02-query-the-corpus.md) | 30 min |
+| 3 | [Aliran 2: Kertas projek → slaid](lab/03-project-paper-to-slides.md) | 35 min |
+| 4 | [Aliran 3: Audio → minit mesyuarat](lab/04-meeting-audio-to-minutes.md) | 35 min |
+| 5 | [Explore lanjut](lab/05-explore-further.md) | 20 min |
 
 Jumlah ~2.5–3 jam (termasuk buffer untuk soal jawab).

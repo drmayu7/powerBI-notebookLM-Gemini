@@ -73,7 +73,7 @@ Sentiasa patuhi dasar keselamatan maklumat jabatan.
 | 4 | Aliran 3: Audio → minit | 35 min |
 | 5 | Explore lanjut | 20 min |
 
-Dokumen latihan: lihat `rujukan-awam.md` (pautan awam KKM/JPA).
+Dokumen latihan: lihat `public-references.md` (pautan awam KKM/JPA).
 
 ---
 

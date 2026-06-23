@@ -5,7 +5,7 @@ This guide walks you, step by step, through building an interactive COVID-19 mor
 ## Ground rules
 
 1. **Bring your own laptop** with Power BI Desktop installed (Windows only — there is no Mac version). Confirm it opens before the session starts.
-2. **Use the local CSV files**, not the internet. All three datasets you need are already in `modul-1-power-bi/data/`:
+2. **Use the local CSV files**, not the internet. All three datasets you need are already in `module-1-power-bi/data/`:
    - `covid_deaths_linelist.csv` — one row per COVID-19 death (~37,351 rows). Will become table **Fact_Deaths**.
    - `covid_cases.csv` — daily new cases by state. Will become table **covid_cases**.
    - `population_state.csv` — population by state. Will become table **Dim_State**.
@@ -29,7 +29,7 @@ This guide walks you, step by step, through building an interactive COVID-19 mor
 ### 1.1 Load the three CSV files
 
 1. Open Power BI Desktop. Go to **Home → Get Data → Text/CSV**.
-2. Browse to `modul-1-power-bi/data/covid_deaths_linelist.csv` and select it. Click **Transform Data** (not Load) so it opens in Power Query Editor.
+2. Browse to `module-1-power-bi/data/covid_deaths_linelist.csv` and select it. Click **Transform Data** (not Load) so it opens in Power Query Editor.
 3. Repeat **Home → Get Data → Text/CSV** for `covid_cases.csv` and for `population_state.csv`. Click **Transform Data** for each, so all three open as queries in the same Power Query Editor window.
 
 You should now have three queries listed on the left: `covid_deaths_linelist`, `covid_cases`, `population_state`.

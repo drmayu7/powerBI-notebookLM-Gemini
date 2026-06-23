@@ -1,0 +1,45 @@
+{
+  "planPath": "docs/superpowers/plans/2026-06-23-module-1-powerbi-rework.md",
+  "tasks": [
+    {
+      "id": 1,
+      "subject": "Task 1: Retire old synthetic Modul 1 content",
+      "status": "completed",
+      "description": "**Goal:** Remove the synthetic-admissions labs, generator, and CSVs so only the new COVID storyline remains.\n\n**Files:** Delete module-1-power-bi/lab/** (7 labs + img/.gitkeep), data/jana_data.py, disiplin.csv, kemasukan.csv, tarikh.csv, wad.csv; Create module-1-power-bi/img/.gitkeep.\n\n**Verify:** `ls module-1-power-bi/lab 2>/dev/null; ls module-1-power-bi/data` -> lab absent; no synthetic CSVs.\n\n```json:metadata\n{\"files\": [\"module-1-power-bi/lab\", \"module-1-power-bi/data/jana_data.py\", \"module-1-power-bi/img/.gitkeep\"], \"verifyCommand\": \"ls module-1-power-bi/lab 2>/dev/null; ls module-1-power-bi/data\", \"acceptanceCriteria\": [\"lab/ removed\", \"no synthetic CSVs or jana_data.py\", \"img/.gitkeep exists\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 2,
+      "subject": "Task 2: Data fetch script + pinned local datasets",
+      "status": "completed",
+      "description": "**Goal:** Reproducible fetch_data.py downloading 3 datasets to committed CSVs with validated row counts.\n\n**Files:** Modify pyproject.toml (duckdb>=1.0); Create module-1-power-bi/data/fetch_data.py; generate covid_deaths_linelist.csv, covid_cases.csv, population_state.csv.\n\n**Verify:** `python module-1-power-bi/data/fetch_data.py` -> prints `covid_deaths_linelist: 37351 rows`, exit 0.\n\n```json:metadata\n{\"files\": [\"pyproject.toml\", \"module-1-power-bi/data/fetch_data.py\", \"module-1-power-bi/data/covid_deaths_linelist.csv\", \"module-1-power-bi/data/covid_cases.csv\", \"module-1-power-bi/data/population_state.csv\"], \"verifyCommand\": \"python module-1-power-bi/data/fetch_data.py\", \"acceptanceCriteria\": [\"script writes 3 CSVs\", \"covid_deaths_linelist.csv has 37351 rows\", \"population pre-filtered to overall\", \"prints row counts\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 3,
+      "subject": "Task 3: Theory slide deck (English, Marp)",
+      "status": "completed",
+      "description": "**Goal:** Rewrite slides/module-1-power-bi.md in English (~14 slides incl. 5-types-of-analytics), render PDF, fix slides README.\n\n**Files:** Rewrite slides/module-1-power-bi.md; regenerate slides/build/module-1-power-bi.pdf; modify slides/README.md.\n\n**Verify:** `npx -y @marp-team/marp-cli slides/module-1-power-bi.md --pdf -o slides/build/module-1-power-bi.pdf` -> exit 0.\n\n```json:metadata\n{\"files\": [\"slides/module-1-power-bi.md\", \"slides/build/module-1-power-bi.pdf\", \"slides/README.md\"], \"verifyCommand\": \"npx -y @marp-team/marp-cli slides/module-1-power-bi.md --pdf -o slides/build/module-1-power-bi.pdf\", \"acceptanceCriteria\": [\"English deck with Marp front-matter\", \"5-types-of-analytics slide present\", \"covers BI/why/workflow/views/data-model/measure/data/ethics/preview/ground-rules\", \"renders to PDF without error\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 4,
+      "subject": "Task 4: Hands-on follow-along guide",
+      "status": "completed",
+      "blockedBy": [2],
+      "description": "**Goal:** Create module-1-power-bi/hands-on-guide.md — complete English follow-along build using canonical artifacts, 5 build parts, checkpoints, facilitator pacing.\n\n**Files:** Create module-1-power-bi/hands-on-guide.md.\n\n**Verify:** grep -c Vaccination_Status >=2; grep -c 'Deaths per 100k' >=1; grep -c 'Mark as date table' >=1.\n\n```json:metadata\n{\"files\": [\"module-1-power-bi/hands-on-guide.md\"], \"verifyCommand\": \"grep -c 'Vaccination_Status' module-1-power-bi/hands-on-guide.md; grep -c 'Deaths per 100k' module-1-power-bi/hands-on-guide.md; grep -c 'Mark as date table' module-1-power-bi/hands-on-guide.md\", \"acceptanceCriteria\": [\"5 build parts in order\", \"exact PQ custom-column formulas\", \"Dim_State + Dim_Date + mark-as-date + 4 relationships\", \"all 10 DAX measures verbatim\", \"6 core visuals + 4 slicers + optional showcase\", \"6 named checkpoints\", \"facilitator pacing note\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 5,
+      "subject": "Task 5: Rewrite Modul 1 README (English)",
+      "status": "completed",
+      "blockedBy": [2, 4],
+      "description": "**Goal:** Rewrite module-1-power-bi/README.md in English: theory + follow-along structure, datasets, fetch instructions.\n\n**Files:** Rewrite module-1-power-bi/README.md.\n\n**Verify:** grep -i 'jana_data|kemasukan|BOR|ALOS' -> none; grep -c hands-on-guide >=1.\n\n```json:metadata\n{\"files\": [\"module-1-power-bi/README.md\"], \"verifyCommand\": \"grep -i 'jana_data\\\\|kemasukan\\\\|BOR\\\\|ALOS' module-1-power-bi/README.md; grep -c 'hands-on-guide' module-1-power-bi/README.md\", \"acceptanceCriteria\": [\"English; theory+follow-along split + timetable\", \"datasets + fetch_data.py documented\", \"links guide + slide deck\", \"data-safety + prerequisite link\", \"no stale synthetic refs\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 6,
+      "subject": "Task 6: Update screenshot manifest for new build",
+      "status": "completed",
+      "blockedBy": [1, 4],
+      "description": "**Goal:** Replace Modul 1 section of docs/SCREENSHOTS.md to list new follow-along guide screenshots in module-1-power-bi/img/; leave Modul 2 untouched.\n\n**Files:** Modify docs/SCREENSHOTS.md (Modul 1 table only).\n\n**Verify:** grep -n 'lab/img|kemasukan|Tempoh_Tinggal' docs/SCREENSHOTS.md -> none.\n\n```json:metadata\n{\"files\": [\"docs/SCREENSHOTS.md\"], \"verifyCommand\": \"grep -n 'lab/img\\\\|kemasukan\\\\|Tempoh_Tinggal' docs/SCREENSHOTS.md\", \"acceptanceCriteria\": [\"Modul 1 table points at module-1-power-bi/img/\", \"rows match new build steps\", \"no old lab refs\"], \"modelTier\": \"mechanical\"}\n```"
+    }
+  ],
+  "lastUpdated": "2026-06-23T02:00:00Z"
+}

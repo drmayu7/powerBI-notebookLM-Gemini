@@ -8,7 +8,7 @@ rosak** — ini normal.
 > **Nota:** UI NotebookLM/Gemini kerap berubah; tangkap apa yang paling hampir
 > dengan langkah jika butang dinamakan berbeza.
 
-## Modul 1 — Power BI (`modul-1-power-bi/img/`)
+## Modul 1 — Power BI (`module-1-power-bi/img/`)
 
 > Modul 1 kini **demo langsung (live)** + `hands-on-guide.md` sebagai jaring
 > keselamatan. Panduan tidak menyemat imej, jadi screenshot adalah **opsyenal**.
@@ -20,7 +20,7 @@ rosak** — ini normal.
 | [ ] | `03-model-star.png` | Part 2, 2.3 | Model view — star schema dengan 4 hubungan (langkah paling sukar dikejar semula) |
 | [ ] | `05-cards-visuals.png` | Part 4 | Susun atur dashboard akhir (4 kad + carta garis/bar/lajur/donut) |
 
-## Modul 2 — NotebookLM & Gemini (`modul-2-notebooklm-gemini/lab/img/`)
+## Modul 2 — NotebookLM & Gemini (`module-2-notebooklm-gemini/lab/img/`)
 
 | Siap | Fail | Lab / langkah | Apa yang ditangkap |
 |------|------|---------------|--------------------|

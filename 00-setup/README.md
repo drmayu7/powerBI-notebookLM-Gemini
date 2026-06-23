@@ -68,5 +68,5 @@ tiada pemasangan diperlukan, tetapi anda perlukan akaun Google.
 
 Anda **tidak perlu** membawa apa-apa data pesakit sebenar. Dataset latihan untuk
 Power BI sudah disediakan dalam repo ini di
-[`modul-1-power-bi/data/`](../modul-1-power-bi/data/) — dan ia **sepenuhnya
+[`module-1-power-bi/data/`](../module-1-power-bi/data/) — dan ia **sepenuhnya
 sintetik** (rekaan).

@@ -27,8 +27,8 @@
 README.md                              ← course overview, 2 slots, agenda, cara guna repo
 LICENSE                                ← CC BY 4.0 (training content, public reuse)
 .gitignore                             ← ignore Power BI/OS cruft
-00-persediaan/README.md                ← pre-course setup (install Power BI, akaun Google)
-modul-1-power-bi/
+00-setup/README.md                ← pre-course setup (install Power BI, akaun Google)
+module-1-power-bi/
   README.md                            ← intro lecture notes + lab roadmap
   data/
     jana_data.py                       ← reproducible synthetic data generator (stdlib)
@@ -44,15 +44,15 @@ modul-1-power-bi/
     05-visual-asas.md
     06-dashboard-interaktif.md
     07-eksport-simpan.md
-modul-2-notebooklm-gemini/
+module-2-notebooklm-gemini/
   README.md                            ← intro + 3 workflows overview
-  rujukan-awam.md                      ← curated public KKM/JPA document links
+  public-references.md                      ← curated public KKM/JPA document links
   lab/
-    01-sediakan-notebook.md
-    02-tanya-korpus.md
-    03-kertas-projek-ke-slaid.md
-    04-audio-mesyuarat-ke-minit.md
-    05-explore-lanjut.md
+    01-set-up-notebook.md
+    02-query-the-corpus.md
+    03-project-paper-to-slides.md
+    04-meeting-audio-to-minutes.md
+    05-explore-further.md
 ```
 
 Note: `surat jemputan peserta.docx` (the source invitation) stays out of the public repo — add to `.gitignore`.
@@ -67,10 +67,10 @@ Note: `surat jemputan peserta.docx` (the source invitation) stays out of the pub
 - Create: `README.md`
 - Create: `LICENSE` (CC BY 4.0 full text)
 - Create: `.gitignore`
-- Create: `00-persediaan/` , `modul-1-power-bi/data/` , `modul-1-power-bi/lab/` , `modul-2-notebooklm-gemini/lab/` (via `.gitkeep` until filled)
+- Create: `00-setup/` , `module-1-power-bi/data/` , `module-1-power-bi/lab/` , `module-2-notebooklm-gemini/lab/` (via `.gitkeep` until filled)
 
 **Acceptance Criteria:**
-- [ ] `README.md` states course name, the two 25-Jun-2026 slots with times, audience, and a "cara guna repo ini" section linking to `00-persediaan/`, `modul-1-power-bi/`, `modul-2-notebooklm-gemini/`.
+- [ ] `README.md` states course name, the two 25-Jun-2026 slots with times, audience, and a "cara guna repo ini" section linking to `00-setup/`, `module-1-power-bi/`, `module-2-notebooklm-gemini/`.
 - [ ] `README.md` includes a data-safety note: dataset is synthetic; do not commit real patient/PUU documents.
 - [ ] `LICENSE` is CC BY 4.0 with attribution to Dr. Muhammad Naufal bin Nordin, 2026.
 - [ ] `.gitignore` ignores `surat jemputan peserta.docx`, `.idea/`, `.venv/`, `*.pbix`, `~$*`, `.DS_Store`, `Thumbs.db`.
@@ -84,7 +84,7 @@ Note: `surat jemputan peserta.docx` (the source invitation) stays out of the pub
   - `# Modul Latihan: Power BI, NotebookLM & Gemini`
   - Intro: who it's for (Pegawai Tadbir Rekod Perubatan & Penolong, Kursus Lanjutan KKM 2026).
   - `## Slot Latihan (25 Jun 2026, Khamis)` — table: Slot 1 8:00–11:30 Power BI; Slot 2 11:30–16:00 NotebookLM & Gemini.
-  - `## Cara Guna Repo Ini` — bullet links: mula di `00-persediaan/`, kemudian `modul-1-power-bi/`, kemudian `modul-2-notebooklm-gemini/`.
+  - `## Cara Guna Repo Ini` — bullet links: mula di `00-setup/`, kemudian `module-1-power-bi/`, kemudian `module-2-notebooklm-gemini/`.
   - `## Nota Keselamatan Data` — semua data dalam repo adalah **sintetik**; jangan muat naik / commit dokumen pesakit, surat PUU, atau data sebenar.
   - `## Lesen` — CC BY 4.0.
 
@@ -110,26 +110,26 @@ Thumbs.db
 
 - [ ] **Step 4: Create directory placeholders**
 ```bash
-mkdir -p 00-persediaan modul-1-power-bi/data modul-1-power-bi/lab modul-2-notebooklm-gemini/lab
-touch 00-persediaan/.gitkeep modul-1-power-bi/data/.gitkeep modul-1-power-bi/lab/.gitkeep modul-2-notebooklm-gemini/lab/.gitkeep
+mkdir -p 00-setup module-1-power-bi/data module-1-power-bi/lab module-2-notebooklm-gemini/lab
+touch 00-setup/.gitkeep module-1-power-bi/data/.gitkeep module-1-power-bi/lab/.gitkeep module-2-notebooklm-gemini/lab/.gitkeep
 ```
 
 - [ ] **Step 5: Verify and commit**
 ```bash
 git check-ignore "surat jemputan peserta.docx"   # expect: surat jemputan peserta.docx
-git add README.md LICENSE .gitignore 00-persediaan modul-1-power-bi modul-2-notebooklm-gemini
+git add README.md LICENSE .gitignore 00-setup module-1-power-bi module-2-notebooklm-gemini
 git commit -m "chore: repo scaffold, README, LICENSE, gitignore"
 ```
 
 ---
 
-### Task 2: Pre-course setup guide (`00-persediaan/README.md`)
+### Task 2: Pre-course setup guide (`00-setup/README.md`)
 
 **Goal:** Produce a guide participants follow **before** 25 Jun so they arrive with Power BI Desktop installed and a Google account ready.
 
 **Files:**
-- Create: `00-persediaan/README.md`
-- Delete: `00-persediaan/.gitkeep`
+- Create: `00-setup/README.md`
+- Delete: `00-setup/.gitkeep`
 
 **Acceptance Criteria:**
 - [ ] Power BI Desktop install section covers both routes: Microsoft Store and the standalone installer download, with a note that Windows + (possibly) admin rights are required and to contact IT if blocked.
@@ -138,22 +138,22 @@ git commit -m "chore: repo scaffold, README, LICENSE, gitignore"
 - [ ] A pre-course checklist (checkbox list) participants can tick off.
 - [ ] Explicit note: no real patient data needed; the lab dataset is provided in the repo.
 
-**Verify:** Manual content review against the 5 acceptance criteria; `test -f 00-persediaan/README.md`.
+**Verify:** Manual content review against the 5 acceptance criteria; `test -f 00-setup/README.md`.
 
 **Steps:**
 
-- [ ] **Step 1: Write `00-persediaan/README.md`** (BM) with sections:
+- [ ] **Step 1: Write `00-setup/README.md`** (BM) with sections:
   - `# Persediaan Sebelum Kursus`
   - `## 1. Pasang Power BI Desktop` — Cara A (Microsoft Store: search "Power BI Desktop" → Install), Cara B (muat turun installer dari laman rasmi Microsoft → run `.exe`). Nota: Windows sahaja, mungkin perlu hak admin → rujuk IT jika disekat.
   - `## 2. Semak Pemasangan` — buka Power BI Desktop, pastikan skrin mula (start screen) muncul.
   - `## 3. Sedia Akaun Google` — pastikan boleh log masuk ke `notebooklm.google.com` dan `gemini.google.com`.
   - `## 4. Senarai Semak` — checkbox: [ ] Power BI Desktop dipasang & dibuka, [ ] Akaun Google boleh log masuk, [ ] Laptop dibawa & dicas.
-  - `## Nota` — tiada data pesakit sebenar diperlukan; dataset latihan disediakan dalam repo (`modul-1-power-bi/data/`).
+  - `## Nota` — tiada data pesakit sebenar diperlukan; dataset latihan disediakan dalam repo (`module-1-power-bi/data/`).
 
 - [ ] **Step 2: Commit**
 ```bash
-git rm 00-persediaan/.gitkeep
-git add 00-persediaan/README.md
+git rm 00-setup/.gitkeep
+git add 00-setup/README.md
 git commit -m "docs: panduan persediaan sebelum kursus"
 ```
 
@@ -164,9 +164,9 @@ git commit -m "docs: panduan persediaan sebelum kursus"
 **Goal:** Generate a reproducible synthetic star-schema dataset whose columns make every Module 1 measure (Jumlah Kemasukan/Discaj, BOR %, ALOS, Bilangan Pesakit ikut Wad) computable.
 
 **Files:**
-- Create: `modul-1-power-bi/data/jana_data.py`
-- Create (generated): `modul-1-power-bi/data/kemasukan.csv`, `wad.csv`, `disiplin.csv`, `tarikh.csv`
-- Delete: `modul-1-power-bi/data/.gitkeep`
+- Create: `module-1-power-bi/data/jana_data.py`
+- Create (generated): `module-1-power-bi/data/kemasukan.csv`, `wad.csv`, `disiplin.csv`, `tarikh.csv`
+- Delete: `module-1-power-bi/data/.gitkeep`
 
 **Acceptance Criteria:**
 - [ ] `jana_data.py` uses only the Python stdlib and a fixed `random.seed(...)` so re-running produces identical CSVs.
@@ -178,7 +178,7 @@ git commit -m "docs: panduan persediaan sebelum kursus"
 
 **Verify:**
 ```bash
-cd modul-1-power-bi/data && python jana_data.py && cp kemasukan.csv /tmp/k1.csv && python jana_data.py && diff kemasukan.csv /tmp/k1.csv && python -c "import csv;r=list(csv.DictReader(open('kemasukan.csv',encoding='utf-8')));print('rows',len(r));assert len(r)>=2000;assert all(row['Tarikh_Discaj']>=row['Tarikh_Masuk'] for row in r);print('OK')"
+cd module-1-power-bi/data && python jana_data.py && cp kemasukan.csv /tmp/k1.csv && python jana_data.py && diff kemasukan.csv /tmp/k1.csv && python -c "import csv;r=list(csv.DictReader(open('kemasukan.csv',encoding='utf-8')));print('rows',len(r));assert len(r)>=2000;assert all(row['Tarikh_Discaj']>=row['Tarikh_Masuk'] for row in r);print('OK')"
 ```
 Expected: no `diff` output, `rows >= 2000`, `OK`.
 
@@ -262,7 +262,7 @@ if __name__ == "__main__":
 
 - [ ] **Step 2: Run the generator**
 ```bash
-cd modul-1-power-bi/data && python jana_data.py
+cd module-1-power-bi/data && python jana_data.py
 ```
 Expected: `Siap: kemasukan.csv, wad.csv, disiplin.csv, tarikh.csv`
 
@@ -270,8 +270,8 @@ Expected: `Siap: kemasukan.csv, wad.csv, disiplin.csv, tarikh.csv`
 
 - [ ] **Step 4: Commit**
 ```bash
-git rm modul-1-power-bi/data/.gitkeep
-git add modul-1-power-bi/data/
+git rm module-1-power-bi/data/.gitkeep
+git add module-1-power-bi/data/
 git commit -m "feat: jana dataset statistik perubatan sintetik (CSV star schema)"
 ```
 
@@ -282,9 +282,9 @@ git commit -m "feat: jana dataset statistik perubatan sintetik (CSV star schema)
 **Goal:** Write the Power BI intro-lecture README and the seven numbered lab steps so a first-time user can build an interactive medical-statistics dashboard from the synthetic dataset and replay it afterward.
 
 **Files:**
-- Create: `modul-1-power-bi/README.md`
-- Create: `modul-1-power-bi/lab/01-import-data.md` … `07-eksport-simpan.md`
-- Delete: `modul-1-power-bi/lab/.gitkeep`
+- Create: `module-1-power-bi/README.md`
+- Create: `module-1-power-bi/lab/01-import-data.md` … `07-eksport-simpan.md`
+- Delete: `module-1-power-bi/lab/.gitkeep`
 
 **Acceptance Criteria:**
 - [ ] `README.md` has intro-lecture notes (apa itu Power BI, aliran Get Data→Transform→Model→Visualize→Share, lawatan Report/Data/Model views, pratonton dashboard akhir) + a lab roadmap linking the 7 files in order + an estimated time per part.
@@ -295,11 +295,11 @@ git commit -m "feat: jana dataset statistik perubatan sintetik (CSV star schema)
 - [ ] Every lab file has a "Hasil yang dijangka" line and is written for unaided replay.
 - [ ] Screenshot placeholders use `![keterangan](../img/...)` (images deferred to Phase 2).
 
-**Verify:** `ls modul-1-power-bi/lab/*.md | wc -l` → 7; manual check that DAX in `04-ukuran-dax.md` references real columns and all five measures are present.
+**Verify:** `ls module-1-power-bi/lab/*.md | wc -l` → 7; manual check that DAX in `04-ukuran-dax.md` references real columns and all five measures are present.
 
 **Steps:**
 
-- [ ] **Step 1: Write `modul-1-power-bi/README.md`** — sections: `# Modul 1: Transformasi Statistik Perubatan menggunakan Power BI`; `## Pengenalan (Ceramah ~20 min)` (apa itu Power BI & kenapa relevan; aliran kerja; lawatan antara muka; pratonton dashboard); `## Peta Lab` (numbered links 01–07 with ~time each, total ~2.5 jam); `## Dataset` (terangkan `data/` — kemasukan + wad + disiplin + tarikh; sintetik).
+- [ ] **Step 1: Write `module-1-power-bi/README.md`** — sections: `# Modul 1: Transformasi Statistik Perubatan menggunakan Power BI`; `## Pengenalan (Ceramah ~20 min)` (apa itu Power BI & kenapa relevan; aliran kerja; lawatan antara muka; pratonton dashboard); `## Peta Lab` (numbered links 01–07 with ~time each, total ~2.5 jam); `## Dataset` (terangkan `data/` — kemasukan + wad + disiplin + tarikh; sintetik).
 
 - [ ] **Step 2: Write `lab/01-import-data.md`** — Buka Power BI Desktop → Home → Get Data → Text/CSV → pilih `kemasukan.csv`, `wad.csv`, `disiplin.csv`, `tarikh.csv` (satu per satu) → Load. **Hasil yang dijangka:** 4 jadual muncul di panel Data. Include `![Get Data](../img/01-get-data.png)` placeholder.
 
@@ -340,56 +340,56 @@ Add note: "Bilangan Pesakit ikut Wad" dipaparkan dengan `Nama_Wad` pada paksi da
 
 - [ ] **Step 9: Verify and commit**
 ```bash
-ls modul-1-power-bi/lab/*.md | wc -l   # expect 7
-git rm modul-1-power-bi/lab/.gitkeep
-git add modul-1-power-bi/README.md modul-1-power-bi/lab/
+ls module-1-power-bi/lab/*.md | wc -l   # expect 7
+git rm module-1-power-bi/lab/.gitkeep
+git add module-1-power-bi/README.md module-1-power-bi/lab/
 git commit -m "docs: modul 1 Power BI — pengenalan + 7 langkah lab"
 ```
 
 ---
 
-### Task 5: Module 2 — NotebookLM & Gemini content (README + 5 lab files + rujukan-awam.md)
+### Task 5: Module 2 — NotebookLM & Gemini content (README + 5 lab files + public-references.md)
 
 **Goal:** Write the AI module: intro README, the three core workflow walkthroughs + explore section, and a curated list of public KKM/JPA document links to practice on.
 
 **Files:**
-- Create: `modul-2-notebooklm-gemini/README.md`
-- Create: `modul-2-notebooklm-gemini/rujukan-awam.md`
-- Create: `modul-2-notebooklm-gemini/lab/01-sediakan-notebook.md` … `05-explore-lanjut.md`
-- Delete: `modul-2-notebooklm-gemini/lab/.gitkeep`
+- Create: `module-2-notebooklm-gemini/README.md`
+- Create: `module-2-notebooklm-gemini/public-references.md`
+- Create: `module-2-notebooklm-gemini/lab/01-set-up-notebook.md` … `05-explore-further.md`
+- Delete: `module-2-notebooklm-gemini/lab/.gitkeep`
 
 **Acceptance Criteria:**
 - [ ] `README.md` explains NotebookLM (grounded + citation) vs Gemini (generatif umum), why relevant (berhenti flip2 paper), key concepts (grounding, citation), and a prominent **amaran data sensitif** box.
-- [ ] `02-tanya-korpus.md` covers asking procedure questions and verifying answers via citations.
-- [ ] `03-kertas-projek-ke-slaid.md` covers NotebookLM Studio outputs + Gemini prompting to turn a project paper into slide content; notes the UI evolves.
-- [ ] `04-audio-mesyuarat-ke-minit.md` covers transcribing a meeting recording → drafting minit mesyuarat.
-- [ ] `05-explore-lanjut.md` covers Audio Overview, FAQ, Study Guide, Mind Map, and Gemini for memo/laporan drafting.
-- [ ] `rujukan-awam.md` lists genuinely public KKM/JPA document links with access-date notes and a caveat that links may change; participants may swap in their own documents live.
+- [ ] `02-query-the-corpus.md` covers asking procedure questions and verifying answers via citations.
+- [ ] `03-project-paper-to-slides.md` covers NotebookLM Studio outputs + Gemini prompting to turn a project paper into slide content; notes the UI evolves.
+- [ ] `04-meeting-audio-to-minutes.md` covers transcribing a meeting recording → drafting minit mesyuarat.
+- [ ] `05-explore-further.md` covers Audio Overview, FAQ, Study Guide, Mind Map, and Gemini for memo/laporan drafting.
+- [ ] `public-references.md` lists genuinely public KKM/JPA document links with access-date notes and a caveat that links may change; participants may swap in their own documents live.
 - [ ] Every lab file has a "Hasil yang dijangka" line and a data-safety reminder where uploads happen.
 
-**Verify:** `ls modul-2-notebooklm-gemini/lab/*.md | wc -l` → 5; manual review against the 7 acceptance criteria.
+**Verify:** `ls module-2-notebooklm-gemini/lab/*.md | wc -l` → 5; manual review against the 7 acceptance criteria.
 
 **Steps:**
 
-- [ ] **Step 1: Write `modul-2-notebooklm-gemini/README.md`** — sections: `# Modul 2: NotebookLM dan Gemini`; `## Pengenalan (Ceramah ~20 min)` (NotebookLM vs Gemini; kenapa relevan untuk pengurusan rekod; konsep grounding & citation); `> ⚠️ **Amaran Data Sensitif**` blockquote (jangan muat naik data pesakit sebenar / dokumen PUU sulit ke akaun peribadi; guna dokumen awam atau de-identified); `## Peta Lab` (links 01–05 + ~time each); `## 3 Aliran Kerja Utama` (ringkasan tanya korpus / kertas projek→slaid / audio→minit).
+- [ ] **Step 1: Write `module-2-notebooklm-gemini/README.md`** — sections: `# Modul 2: NotebookLM dan Gemini`; `## Pengenalan (Ceramah ~20 min)` (NotebookLM vs Gemini; kenapa relevan untuk pengurusan rekod; konsep grounding & citation); `> ⚠️ **Amaran Data Sensitif**` blockquote (jangan muat naik data pesakit sebenar / dokumen PUU sulit ke akaun peribadi; guna dokumen awam atau de-identified); `## Peta Lab` (links 01–05 + ~time each); `## 3 Aliran Kerja Utama` (ringkasan tanya korpus / kertas projek→slaid / audio→minit).
 
-- [ ] **Step 2: Write `lab/01-sediakan-notebook.md`** — Pergi `notebooklm.google.com` → log masuk → Create new notebook → Add sources → muat turun 2–3 dokumen awam dari `../rujukan-awam.md` → upload. **Amaran:** hanya dokumen awam. **Hasil:** notebook dengan beberapa sumber sedia.
+- [ ] **Step 2: Write `lab/01-set-up-notebook.md`** — Pergi `notebooklm.google.com` → log masuk → Create new notebook → Add sources → muat turun 2–3 dokumen awam dari `../public-references.md` → upload. **Amaran:** hanya dokumen awam. **Hasil:** notebook dengan beberapa sumber sedia.
 
-- [ ] **Step 3: Write `lab/02-tanya-korpus.md`** (Aliran 1) — Taip soalan prosedur (cth. "Apakah prosedur permohonan laporan perubatan?") di chat → baca jawapan → klik nombor citation untuk lihat petikan sumber → sahkan ketepatan. Tip: tanya soalan spesifik; sentiasa sahkan citation sebelum guna. **Hasil:** jawapan bersumber + tahu cara sahkan.
+- [ ] **Step 3: Write `lab/02-query-the-corpus.md`** (Aliran 1) — Taip soalan prosedur (cth. "Apakah prosedur permohonan laporan perubatan?") di chat → baca jawapan → klik nombor citation untuk lihat petikan sumber → sahkan ketepatan. Tip: tanya soalan spesifik; sentiasa sahkan citation sebelum guna. **Hasil:** jawapan bersumber + tahu cara sahkan.
 
-- [ ] **Step 4: Write `lab/03-kertas-projek-ke-slaid.md`** (Aliran 2) — Upload kertas projek (atau dokumen contoh) sebagai sumber → guna Studio: jana "Briefing doc" / "Study guide" untuk struktur → salin rangka. Kemudian di `gemini.google.com`: prompt contoh — "Berdasarkan ringkasan ini, jana rangka slaid pembentangan 8 slaid dengan tajuk dan 3 bullet setiap slaid: [tampal teks]". Nota: ciri Studio berubah dari masa ke masa; semak pilihan semasa. **Hasil:** rangka slaid sedia untuk diolah.
+- [ ] **Step 4: Write `lab/03-project-paper-to-slides.md`** (Aliran 2) — Upload kertas projek (atau dokumen contoh) sebagai sumber → guna Studio: jana "Briefing doc" / "Study guide" untuk struktur → salin rangka. Kemudian di `gemini.google.com`: prompt contoh — "Berdasarkan ringkasan ini, jana rangka slaid pembentangan 8 slaid dengan tajuk dan 3 bullet setiap slaid: [tampal teks]". Nota: ciri Studio berubah dari masa ke masa; semak pilihan semasa. **Hasil:** rangka slaid sedia untuk diolah.
 
-- [ ] **Step 5: Write `lab/04-audio-mesyuarat-ke-minit.md`** (Aliran 3) — Terangkan: rakam mesyuarat (audio) → muat naik fail audio sebagai sumber dalam NotebookLM (atau guna transkrip) → minta ringkasan / poin tindakan → prompt untuk format minit mesyuarat (Bil, Perkara, Tindakan, PIC, Tarikh). Contoh prompt Gemini untuk kemaskan minit. **Amaran:** dapatkan kebenaran merakam; elak maklumat sulit. **Hasil:** draf minit mesyuarat berstruktur.
+- [ ] **Step 5: Write `lab/04-meeting-audio-to-minutes.md`** (Aliran 3) — Terangkan: rakam mesyuarat (audio) → muat naik fail audio sebagai sumber dalam NotebookLM (atau guna transkrip) → minta ringkasan / poin tindakan → prompt untuk format minit mesyuarat (Bil, Perkara, Tindakan, PIC, Tarikh). Contoh prompt Gemini untuk kemaskan minit. **Amaran:** dapatkan kebenaran merakam; elak maklumat sulit. **Hasil:** draf minit mesyuarat berstruktur.
 
-- [ ] **Step 6: Write `lab/05-explore-lanjut.md`** — Tunjuk ringkas: Audio Overview (podcast ringkasan), FAQ, Study Guide, Mind Map dalam NotebookLM; dan Gemini untuk draf memo/laporan rasmi (contoh prompt). Galak peserta eksperimen dengan dokumen sendiri selepas kursus. **Hasil:** peserta tahu ciri tambahan untuk diterokai.
+- [ ] **Step 6: Write `lab/05-explore-further.md`** — Tunjuk ringkas: Audio Overview (podcast ringkasan), FAQ, Study Guide, Mind Map dalam NotebookLM; dan Gemini untuk draf memo/laporan rasmi (contoh prompt). Galak peserta eksperimen dengan dokumen sendiri selepas kursus. **Hasil:** peserta tahu ciri tambahan untuk diterokai.
 
-- [ ] **Step 7: Write `rujukan-awam.md`** — `# Rujukan Dokumen Awam` + intro (dokumen ini awam; muat turun untuk lab; pautan mungkin berubah — tarikh akses dicatat; anda boleh ganti dengan dokumen sendiri semasa bengkel). Provide a markdown table: Tajuk | Sumber (KKM/JPA/MyGov) | Pautan | Tarikh Akses. Seed with placeholder rows pointing to known public portals (e.g., moh.gov.my muat turun/garis panduan, jpa.gov.my pekeliling, data.gov.my) — and a clear instruction to confirm each link is live before the course. (Links are confirmed live as a Phase-2/pre-course check; mark any unverified as `[sahkan]`.)
+- [ ] **Step 7: Write `public-references.md`** — `# Rujukan Dokumen Awam` + intro (dokumen ini awam; muat turun untuk lab; pautan mungkin berubah — tarikh akses dicatat; anda boleh ganti dengan dokumen sendiri semasa bengkel). Provide a markdown table: Tajuk | Sumber (KKM/JPA/MyGov) | Pautan | Tarikh Akses. Seed with placeholder rows pointing to known public portals (e.g., moh.gov.my muat turun/garis panduan, jpa.gov.my pekeliling, data.gov.my) — and a clear instruction to confirm each link is live before the course. (Links are confirmed live as a Phase-2/pre-course check; mark any unverified as `[sahkan]`.)
 
 - [ ] **Step 8: Verify and commit**
 ```bash
-ls modul-2-notebooklm-gemini/lab/*.md | wc -l   # expect 5
-git rm modul-2-notebooklm-gemini/lab/.gitkeep
-git add modul-2-notebooklm-gemini/
+ls module-2-notebooklm-gemini/lab/*.md | wc -l   # expect 5
+git rm module-2-notebooklm-gemini/lab/.gitkeep
+git add module-2-notebooklm-gemini/
 git commit -m "docs: modul 2 NotebookLM & Gemini — pengenalan, 5 lab, rujukan awam"
 ```
 
@@ -401,7 +401,7 @@ git commit -m "docs: modul 2 NotebookLM & Gemini — pengenalan, 5 lab, rujukan 
 - §3 repo structure → Task 1 (scaffold) + per-module tasks. ✓
 - §3 conventions (focused files, BM+EN, replay, screenshot placeholders) → enforced in Task 4/5 acceptance criteria. ✓
 - §4 Module 1 (intro + 7 labs + 5 measures incl. Bilangan Pesakit ikut Wad) → Task 4. ✓
-- §5 Module 2 (intro + 3 workflows + explore + rujukan-awam + data-safety) → Task 5. ✓
+- §5 Module 2 (intro + 3 workflows + explore + public-references + data-safety) → Task 5. ✓
 - §6 synthetic dataset (star schema, 4 CSVs, reproducible Python) → Task 3. ✓
 - §7 Phase 1 boundary (markdown + dataset + links; no slides/screenshots/pbix/audio) → respected; screenshots are placeholders only. ✓
 - Pre-course setup (install Power BI local, Google account) → Task 2. ✓
