@@ -192,8 +192,8 @@ Region grouping; convert population (thousands → persons).
 **Time intelligence**
 - `Deaths YTD` (showcases Dim_Date)
 
-**Optional**
-- `Case Fatality %` (only if `covid_cases` is brought in)
+**Included (from `covid_cases`)**
+- `Case Fatality %` — total deaths ÷ total cases (facilitator may drop if time tight)
 
 ---
 
@@ -258,8 +258,9 @@ can be regenerated. The checkpoint sequence is documented in the hands-on guide.
 ---
 
 ## 13. Open items for the implementation plan
-- Exact age-band boundaries and labels (proposed 0–17 / 18–39 / 40–59 / 60–79 / 80+).
-- Whether to include `covid_cases` (case-fatality measure) or keep it out for time.
+- **Age bands (decided):** 0–17 / 18–39 / 40–59 / 60–79 / 80+.
+- **`covid_cases` (decided):** include it for now (enables `Case Fatality %`);
+  the facilitator may drop it later if time is tight.
 - Final slide visual assets (finished-dashboard screenshot) — produced after the
   first `.pbix` is built.
 - Marp rendering check for the English deck (reuse existing Marp setup).
