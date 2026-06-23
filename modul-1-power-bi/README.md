@@ -1,79 +1,97 @@
-# Modul 1: Transformasi Statistik Perubatan menggunakan Power BI
+# Modul 1: Transforming Medical Statistics with Power BI
 
-**Slot 1 — 25 Jun 2026 (Khamis), 8:00 pg – 11:30 tgh**
-Penceramah: Dr. Muhammad Naufal bin Nordin
+**Slot 1 — 25 Jun 2026 (Thu), 8:00 am – 11:30 am**
+Presenter: Dr. Muhammad Naufal bin Nordin
 
-Modul ini membimbing anda membina satu **dashboard statistik perubatan interaktif**
-dari awal menggunakan **Power BI Desktop**, walaupun anda tidak pernah menggunakannya.
+This module walks you through building an interactive **COVID-19 mortality
+dashboard** from scratch in **Power BI Desktop** — even if you have never
+used Power BI before.
 
-> **Belum pasang Power BI Desktop?** Sila ikut [panduan persediaan](../00-persediaan/)
-> terlebih dahulu sebelum kursus.
-
----
-
-## Pengenalan (Ceramah ~20 min)
-
-### Apa itu Power BI?
-Power BI ialah alat *business intelligence* daripada Microsoft yang menukar data
-mentah (Excel, CSV, pangkalan data) kepada **dashboard** dan **laporan** yang
-interaktif. Untuk Jabatan Rekod Perubatan, ini bermakna beralih daripada
-mengira statistik secara manual di Excel kepada dashboard automatik yang
-sentiasa dikemas kini.
-
-### Kenapa relevan untuk statistik perubatan?
-- Kira **BOR**, **ALOS**, bilangan kemasukan/discaj secara automatik.
-- Tapis mengikut wad, disiplin, atau bulan dengan satu klik.
-- Kongsi gambaran statistik yang konsisten kepada pengurusan.
-
-### Aliran kerja Power BI
-```
-Get Data  →  Transform (Power Query)  →  Model  →  Visualize  →  Share
-```
-
-### Lawatan ringkas antara muka
-Power BI Desktop ada tiga *view* di tepi kiri:
-- **Report view** — kanvas untuk bina visual & dashboard.
-- **Data view** — lihat jadual data (rows & columns).
-- **Model view** — lihat & urus hubungan (*relationship*) antara jadual.
-
-### Pratonton hasil akhir
-Pada penghujung modul, anda akan ada satu halaman dashboard dengan:
-- Kad KPI (Jumlah Kemasukan, ALOS, BOR %)
-- Carta bilangan kemasukan ikut disiplin
-- Carta bilangan pesakit ikut wad
-- Carta trend kemasukan bulanan
-- Slicer (penapis) untuk disiplin, wad, dan bulan
+> **Haven't installed Power BI Desktop yet?** Please complete the
+> [setup guide](../00-persediaan/) before the session.
 
 ---
 
-## Peta Lab
+## Session format
 
-Ikut langkah secara berurutan. Setiap fail boleh diulang sendiri selepas kursus.
+The session has two parts:
 
-| Langkah | Fail | Anggaran masa |
+1. **Theory (30 min)** — a short slide presentation covering what Power BI
+   is, why it matters for medical statistics, and the workflow you'll use.
+2. **Follow-along build (~2.5 hrs)** — everyone builds the dashboard live,
+   on their own laptop, alongside the facilitator. If you fall behind, get
+   stuck, or miss a step, you can always rejoin from one of six checkpoint
+   `.pbix` files — just ask the facilitator for the nearest one. Every step
+   is also written out in the hands-on guide so you can repeat it on your
+   own after the course.
+
+---
+
+## Slot 1 timetable
+
+| Block | Time | Format |
 | --- | --- | --- |
-| 1 | [Import data](lab/01-import-data.md) | 15 min |
-| 2 | [Bersihkan data (Power Query)](lab/02-power-query-bersih.md) | 25 min |
-| 3 | [Model & hubungan](lab/03-model-hubungan.md) | 20 min |
-| 4 | [Ukuran (measure) DAX](lab/04-ukuran-dax.md) | 30 min |
-| 5 | [Visual asas](lab/05-visual-asas.md) | 30 min |
-| 6 | [Dashboard interaktif](lab/06-dashboard-interaktif.md) | 25 min |
-| 7 | [Eksport & simpan](lab/07-eksport-simpan.md) | 10 min |
-
-Jumlah ~2.5 jam (termasuk buffer untuk soal jawab).
+| Theory (slide deck) | 8:00–8:30 | Facilitator presents |
+| Build Pt.1: Ingest + Power Query | 8:30–9:20 | Follow-along |
+| Build Pt.2: Data model (star schema) | 9:20–9:45 | Follow-along |
+| Break | 9:45–10:00 | — |
+| Build Pt.3: DAX measures | 10:00–10:30 | Follow-along |
+| Build Pt.4: Visuals | 10:30–11:10 | Follow-along |
+| Build Pt.5: Interactivity + free explore + Q&A | 11:10–11:30 | Follow-along |
 
 ---
 
-## Dataset
+## What you'll build
 
-Dataset latihan berada dalam folder [`data/`](data/). Ia **sepenuhnya sintetik**
-(rekaan) — tiada kaitan dengan pesakit sebenar. Ia disusun sebagai *star schema*:
+By the end of the session, you'll have one interactive COVID-19 dashboard
+page with:
 
-| Fail | Jenis | Kandungan |
+- KPI cards — Total Deaths, % Unvaccinated, % With Comorbidity, Median Age
+- Deaths-over-time line chart
+- Deaths by state
+- Deaths by age group
+- Vaccination-status donut chart
+- Slicers for interactive filtering
+
+It's built on a **star schema** (`Fact_Deaths` + `Dim_Date` + `Dim_State`),
+so along the way you'll also learn the modelling pattern that underlies most
+real-world Power BI reports.
+
+---
+
+## How to follow
+
+- **[hands-on-guide.md](hands-on-guide.md)** is your detailed, step-by-step
+  safety net — every formula, every measure, and the checkpoint `.pbix`
+  files are documented there. Use it to follow along live or to redo the
+  build on your own afterwards.
+- The **theory slide deck** is at [`../slides/modul-1-power-bi.md`](../slides/modul-1-power-bi.md).
+
+---
+
+## Datasets
+
+The datasets live in [`data/`](data/) and are real, aggregate, open
+government data — pinned as CSV files so the session doesn't depend on
+internet access.
+
+| File | Role | Source |
 | --- | --- | --- |
-| `kemasukan.csv` | Jadual fakta | Satu baris setiap episod kemasukan (tarikh masuk/discaj, wad, disiplin, diagnosis, umur, jantina) |
-| `wad.csv` | Dimensi | Senarai wad + kapasiti katil |
-| `disiplin.csv` | Dimensi | Senarai disiplin perubatan |
-| `tarikh.csv` | Dimensi | Kalendar harian (untuk analisis trend) |
+| `covid_deaths_linelist.csv` | Fact — one row per COVID-19 death (~37,351) | data.gov.my (MOH) |
+| `covid_cases.csv` | Daily new cases by state | data.gov.my (MOH) |
+| `population_state.csv` | Population by state → per-100k rates | DOSM |
 
-Untuk menjana semula data (pilihan): `python data/jana_data.py`
+To regenerate the datasets from source (optional):
+
+```bash
+python data/fetch_data.py
+```
+
+---
+
+## Data safety
+
+All data used in this module is **open, aggregate government data** from
+data.gov.my and DOSM — there is no real patient data and nothing
+confidential. Never substitute these files with real patient records or
+confidential hospital documents, even for practice.
