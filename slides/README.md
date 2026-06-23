@@ -1,9 +1,14 @@
 # Introduction Slides (Marp)
 
 Introductory talk slides for the two course slots, written as Markdown
-[Marp](https://marp.app/). The `.md` file is the primary source; the PDF in
-`build/` is committed so it can be presented immediately without any
-installation.
+[Marp](https://marp.app/). The `.md` file is the primary source; the PDF and
+PowerPoint (`.pptx`) files in `build/` are committed so they can be presented
+immediately without any installation.
+
+> **Note on `.pptx`:** Marp's default PowerPoint export embeds each slide as a
+> full-slide image (great for presenting, but the text is not editable). For
+> editable text boxes, use the experimental `--pptx-editable` flag (requires
+> LibreOffice/SOffice installed).
 
 | File | Slot |
 |------|------|
