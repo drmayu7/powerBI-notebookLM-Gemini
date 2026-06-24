@@ -11,9 +11,19 @@
 
 ## Part A — Get the structure from NotebookLM
 
-1. Upload your project paper (or a public sample document) as a new source.
+1. Upload the shipped sample — the Hospital Seri Aman digitization proposal —
+   as a new NotebookLM source:
 
-   > ⚠️ Use a document you are authorized to share; avoid confidential
+   **[`01-project-paper-pendigitalan-rekod.md`](../examples/01-project-paper-pendigitalan-rekod.md)**
+
+   This is a synthetic Malay project paper titled *"Kertas Cadangan: Projek
+   Pendigitalan Rekod Perubatan — Hospital Daerah Seri Aman"*.  It covers
+   sections such as Latar Belakang, Objektif, Implikasi Kos & Latihan, and
+   Cadangan Jadual Pelaksanaan — a realistic digitization proposal you can use
+   throughout this lab.
+
+   > Or use your own project paper if you prefer — just ensure it is a
+   > document you are authorized to share and does not contain confidential
    > information.
 
 2. Open the **Studio** panel (usually on the right).
@@ -48,6 +58,10 @@
    - "Make slide 3 more concise."
    - "Suggest a closing slide with a summary and next steps."
    - "Suggest an engaging presentation title."
+   - "Ringkaskan slaid Implikasi Kos & Latihan supaya lebih padat." *(condense
+     the Cost & Training slide — relevant to the Hospital Seri Aman paper)*
+   - "Tambah slaid khusus tentang Cadangan Jadual Pelaksanaan 18 bulan." *(add
+     a dedicated slide for the 18-month implementation schedule)*
 
 4. Copy the final slide outline into your presentation tool (PowerPoint,
    Google Slides) for further development.
