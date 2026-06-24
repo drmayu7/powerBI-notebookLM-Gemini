@@ -65,4 +65,4 @@ answer comes with references to its source.
 | 5 | [Workflow 4: Build a dashboard in Gemini Canvas](lab/05-gemini-canvas-dashboard.md) | 25 min |
 | 6 | [Explore further](lab/06-explore-further.md) | 20 min |
 
-Total ~2.5–3 hours (including buffer for Q&A).
+Total ~3–3.5 hours (including buffer for Q&A).
