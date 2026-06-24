@@ -19,8 +19,9 @@ Try generating the following outputs from your notebook:
   document.
 - **Timeline / Briefing doc** — a chronology or executive summary.
 
-> Try generating an **Audio Overview** from a guideline — listen to how it
-> explains the content conversationally.
+> Try generating an **Audio Overview** from the MOH guideline used in Lab 1
+> (*Garis Panduan Pengendalian dan Pengurusan Rekod Perubatan Pesakit di
+> Fasiliti KKM*) — listen to how it explains the content conversationally.
 
 ![Audio Overview in the Studio panel](img/05-audio-overview.png)
 
@@ -32,12 +33,15 @@ Gemini is useful for drafting and refining documents. Example prompts:
 
 - **Draft a memo:**
   ```
-  Draf satu memo rasmi dalam Bahasa Melayu untuk memaklumkan ketua jabatan
-  tentang [perkara]. Nada formal, ringkas, dengan tindakan yang jelas.
+  Draf satu memo rasmi dalam Bahasa Melayu kepada Pengarah Hospital Daerah
+  Seri Aman untuk memaklumkan beliau tentang pelancaran projek pendigitalan
+  rekod perubatan di unit kami. Nada formal, ringkas, dengan tindakan yang
+  jelas.
   ```
 - **Summarize a report:**
   ```
-  Ringkaskan laporan ini kepada 5 poin utama untuk pembentangan pengurusan.
+  Ringkaskan Kertas Cadangan Pendigitalan Rekod Perubatan ini kepada 5 poin
+  utama untuk pembentangan pengurusan.
   [tampal teks]
   ```
 - **Improve the language:**
