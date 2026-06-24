@@ -1,0 +1,26 @@
+{
+  "planPath": "docs/superpowers/plans/2026-06-24-module-2-gemini-canvas-dashboard.md",
+  "tasks": [
+    {
+      "id": 1,
+      "subject": "Task 1: Aggregation script + verified source CSV",
+      "status": "pending",
+      "description": "**Goal:** duckdb script aggregating Module 1 deaths line-list into five tables (All/Male/Female), writing the source CSV, printing paste blocks, and failing if the All slice does not match the Module 1 screenshot.\n\n**USER-ORDERED GATE — NON-SKIPPABLE.**\n\n**Files:**\n- Create: module-2-notebooklm-gemini/data/aggregate_dashboard_data.py\n- Generate: module-2-notebooklm-gemini/data/covid_dashboard_aggregated.csv\n\n**Verify:** `uv run python module-2-notebooklm-gemini/data/aggregate_dashboard_data.py` → VERIFICATION PASSED, exit 0\n\n```json:metadata\n{\"files\": [\"module-2-notebooklm-gemini/data/aggregate_dashboard_data.py\", \"module-2-notebooklm-gemini/data/covid_dashboard_aggregated.csv\"], \"verifyCommand\": \"uv run python module-2-notebooklm-gemini/data/aggregate_dashboard_data.py\", \"acceptanceCriteria\": [\"script exits 0 and prints VERIFICATION PASSED\", \"All slice: total_deaths=37351, pct_unvaccinated within 0.1 of 60.2, pct_comorbidity within 0.1 of 78.8, median_age within 0.5 of 64.0\", \"covid_dashboard_aggregated.csv written with header table,sex,category,value\", \"five labeled paste blocks printed\"], \"modelTier\": \"standard\", \"userGate\": true, \"tags\": [\"user-gate\"], \"requiresUserSpecification\": false, \"gateScope\": \"all\"}\n```"
+    },
+    {
+      "id": 2,
+      "subject": "Task 2: New lab file + renumber explore-further",
+      "status": "pending",
+      "blockedBy": [1],
+      "description": "**Goal:** Create 05-gemini-canvas-dashboard.md (bridge intro → five tables → Malay hero prompt → iterate → outcome) and rename 05-explore-further.md → 06-explore-further.md.\n\n**Files:**\n- Rename: module-2-notebooklm-gemini/lab/05-explore-further.md → 06-explore-further.md\n- Create: module-2-notebooklm-gemini/lab/05-gemini-canvas-dashboard.md\n\n**Verify:** lab/ shows 05-gemini-canvas-dashboard.md and 06-explore-further.md (no 05-explore-further.md); no `paste block` markers remain\n\n```json:metadata\n{\"files\": [\"module-2-notebooklm-gemini/lab/05-gemini-canvas-dashboard.md\", \"module-2-notebooklm-gemini/lab/06-explore-further.md\"], \"verifyCommand\": \"ls module-2-notebooklm-gemini/lab/ && grep -n 'paste block' module-2-notebooklm-gemini/lab/05-gemini-canvas-dashboard.md\", \"acceptanceCriteria\": [\"06-explore-further.md exists, 05-explore-further.md removed\", \"new lab has bridge intro, five paste blocks, verbatim Malay prompt, iterate step, expected outcome\", \"KPI All row reads All,37351,60.2,78.8,64.0\", \"no markers remain\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 3,
+      "subject": "Task 3: Update Module 2 README lab map",
+      "status": "pending",
+      "blockedBy": [2],
+      "description": "**Goal:** Reflect the four-workflow structure and renumbered files in the Module 2 README.\n\n**Files:**\n- Modify: module-2-notebooklm-gemini/README.md\n\n**Verify:** `grep -c '05-explore-further.md' module-2-notebooklm-gemini/README.md` → 0; both new filenames present\n\n```json:metadata\n{\"files\": [\"module-2-notebooklm-gemini/README.md\"], \"verifyCommand\": \"grep -c '05-explore-further.md' module-2-notebooklm-gemini/README.md\", \"acceptanceCriteria\": [\"Main Workflows lists four workflows\", \"Lab Map has six rows linking to 05-gemini-canvas-dashboard.md and 06-explore-further.md\", \"no link to 05-explore-further.md remains\"], \"modelTier\": \"mechanical\"}\n```"
+    }
+  ],
+  "lastUpdated": "2026-06-24"
+}
