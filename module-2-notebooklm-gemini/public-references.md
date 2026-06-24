@@ -32,25 +32,33 @@ live before use.
 
 > **PRIMARY corpus document (Lab 1 & Lab 2):** The first row below is the
 > document participants upload to NotebookLM in Lab 1 and query in Lab 2.
-> Confirm the direct PDF link works before the course; use the stable fallback
-> portal link if needed (see note below).
+> The verified direct PDF (KKM portal host) downloads cleanly; the
+> `www.moh.gov.my` host throws a TLS/SSL certificate warning, so it is listed
+> only as a secondary fallback (see note below).
 
 | Title (suggested) | Source | Link | Access Date | Status |
 | --- | --- | --- | --- | --- |
-| **Garis Panduan Pengendalian dan Pengurusan Rekod Perubatan Pesakit di Fasiliti KKM** (Medical Development Division, ~2023) — **PRIMARY** | MOH | Direct PDF: `https://www.moh.gov.my/images/04-penerbitan/pekeliling/Garis%20Panduan%20Pengendalian%20dan%20Pengurusan%20Rekod%20Perubatan%20Pesakit%20di%20Fasiliti%20KKM.pdf` | 2026-06-22 | `[verify]` |
+| **Garis Panduan Pengendalian dan Pengurusan Rekod Perubatan Pesakit di Fasiliti KKM** (Medical Development Division, 2023; last updated 27 Oct 2025) — **PRIMARY** | MOH (KKM portal) | Direct PDF: `https://kkm.synchronet.my/images/04-penerbitan/garis-panduan-kkm/Garis%20Panduan%20Pengendalian%20dan%20Pengurusan%20Rekod%20Perubatan%20Pesakit%20di%20Fasiliti%20KKM.pdf` | 2026-06-25 | `✅ verified` |
 | Service Circular related to records management | JPA | search `jpa.gov.my` → Circulars | 2026-06-22 | `[verify]` |
 | Act/Policy related to the Medical Board | MOH | search `moh.gov.my` | 2026-06-22 | `[verify]` |
 | Malaysia Health Statistics (public dataset) | data.gov.my | search "health" on `data.gov.my` | 2026-06-22 | `[verify]` |
 
-### Stable fallback for the PRIMARY document
+### Fallbacks for the PRIMARY document
 
-If the direct `moh.gov.my` PDF link triggers a TLS/SSL certificate warning in
-your browser or in NotebookLM, use this official KKM portal listing instead to
-locate and download the same document:
+**Verified 2026-06-25.** The direct PDF link in the table above (KKM portal
+host) downloads correctly.
 
-```
-https://kkm.synchronet.my/en/publications-and-reports/dasar-akta-polisi-garis-panduan/garis-panduan-umum-kkm/senarai-garis-panduan-umum-awam/garis-panduan-pengendalian-dan-pengurusan-rekod-perubatan-pesakit-di-fasiliti-kkm
-```
+1. **Human-friendly portal page** — if you prefer to navigate to the document
+   and click its **Muat Turun** (Download) button:
+
+   ```
+   https://kkm.synchronet.my/en/publications-and-reports/dasar-akta-polisi-garis-panduan/garis-panduan-umum-kkm/senarai-garis-panduan-umum-awam/garis-panduan-pengendalian-dan-pengurusan-rekod-perubatan-pesakit-di-fasiliti-kkm
+   ```
+
+2. **`www.moh.gov.my` host (secondary)** — the same document is also served from
+   `www.moh.gov.my`, but that host currently triggers a **TLS/SSL certificate
+   warning** in browsers and in NotebookLM. Prefer the verified KKM-portal link
+   above; only use the `moh.gov.my` host if the portal is unreachable.
 
 Keep a downloaded copy on a USB drive as an additional backup (see presenter
 note below).
@@ -66,5 +74,5 @@ note below).
 >    participants can copy the file from a USB drive.
 > 4. Download a backup copy of the PRIMARY guideline PDF
 >    ("Garis Panduan Pengendalian dan Pengurusan Rekod Perubatan") to a USB
->    drive — use the fallback portal link above if the direct `moh.gov.my` PDF
->    URL shows a certificate warning.
+>    drive from the verified KKM-portal link in the table above. (The
+>    `www.moh.gov.my` host shows a certificate warning — avoid it.)
