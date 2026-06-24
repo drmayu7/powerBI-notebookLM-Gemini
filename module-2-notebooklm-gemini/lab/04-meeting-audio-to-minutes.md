@@ -12,11 +12,18 @@ minutes** document.
 ## Steps
 
 1. **Prepare your audio/transcript source:**
-   - Record the meeting (e.g. using a phone voice recorder), **or**
-   - If you already have a text transcript, use it directly as the source.
+   - Use the supplied recording for this lab:
+     `../examples/02-mesyuarat-jk-rekod-audio.m4a`
+     (**Mesyuarat Jawatankuasa Rekod Perubatan Bil. 2/2026**, Hospital Daerah
+     Seri Aman — digitization rollout), **or**
+   - If your device cannot play/upload `.m4a`, use the transcript fallback:
+     `../examples/02-mesyuarat-jk-rekod-transcript.md` (paste its contents as a
+     Text source), **or**
+   - Use your own meeting recording or transcript.
 
-2. In NotebookLM, click **Add source** and upload the audio file (or paste the
-   transcript). NotebookLM will process the content.
+2. In NotebookLM, click **Add source** and upload
+   `02-mesyuarat-jk-rekod-audio.m4a` (or paste/upload the transcript as a
+   fallback). NotebookLM will process the content.
 
 3. In the chat, ask for a structured summary. Example prompt:
    ```
