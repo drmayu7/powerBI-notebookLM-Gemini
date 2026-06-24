@@ -43,12 +43,14 @@ answer comes with references to its source.
 
 ---
 
-## 3 Main Workflows
+## 4 Main Workflows
 
 1. **Query the reference corpus** — upload guidelines/procedures, ask
    questions, get answers + citations.
 2. **Project paper → slides** — turn a project paper into a slide outline.
 3. **Meeting audio → minutes** — transcribe a recording, draft meeting minutes.
+4. **Build a dashboard in Gemini Canvas** — turn Module 1's aggregated COVID
+   figures into a polished web dashboard from a single prompt.
 
 ---
 
@@ -60,6 +62,7 @@ answer comes with references to its source.
 | 2 | [Workflow 1: Query the corpus](lab/02-query-the-corpus.md) | 30 min |
 | 3 | [Workflow 2: Project paper → slides](lab/03-project-paper-to-slides.md) | 35 min |
 | 4 | [Workflow 3: Audio → meeting minutes](lab/04-meeting-audio-to-minutes.md) | 35 min |
-| 5 | [Explore further](lab/05-explore-further.md) | 20 min |
+| 5 | [Workflow 4: Build a dashboard in Gemini Canvas](lab/05-gemini-canvas-dashboard.md) | 25 min |
+| 6 | [Explore further](lab/06-explore-further.md) | 20 min |
 
 Total ~2.5–3 hours (including buffer for Q&A).
