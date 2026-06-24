@@ -1,0 +1,100 @@
+table,sex,category,value
+kpi,Female,total_deaths,15849
+kpi,Female,pct_unvaccinated,62.4
+kpi,Female,pct_comorbidity,80.4
+kpi,Female,median_age,65.0
+kpi,Male,total_deaths,21502
+kpi,Male,pct_unvaccinated,58.5
+kpi,Male,pct_comorbidity,77.6
+kpi,Male,median_age,63.0
+kpi,All,total_deaths,37351
+kpi,All,pct_unvaccinated,60.2
+kpi,All,pct_comorbidity,78.8
+kpi,All,median_age,64.0
+deaths_by_year,Female,2020,182
+deaths_by_year,Female,2021,13253
+deaths_by_year,Female,2022,2255
+deaths_by_year,Female,2023,146
+deaths_by_year,Female,2024,13
+deaths_by_year,Male,2020,334
+deaths_by_year,Male,2021,17811
+deaths_by_year,Male,2022,3059
+deaths_by_year,Male,2023,270
+deaths_by_year,Male,2024,28
+deaths_by_year,All,2020,516
+deaths_by_year,All,2021,31064
+deaths_by_year,All,2022,5314
+deaths_by_year,All,2023,416
+deaths_by_year,All,2024,41
+deaths_by_state,Female,Selangor,4515
+deaths_by_state,Female,Johor,2105
+deaths_by_state,Female,Kedah,1286
+deaths_by_state,Female,Sabah,1283
+deaths_by_state,Female,W.P. Kuala Lumpur,1191
+deaths_by_state,Female,Perak,925
+deaths_by_state,Female,Pulau Pinang,872
+deaths_by_state,Female,Sarawak,756
+deaths_by_state,Female,Kelantan,709
+deaths_by_state,Female,Negeri Sembilan,677
+deaths_by_state,Female,Melaka,532
+deaths_by_state,Female,Terengganu,425
+deaths_by_state,Female,Pahang,410
+deaths_by_state,Female,Perlis,87
+deaths_by_state,Female,W.P. Labuan,66
+deaths_by_state,Female,W.P. Putrajaya,10
+deaths_by_state,Male,Selangor,6551
+deaths_by_state,Male,Johor,2665
+deaths_by_state,Male,Sabah,1933
+deaths_by_state,Male,W.P. Kuala Lumpur,1681
+deaths_by_state,Male,Kedah,1489
+deaths_by_state,Male,Perak,1265
+deaths_by_state,Male,Pulau Pinang,1229
+deaths_by_state,Male,Sarawak,1051
+deaths_by_state,Male,Negeri Sembilan,875
+deaths_by_state,Male,Kelantan,721
+deaths_by_state,Male,Melaka,695
+deaths_by_state,Male,Pahang,632
+deaths_by_state,Male,Terengganu,484
+deaths_by_state,Male,Perlis,115
+deaths_by_state,Male,W.P. Labuan,94
+deaths_by_state,Male,W.P. Putrajaya,22
+deaths_by_state,All,Selangor,11066
+deaths_by_state,All,Johor,4770
+deaths_by_state,All,Sabah,3216
+deaths_by_state,All,W.P. Kuala Lumpur,2872
+deaths_by_state,All,Kedah,2775
+deaths_by_state,All,Perak,2190
+deaths_by_state,All,Pulau Pinang,2101
+deaths_by_state,All,Sarawak,1807
+deaths_by_state,All,Negeri Sembilan,1552
+deaths_by_state,All,Kelantan,1430
+deaths_by_state,All,Melaka,1227
+deaths_by_state,All,Pahang,1042
+deaths_by_state,All,Terengganu,909
+deaths_by_state,All,Perlis,202
+deaths_by_state,All,W.P. Labuan,160
+deaths_by_state,All,W.P. Putrajaya,32
+deaths_by_age_group,Female,60–79,6471
+deaths_by_age_group,Female,40–59,4666
+deaths_by_age_group,Female,80+,3262
+deaths_by_age_group,Female,18–39,1356
+deaths_by_age_group,Female,0–17,94
+deaths_by_age_group,Male,60–79,9583
+deaths_by_age_group,Male,40–59,6735
+deaths_by_age_group,Male,80+,3119
+deaths_by_age_group,Male,18–39,1952
+deaths_by_age_group,Male,0–17,113
+deaths_by_age_group,All,60–79,16054
+deaths_by_age_group,All,40–59,11401
+deaths_by_age_group,All,80+,6381
+deaths_by_age_group,All,18–39,3308
+deaths_by_age_group,All,0–17,207
+deaths_by_vacc_status,Female,Unvaccinated,9895
+deaths_by_vacc_status,Female,Fully vaccinated (≥2 doses),3600
+deaths_by_vacc_status,Female,Partial (1 dose),2354
+deaths_by_vacc_status,Male,Unvaccinated,12580
+deaths_by_vacc_status,Male,Fully vaccinated (≥2 doses),5676
+deaths_by_vacc_status,Male,Partial (1 dose),3246
+deaths_by_vacc_status,All,Unvaccinated,22475
+deaths_by_vacc_status,All,Fully vaccinated (≥2 doses),9276
+deaths_by_vacc_status,All,Partial (1 dose),5600
