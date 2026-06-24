@@ -1,0 +1,91 @@
+{
+  "planPath": "docs/superpowers/plans/2026-06-24-module-2-lab-working-examples.md",
+  "tasks": [
+    {
+      "id": 10,
+      "subject": "Task 1: Create digitization project paper artifact",
+      "status": "pending",
+      "description": "Create module-2-notebooklm-gemini/examples/01-project-paper-pendigitalan-rekod.md — a Malay Kertas Cadangan with disclaimer, 8 ## sections, phases table, scenario facts. Verify: grep -c '^## ' = 8.",
+      "metadata": {"files": ["module-2-notebooklm-gemini/examples/01-project-paper-pendigitalan-rekod.md"], "modelTier": "standard"}
+    },
+    {
+      "id": 11,
+      "subject": "Task 2: Create records-committee meeting transcript artifact",
+      "status": "pending",
+      "description": "Create module-2-notebooklm-gemini/examples/02-mesyuarat-jk-rekod-transcript.md — Malay transcript, 4 named speakers, >=3 decisions + >=3 actions with officer+date. Verify: >=6 speaker turns.",
+      "metadata": {"files": ["module-2-notebooklm-gemini/examples/02-mesyuarat-jk-rekod-transcript.md"], "modelTier": "standard"}
+    },
+    {
+      "id": 12,
+      "subject": "Task 3: Generate meeting audio from transcript",
+      "status": "pending",
+      "blockedBy": [11],
+      "description": "Create generate_audio.py (per-speaker macOS say voices, afconvert to m4a) and commit the generated 02-mesyuarat-jk-rekod-audio.m4a. Verify: script runs, afinfo shows non-zero duration.",
+      "metadata": {"files": ["module-2-notebooklm-gemini/examples/generate_audio.py", "module-2-notebooklm-gemini/examples/02-mesyuarat-jk-rekod-audio.m4a"], "modelTier": "standard"}
+    },
+    {
+      "id": 13,
+      "subject": "Task 4: Write examples README (scenario hub)",
+      "status": "pending",
+      "blockedBy": [10, 11, 12],
+      "description": "Create module-2-notebooklm-gemini/examples/README.md — scenario paragraph, artifact->lab table, disclaimer, working links. Verify: file exists + contains 'Seri Aman'.",
+      "metadata": {"files": ["module-2-notebooklm-gemini/examples/README.md"], "modelTier": "standard"}
+    },
+    {
+      "id": 14,
+      "subject": "Task 5: Promote MOH guideline in public-references.md",
+      "status": "pending",
+      "description": "Modify public-references.md — named primary MOH guideline entry (PDF URL [verify]) + kkm.synchronet.my fallback + TLS/USB note + checklist USB bullet. Verify: greps for guideline title and kkm.synchronet.my.",
+      "metadata": {"files": ["module-2-notebooklm-gemini/public-references.md"], "modelTier": "standard"}
+    },
+    {
+      "id": 15,
+      "subject": "Task 6: Point Lab 1 setup at the MOH guideline",
+      "status": "pending",
+      "blockedBy": [14],
+      "description": "Modify lab/01-set-up-notebook.md — Step 4 names the MOH guideline, Seri Aman framing + notebook name, substitute note, keep screenshots/tip/Next link. Verify: greps 'Seri Aman' + 'public-references.md'.",
+      "metadata": {"files": ["module-2-notebooklm-gemini/lab/01-set-up-notebook.md"], "modelTier": "standard"}
+    },
+    {
+      "id": 16,
+      "subject": "Task 7: Tailor Lab 2 queries to the MOH guideline",
+      "status": "pending",
+      "blockedBy": [14],
+      "description": "Modify lab/02-query-the-corpus.md — 3 scenario questions answerable from guideline, keep citation step+screenshot, update follow-ups. Verify: grep 'tempoh penyimpanan'.",
+      "metadata": {"files": ["module-2-notebooklm-gemini/lab/02-query-the-corpus.md"], "modelTier": "standard"}
+    },
+    {
+      "id": 17,
+      "subject": "Task 8: Wire Lab 3 to the project-paper artifact",
+      "status": "pending",
+      "blockedBy": [10],
+      "description": "Modify lab/03-project-paper-to-slides.md — upload ../examples/01-project-paper-pendigitalan-rekod.md, substitute note, refine prompt references real section. Verify: grep link + file exists.",
+      "metadata": {"files": ["module-2-notebooklm-gemini/lab/03-project-paper-to-slides.md"], "modelTier": "standard"}
+    },
+    {
+      "id": 18,
+      "subject": "Task 9: Wire Lab 4 to the meeting audio/transcript",
+      "status": "pending",
+      "blockedBy": [11, 12],
+      "description": "Modify lab/04-meeting-audio-to-minutes.md — upload ../examples/02-mesyuarat-jk-rekod-audio.m4a (transcript fallback), name meeting Bil 2/2026, keep prompts/warning/screenshot/Next. Verify: grep link + m4a exists.",
+      "metadata": {"files": ["module-2-notebooklm-gemini/lab/04-meeting-audio-to-minutes.md"], "modelTier": "standard"}
+    },
+    {
+      "id": 19,
+      "subject": "Task 10: Anchor Lab 6 prompts to the scenario",
+      "status": "pending",
+      "blockedBy": [10],
+      "description": "Modify lab/06-explore-further.md — memo prompt announces project to Pengarah, summarize prompt = Lab 3 paper, Audio Overview = MOH guideline, keep challenge section + warning. Verify: grep 'pendigitalan'.",
+      "metadata": {"files": ["module-2-notebooklm-gemini/lab/06-explore-further.md"], "modelTier": "standard"}
+    },
+    {
+      "id": 20,
+      "subject": "Task 11: Final consistency & link verification",
+      "status": "pending",
+      "blockedBy": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+      "description": "Run the link checker over the 5 edited labs + examples/README.md; fix BROKEN; spot-check Next links + README lab map. Verify: link-checker prints PASS.",
+      "metadata": {"files": ["module-2-notebooklm-gemini/README.md"], "modelTier": "mechanical"}
+    }
+  ],
+  "lastUpdated": "2026-06-24"
+}
