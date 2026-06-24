@@ -51,4 +51,4 @@ A structured **draft meeting minutes** document (No., Item, Action, Officer,
 Date) generated from the recording/transcript, ready to be reviewed and
 finalized.
 
-➡️ Next: [Lab 5 — Explore further](05-explore-further.md)
+➡️ Next: [Lab 5 — Build a dashboard in Gemini Canvas](05-gemini-canvas-dashboard.md)

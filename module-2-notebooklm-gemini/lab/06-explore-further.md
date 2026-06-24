@@ -1,4 +1,4 @@
-# Lab 5: Explore Further
+# Lab 6: Explore Further
 
 **Goal:** Explore other NotebookLM and Gemini features that are useful for the
 daily work of records management.
